@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #wrap {
+            width:500px; height:500px;
+            border: 5px solid red;
+            margin : 0 auto;
+            position:relative;
+        }
+
+        #wrap div {
+            width:100px; height:100px;
+            background-color: skyblue;
+            position:absolute;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .box1 {top:0; left:0; z-index:1;}
+        .box2 {top:0; right:0;}
+        .box3 {bottom:0; left:0;}
+        .box4 {bottom:0; right:0;}
+        .box5 {top:50%; left:50%; margin: -50px 0 0 -50px;}
+        #wrap .box6 {width : 100px; height:200px;
+        background-color: red;
+        top:0; right:-120px;
+        }
+
+        .top {width:50px;height:50px;
+        background-color: springgreen;
+        border-radius: 50%;
+        text-align: center;
+        position:fixed;
+        bottom:20px; right:20px;}
+        .top a{text-decoration:none;
+        line-height: 50px;
+        color:#fff;}
+        
+        html {scroll-behavior: smooth;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+        <div class="box6">banner</div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur similique praesentium deserunt voluptatem laboriosam explicabo debitis ipsam rem maxime suscipit beatae est tempore excepturi, eaque impedit sunt quaerat iure totam?</p>
+    <p>Laborum ad, sapiente corporis enim facere minus tempore laboriosam libero ea blanditiis, assumenda quam tempora. Nisi fugiat consequuntur unde eligendi corrupti deserunt dignissimos quae ratione porro totam, iste libero suscipit.</p>
+    <p>Illum, esse deleniti porro odio nemo minima harum quasi, rem laborum, quos culpa? Voluptatibus autem totam officia. Nobis, optio corrupti recusandae sapiente tenetur alias, vero omnis illum modi, molestias autem.</p>
+    <p>Facilis eveniet sint unde alias, nobis corrupti id dolorum harum in autem illum nostrum exercitationem et consequatur nulla ipsam modi nesciunt ad, sapiente commodi! Eveniet nostrum fuga reprehenderit consequatur dolores.</p>
+    <p>Deserunt vel et magni accusamus laudantium nobis, error quibusdam nostrum impedit facilis. Eaque dolore quae impedit aspernatur qui explicabo ad omnis consequuntur rerum illo! Perspiciatis aut quae dicta alias exercitationem.</p>
+    <p>Nulla, libero. Exercitationem, quod. Quasi, excepturi. Labore tempora, dolorum porro itaque, soluta debitis exercitationem at ratione minus molestiae perferendis a suscipit obcaecati quibusdam, doloribus amet blanditiis rerum ullam optio nam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur similique praesentium deserunt voluptatem laboriosam explicabo debitis ipsam rem maxime suscipit beatae est tempore excepturi, eaque impedit sunt quaerat iure totam?</p>
+    <p>Laborum ad, sapiente corporis enim facere minus tempore laboriosam libero ea blanditiis, assumenda quam tempora. Nisi fugiat consequuntur unde eligendi corrupti deserunt dignissimos quae ratione porro totam, iste libero suscipit.</p>
+    <p>Illum, esse deleniti porro odio nemo minima harum quasi, rem laborum, quos culpa? Voluptatibus autem totam officia. Nobis, optio corrupti recusandae sapiente tenetur alias, vero omnis illum modi, molestias autem.</p>
+    <p>Facilis eveniet sint unde alias, nobis corrupti id dolorum harum in autem illum nostrum exercitationem et consequatur nulla ipsam modi nesciunt ad, sapiente commodi! Eveniet nostrum fuga reprehenderit consequatur dolores.</p>
+    <p>Deserunt vel et magni accusamus laudantium nobis, error quibusdam nostrum impedit facilis. Eaque dolore quae impedit aspernatur qui explicabo ad omnis consequuntur rerum illo! Perspiciatis aut quae dicta alias exercitationem.</p>
+    <p>Nulla, libero. Exercitationem, quod. Quasi, excepturi. Labore tempora, dolorum porro itaque, soluta debitis exercitationem at ratione minus molestiae perferendis a suscipit obcaecati quibusdam, doloribus amet blanditiis rerum ullam optio nam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur similique praesentium deserunt voluptatem laboriosam explicabo debitis ipsam rem maxime suscipit beatae est tempore excepturi, eaque impedit sunt quaerat iure totam?</p>
+    <p>Laborum ad, sapiente corporis enim facere minus tempore laboriosam libero ea blanditiis, assumenda quam tempora. Nisi fugiat consequuntur unde eligendi corrupti deserunt dignissimos quae ratione porro totam, iste libero suscipit.</p>
+    <p>Illum, esse deleniti porro odio nemo minima harum quasi, rem laborum, quos culpa? Voluptatibus autem totam officia. Nobis, optio corrupti recusandae sapiente tenetur alias, vero omnis illum modi, molestias autem.</p>
+    <p>Facilis eveniet sint unde alias, nobis corrupti id dolorum harum in autem illum nostrum exercitationem et consequatur nulla ipsam modi nesciunt ad, sapiente commodi! Eveniet nostrum fuga reprehenderit consequatur dolores.</p>
+    <p>Deserunt vel et magni accusamus laudantium nobis, error quibusdam nostrum impedit facilis. Eaque dolore quae impedit aspernatur qui explicabo ad omnis consequuntur rerum illo! Perspiciatis aut quae dicta alias exercitationem.</p>
+    <p>Nulla, libero. Exercitationem, quod. Quasi, excepturi. Labore tempora, dolorum porro itaque, soluta debitis exercitationem at ratione minus molestiae perferendis a suscipit obcaecati quibusdam, doloribus amet blanditiis rerum ullam optio nam!</p>
+
+    <div class="top"><a href="#wrap">TOP</a></div>
+</body>
+</html>

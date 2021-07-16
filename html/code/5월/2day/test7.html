@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+
+    <style>
+        body { }
+        /* 블록 레벨은 한 줄에 한개씩 들어감 */
+        #wrap { border:2px solid red;
+                background-color: yellow;
+                /* 
+                1. 자신의 공간 이상으로 늘어나지 않도록 함 
+                2. float로 띄워진 자식객체들의 부피를 가져옴
+                */
+                }
+
+        #wrap .inner div {width:200px; height:200px;
+        /* inline-block 인라인 특성을 가지지만, 부피가 있음 */
+        background-color: brown; float:left;
+        margin: 0 auto;
+        padding:5px;
+        border:2px solid blue;
+        box-sizing:border-box;}
+
+        .inner { overflow:hidden;
+        margin: 0 auto; width:800px;     }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="inner">
+            <div class="box1">box1</div>
+            <div class="box2">box2</div>
+            <div class="box3">box3</div>
+            <div class="box4">box4</div>
+        </div>
+    </div>
+</body>
+</html>

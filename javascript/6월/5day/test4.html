@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>오늘의 날짜 6월 18일 금요일</title>
+
+
+    
+</head>
+<body>
+    <script>
+
+        function login(id, pw) {
+            if( id == "test" ) {
+   
+               if ( pw == "1234" ){
+                   document.write("환영합니다~!");
+               } else {
+                   alert("잘못된 비밀번호 입니다.")
+               }
+                
+            } else {
+               alert("아이디를 다시 입력하세요");
+            }
+        }
+   
+        var userId = prompt("아이디를 입력하세요");
+        var userPW = prompt("비밀번호를 입력하세요");
+   
+        login(userId, userPW);
+        
+    </script>
+
+</body>
+</html>

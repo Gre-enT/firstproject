@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+* { margin: 0; padding: 0; }
+#wrap { width: 1000px; margin: 0 auto; }
+.tab_box { padding: 50px; text-align: center; 
+           color: #fff; display: none; }
+#crimson { background-color: crimson; } 
+#deepskyblue { background-color: deepskyblue; }       
+#darkolivegreen { background-color: darkolivegreen;} 
+#orange { background-color: orange; }        
+.tab_btn { background-color: #555; color: #fff; 
+           border: 0; outline: 0; 
+           cursor: pointer; padding: 14px 20px;
+           float: left; width: 25%; }
+.tab_btn:hover { background-color: #999; }        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="crimson" class="tab_box">
+        <h1>crimson</h1>
+        <p>My color : crimson</p>  
+        </div> 
+        <div id="deepskyblue" class="tab_box">
+        <h1>deepskyblue</h1>
+        <p>My color : deepskyblue</p>   
+        </div> 
+        <div id="darkolivegreen" class="tab_box">
+        <h1>darkolivegreen</h1>
+        <p>My color : darkolivegreen</p>   
+        </div>  
+        <div id="orange" class="tab_box">
+        <h1>orange</h1>
+        <p>My color : orange</p>   
+        </div> 
+        <button class="tab_btn" onclick="openColor('crimson', this)">RED</button> 
+        <button class="tab_btn" onclick="openColor('deepskyblue', this)">BLUE</button> 
+        <button class="tab_btn" onclick="openColor('darkolivegreen', this)">GREEN</button> 
+        <button class="tab_btn" onclick="openColor('orange', this)">YELLOW</button> 
+    </div>
+
+    <script>
+        function openColor(color, self){
+            let tab_box = document.getElementsByClassName("tab_box");
+            for(let i=0; i<tab_box.length; i++){
+                tab_box[i].style.display = "none";
+            }
+
+            let tab_btn = document.getElementsByClassName("tab_btn");
+            for(let i=0; i<tab_btn.length; i++){
+                tab_btn[i].style.backgroundColor= "";
+            }
+
+            document.getElementById(color).style.display = "block";
+            self.style.backgroundColor = color;   
+        }
+
+        document.querySelector(".tab_btn").click(); //첫번쨰 버튼에 클릭 이벤트 연결
+    </script>
+
+</body>
+</html>

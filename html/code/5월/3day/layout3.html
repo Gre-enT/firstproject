@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        * {margin:0; padding:0;}
+        #wrap {width:800px; margin: 0 auto;}
+
+        #wrap, #title, .gnb li, section, section h2, .text, aside, aside ul li {border:1px solid red;}
+        
+        #title {margin: 10px 0;}
+        #title h1{margin: 0;}
+
+        nav {}
+        
+        .gnb::after {content:""; display:block; clear:both;}
+
+        .gnb {background-color: #eee; padding : 10px;
+        }
+
+        .gnb li{
+            list-style: none; 
+            float:left;
+            margin-left: 50px;
+            text-transform: uppercase;}
+
+        .gnb li a{text-decoration:none; color:black;}
+
+        #content::after{content:""; display: block; clear:both;
+
+        }
+        #content {
+        }
+
+        section {width:550px; float:left; margin-right : 10px;}
+
+        #content section h2 {
+            margin: 10px 10px 0px 10px;
+            text-transform: capitalize;
+        }
+
+        .text {float:left; margin: 0px 10px 10px 10px;}
+        
+        .text p{
+                width: 48%;
+                margin-top : 15px;
+                margin-bottom : 15px;
+                font-size:14px
+            }
+
+        .p_left{float:left; margin-right:20px;}
+        .p_right{float:right;}
+
+        .imgbox img{
+            width: 100%; 
+            padding: 10px;
+            box-sizing: border-box;
+            }
+
+        aside { /* 다시한번 적어두지만, padding, margin은 2개는 상하,좌우/ 4개는 상,우,하,좌 순  */
+            width:236px;
+            float:right;
+            background-color: #ccc;
+            }
+
+        aside ul{
+            background-color: #eee;
+            padding: 10px 30px;
+            border-radius: 10px;
+            margin: 28px 20px;
+        }
+
+        aside ul li{
+            text-transform: uppercase;
+        }
+
+        aside ul li a{
+            text-decoration:none; color:black;
+        }
+
+
+        footer {
+            height : 60px;
+            background-color: #222;
+            color : #fff;
+            text-align: center;
+            line-height: 60px;
+            }
+
+        
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id = "title">
+                <h1>HTML5</h1>                
+            </div>
+
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">feedback</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="content">
+            <section>
+                <h2>about html5</h2>
+                <div class="text">
+                    <p class="p_left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus incidunt atque similique. Facilis, fugiat! Totam culpa velit, minus sed corrupti vitae voluptatibus mollitia quas? Repellendus adipisci at officia quaerat eos.</p>
+                    <p class="p_right">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repellendus natus, iusto omnis veniam placeat ipsum officiis vel. Quasi fuga accusamus nihil, natus architecto sapiente perspiciatis delectus molestias itaque ab.</p>
+                </div>
+
+                <div class="imgbox">
+                    <img src="http://placehold.it/1000x400" alt="">
+                </div>
+
+            </section>
+            
+            <aside>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">feedback</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">feedback</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">feedback</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+
+
+            </aside>
+
+        </div><!-- id="content" -->
+
+        <footer>
+            <p>Copy Right</p>
+        </footer>
+    </div>
+</body>
+</html>

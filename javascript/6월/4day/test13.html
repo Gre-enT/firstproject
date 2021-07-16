@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>간격</title>    
+</head>
+<body>
+    
+    <script>
+        var info = navigator.userAgent.toLowerCase();
+        console.log(info);
+        var osImg = null;
+
+        if(info.indexOf('windows') >=0){
+            osImg = "images/windows.png"
+        }
+        else if(info.indexOf('macintosh') >=0) {
+            osImg = "images/macintosh.png"
+        }
+        else if(info.indexOf('iphone') >= 0 || info.indexOf('ipad') >=0) {
+            osImg = "images/iphone.png"
+        }
+        else if(info.indexOf('android') >=0) {
+            osImg = "images/android.png"
+        }
+
+        document.write(`<img src="${osImg}"><br>`)
+
+
+        var scr_w = screen.width;
+        var scr_h = screen.height;
+
+        document.write("모니터 해상도 너비 : " + scr_w + "px<br>");
+        document.write("모니터 해상도 높이 : " + scr_h + "px<br>");
+
+    </script>
+</body>
+</html>

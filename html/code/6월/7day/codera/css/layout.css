@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+body, h1, h2, h3, h4, h5, p, ul, li, ol, dl, dt, dd, form, fieldset, label, input { margin: 0; padding: 0;} 
+nav ul { list-style: none; }
+a { text-decoration: none; color: #333; }
+.clear::after { content: ""; display: block; clear: both; }
+
+#wrap {}
+.inner { width: 1000px; margin: 0 auto; }
+header { background-color: #c84040; height: 86px; padding-top: 20px; box-sizing: border-box; }
+header .logo { }
+nav { background-color: #393939; height: 48px; }
+.gnb { width: 1000px; margin: 0 auto; }
+.gnb li { float: left; width: 25%; text-align: center; line-height: 48px; }
+.gnb li:hover { background-color: #c84040; }          
+.gnb li a { color: #fff; }
+
+footer { padding: 20px 0; background-color: #c84040; }
+
+.btm_menu{
+    list-style: none;
+}
+
+.btm_menu li{
+    float:left;
+    padding : 10px;
+}
+
+.btm_menu li a{
+    color:white;
+}

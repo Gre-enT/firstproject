@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #wrap, header, footer, aside, section { 
+            border:2px solid #eee;
+            padding:10px;
+            box-sizing:border-box}
+
+        #wrap {width:700px; margin: 0px auto;
+            box-sizing:border-box;
+        }
+
+        #content {overflow:hidden;}
+
+        aside, section{
+            float:left;
+            height:320px;
+            margin : 10px 0;
+            
+        }
+
+        aside {
+            width:120px;
+        }
+
+        section {
+            width: 416px;
+            box-sizing: border-box;
+            margin:10px 10px;
+            
+        }
+
+        section p {
+            font-size : 12px;
+        }
+
+
+        footer {
+            clear:both;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>사이트 제목</h1>
+        </header>
+
+        <div id="content">
+            <aside>사이드바
+                <ul>
+                    <li>항목1</li>
+                    <li>항목2</li>
+                    <li>항목3</li>
+                    <li>항목4</li>
+
+                </ul>
+            </aside>
+
+            <section>
+                <h2>본문</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet possimus consequatur atque molestias corporis blanditiis. Reiciendis aspernatur quasi cum esse omnis earum, ipsum ut, aut illo qui doloribus tempora libero.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet possimus consequatur atque molestias corporis blanditiis. Reiciendis aspernatur quasi cum esse omnis earum, ipsum ut, aut illo qui doloribus tempora libero.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet possimus consequatur atque molestias corporis blanditiis. Reiciendis aspernatur quasi cum esse omnis earum, ipsum ut, aut illo qui doloribus tempora libero.</p>
+
+            </section>
+
+            <aside>사이드바
+                <ul>
+                    <li>항목1</li>
+                    <li>항목2</li>
+                    <li>항목3</li>
+                    <li>항목4</li>
+
+                </ul>
+
+            </aside>
+        </div>
+
+        <footer>
+            <h3>푸터</h3>
+            <p>저작권</p>
+            <address>주소</address>
+        </footer>
+
+
+
+
+
+    </div>
+</body>
+</html>

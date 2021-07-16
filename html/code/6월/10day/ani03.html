@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+
+    <style>
+        .box {
+            width:100px;
+            height:100px;
+            background-color: skyblue;
+            text-align: center;
+            line-height:100px;
+
+            position:absolute;
+            left:0; top:0;
+            margin:10px;
+
+
+            animation-name:ani;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            -o-animation-direction: alternate;
+        }
+
+        @keyframes ani{
+            0% {
+                left:0;
+                top:0;
+                
+            }
+            25% {
+                left:500px;
+                top:0;
+                background-color: red;
+            }
+            50% {
+                left:500px;
+                top:500px;
+                background-color: yellow;
+            }
+            75% {
+                left:0;
+                top:500px;
+                background-color: greenyellow;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        box
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        * {
+        /*order:1px solid red;*/
+        }
+        #wrap {
+            width:700px; margin:0 auto;
+        }
+
+        header {
+            background-color: skyblue;
+            padding-bottom:20px;
+        }
+
+        header::after{
+            content:""; display:block; clear:both;
+        }
+
+        header h1 {
+            text-align: center;
+        }
+
+        header ul {
+            list-style: none;
+            padding:0;
+            width:392px; margin:0 auto;
+            
+        }
+
+        header ul li{
+            float:left; /* float:right는 순서가 뒤집히므로 자주 쓰지 않음 */
+            border:1px solid blue;
+            padding : 10px 20px;
+            margin: 0 2px;
+        }
+
+        header ul li a{
+            text-decoration: none;
+            color:black;
+        }
+
+        header ul li:hover a{
+            color:#fff;
+        }
+
+
+        #content{
+            margin:10px 0;
+            background-color: orange;
+        }
+
+        #content::after{
+            content:""; display: block; clear:both;
+        }
+
+        #content section{
+            float:left;
+            width : 33.3333%;
+            border:1px solid red;
+            height:300px;
+            box-sizing: border-box;
+        }
+
+        footer{
+            background-color: #ccc;
+            padding:5px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1>LOGO</h1>
+
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+
+        </header>
+
+        <div id="content">
+            <section>
+                <article>
+                    <h2>본문 1</h2>
+                    <p></p>
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <h2>본문 2</h2>
+                    <p></p>
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <h2>본문 3</h2>
+                    <p></p>
+                </article>
+            </section>
+
+        </div>
+
+        <footer>
+            <p>copyright.</p>
+        </footer>
+    </div>
+</body>
+</html>

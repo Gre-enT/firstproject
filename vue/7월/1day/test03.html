@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="app">
+        <h1>뷰 라우터</h1>
+        <router-view></router-view>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+    <script>
+        let User = {
+            template: `<div>
+                        User Component 1
+                        <router-view></router-view>
+                        </div>`
+        }
+
+        let UserPost = {
+            template: '<p> UserPost 2</p>'
+        }
+        let UserProfile = {
+            template: '<p> UserProfile 3</p>'
+        }
+
+        //각 경로에 해당 컴퓨넌트 등록
+
+        let routes = [{
+            path: "/user",
+            component: User,
+            children: [
+                {path:"/post", component: UserPost},
+                {path: "/profile", component: UserProfile}
+            ]
+        }]
+
+        // 라우터 정의
+        let router = new VueRouter({
+            routes
+        });
+
+        // 라우터 인스턴스 등록
+        let app = new Vue({
+            router
+        }).$mount("#app")
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

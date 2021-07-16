@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+
+    <style>
+
+        #box {
+
+        }
+
+        .inner{
+            width : 800px;
+            margin : 50px auto;
+            position:relative;
+            overflow: hidden;
+            transition-duration: 0.2s;
+            text-align: center;
+        }
+
+        .view {
+            width : 100px;
+            height : 50px;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+            color:black;
+
+
+            background-color: skyblue;
+            border:1px solid black;
+            position : absolute;
+            left:50%;
+            top:-50%;
+            transform: translate(-50%, -50%);
+            transition-duration: 1s;
+        }
+
+        .inner:hover{
+            transform:scale(1.05);
+        }
+
+        .inner:hover{
+            border-radius: 0;
+        }
+
+        .inner:hover .view{
+            top:50%;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <div id="box">
+        <div class="inner">
+            <img src="ani_sos/test.png" alt="">
+            <a href="#" class="view">View</a>
+        </div>
+    </div>    
+</body>
+</html>

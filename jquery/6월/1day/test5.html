@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선택자3</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <a href="https://www.naver.com/" target="_blank">바로가기1</a>
+    <a href="https://www.naver.com/" target="" >바로가기2</a>
+    <p>나를 클릭하면 사라집니다.1</p>
+    <p>나를 클릭하면 사라집니다.2</p>
+    <p>나를 클릭하면 사라집니다.3</p>
+    <p>나를 클릭하면 사라집니다.4</p>
+    <p>나를 클릭하면 사라집니다.5</p>
+    <p>나를 클릭하면 사라집니다.6</p>
+
+    <button>나타내기</button>
+
+    <script>
+        $("p").click(function(){
+            $(this).css("display", "none");
+        });
+
+        // $("p").hover(function(){
+        //     $(this).css("background", "yellow").siblings().css("background", "");
+        // })
+
+        // $("p").mouseenter(function(){
+        //     $(this).css("background", "yellow");
+        // })
+        // $("p").mouseleave(function(){
+        //     $(this).css("background", "");
+        // })
+
+
+        $("p").on({
+            mouseenter: function(){
+                $(this).css("background", "yellow");
+            },
+            mouseleave: function(){
+                $(this).css("background", "");
+            },
+            click: function(){
+                $(this).css("background", "green");
+            }
+        })
+
+
+        $("button").click(function(){
+            $(this).html("왜클릭?");
+            $("p").css("display", "");
+
+            $("a[target='_blank']").attr({
+                "href":"https://    daum.net",
+                "target":"_self"
+            });
+
+        })
+
+        $("[target]").css("border", "2px solid blue");
+        $("a[target='_blank']").css("border", "3px solid red");
+        
+    </script>
+</body>
+</html>

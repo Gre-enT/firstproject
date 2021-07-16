@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 서랍메뉴</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+body { overflow: hidden; }
+#toggle { height: 36px; display: block; }  
+#toggle span { background: #000; width: 30px; height: 2px; 
+               margin: 5px 0; display: block; }
+#menu { width: 500px; height: 1000px; 
+        background: rgba(0,0,0,0.7); color: #fff;
+        position: absolute; top: 0; right: -550px; }
+#menu .close { font-size: 32px; font-weight: bold; 
+               color: #000;
+               margin: 50px; float: right; }        
+        
+    </style>
+
+    </script>
+</head>
+<body>
+    <button id="toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+    </button>
+    <br>
+    <div id="menu">
+    <button class="close">X</button>
+    <ul>
+        <li>메뉴01</li>
+        <li>메뉴02</li>
+        <li>메뉴03</li>
+        <li>메뉴04</li>
+    </ul>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#toggle").click(function(){
+                if($("#menu").css("right") == "-550px"){
+                    $("#menu").stop().animate({right:0}, 1000);
+                }
+                
+                else {
+                    $("#menu").stop().animate({right:"-550px"}, 1000);
+                }
+            });
+            $(".close").click(function(){
+                $("#menu").animate({right : "-550px"}, 1000);
+            });
+        })
+    </script>
+    
+</body>
+</html>

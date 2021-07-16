@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        body {margin:0;}
+        #wrap {border:2px solid deeppink; background-color: yellow;
+        /* 플로팅되어있는 자식들을 잡아옴 */
+        overflow: hidden;
+        }
+        /* #wrap 안에 있는 div를 의미 */
+        #wrap div {width: 200px;height: 200px;
+        background-color:rgba(0,0,255,0.5); margin:0;
+        float:left}
+        /* .box1, .box2, .box3, .box4, .box5 {} */
+        .box1{}
+        .box2{ padding:50px}
+        .box3{border:50px solid red}
+        .box4{padding:50px; border:50px solid red;}
+        .box5{padding:50px; border:50px solid red;
+                box-sizing: border-box;}
+
+        #footer {background-color:#333;
+        padding:30px; color:#fff; text-align:center;
+        /* float되어있는것을 가리지 않고 겹치지 않게 함 */
+        clear:both;}
+    </style>
+</head>
+<body>
+
+<div id="wrap">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+</div>
+<div id="footer">copyright.</div>
+</body>
+</html>

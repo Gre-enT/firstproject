@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>탭 메뉴</title>
+    <style>
+    .tab_title { overflow: hidden; background: #eee;border-left: 1px solid #ccc; border-top: 1px solid #ccc; border-right: 1px solid #ccc;}  
+    .tab_title .tab_btn { background: inherit; float: left; border: 0; outline: 0; cursor: pointer; font-size: 20px; padding: 14px 30px; }  
+    .tab_title .tab_btn:hover { background: #eee; }
+    .tab_title .tab_btn.on { background: #fff; border-bottom-color: #fff; }
+    .tab_box { padding: 10px 20px; border: 1px solid #ccc; border-top: none; display: none; } 
+    .tab_box h3 { font-size: 24px; }
+    .tab_box p { color: #333; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+</head>
+<body>
+    <div class="tab_title">
+    <button class="tab_btn"> 빨강 </button> 
+    <button class="tab_btn"> 노랑 </button> 
+    <button class="tab_btn"> 파랑 </button>   
+    </div>
+    
+    <div id="tab_con">
+        <div id="red" class="tab_box">
+            <h3>color: red</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>   
+        </div> 
+        <div id="yellow" class="tab_box">
+            <h3>color: yellow</h3>
+            <p>동해물과 백두산이 동해물과 백두산이</p>
+        </div> 
+        <div id="blue" class="tab_box">
+            <h3>color: blue</h3>
+            <p>하나둘셋넷 하나둘셋넷 하나둘셋넷 </p>
+        </div>
+    </div>
+
+    
+    <script>
+        // $(".tab_btn").eq(0).click(function(){
+        //     console.log(this);
+        //     $(".tab_box").eq(0).addClass("on").css("display", "block").siblings(".tab_box").removeClass("on").css("display", "none");
+        // })
+        // $(".tab_btn").eq(1).click(function(){
+        //     console.log(this);
+        //     $(".tab_box").eq(1).addClass("on").css("display", "block").siblings(".tab_box").removeClass("on").css("display", "none");
+        // })
+        // $(".tab_btn").eq(2).click(function(){
+        //     console.log(this);
+        //     $(".tab_box").eq(2).addClass("on").css("display", "block").siblings(".tab_box").removeClass("on").css("display", "none");
+        // })
+
+        $(".tab_title>.tab_btn").click(function(){
+            let btn_index = $(this).index();
+            let box_color = $(".tab_box").eq(btn_index).attr("id")
+            $(".tab_box").eq(btn_index).addClass("on").siblings(".tab_box").removeClass("on");
+            $(".tab_box").eq(btn_index).show().siblings(".tab_box").hide();
+            $(".tab_box").eq(btn_index).css("background-color", box_color).siblings(".tab_box").css("background-color", "");
+        })
+    </script>
+</body>
+</html>

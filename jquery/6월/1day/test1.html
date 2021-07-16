@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".click").click(function(){
+                alert("jquery 테스트");
+            });
+        });
+
+        /*
+        $("선택자=css동일").click(function(){})
+        혹은
+
+        $(document).ready(function(){})
+
+        */
+    </script>
+    <!-- <script src="test.js"></script> -->
+
+</head>
+<body>
+    <p class="hi1">안녕하세요1</p>
+    <p class="hi2">안녕하세요2</p>
+
+    <ul>
+        <li></li> <!-- test -->
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <button class="click">클릭</button>
+
+    <script>
+        let hi = document.querySelector(".hi1");
+        hi.innerHTML = "누구쎄요";
+
+        $(".hi2").html("누구쎼ㅖㅖㅖㅖㅖ요");
+
+        let li = document.querySelectorAll("li");
+
+        for(let i = 0; i<li.length; i++){
+            li[i].innerHTML = "test";
+            li[i].style.color = "red";
+        }
+
+        $("li").html("test2").css({"color":"blue", "background-color":"yellow"});
+        //$("li").css("color", "orange");
+        //$("li").attr("style", "color:blue");
+    </script>
+</body>
+</html>

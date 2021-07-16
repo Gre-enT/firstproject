@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .test1{
+            width:400px;
+            height:100px;
+            border:3px solid red;
+        }
+        .test2{
+            background-color: yellow;
+        }
+        .test3{
+            font-size: 42px;
+            text-align: center;
+            margin:50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button class="add">클래스 추가</button>
+    <button class="del">클래스 삭제</button>
+    <button class="toggle">클래스 토글</button>
+    <div id="box"></div>
+
+    <script>
+        let box = document.getElementById("box");
+        let add = document.querySelector(".add");
+        let del = document.querySelector(".del");
+        let toggle = document.querySelector(".toggle");
+
+        add.onclick = function() {
+            box.innerHTML = "javascript";
+            box.classList.add("test1", "test2", "test3");
+        }
+
+        del.onclick = function(){
+            box.classList.remove("test1", "test2", "test3");
+        }
+
+        toggle.onclick = function() {
+            box.classList.toggle("test1", "test2", "test3");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        body, ul, li, ol, dl, dd, dt, h1, h2, p{ margin ; 0;, padding:0;}
+
+        #wrap {
+
+        }
+
+        .inner {
+            width : 800px;
+            margin : 0 auto;
+        }
+
+        .clear::after{
+            content:""; display: block; clear: both;
+        }
+
+        header {
+            height:150px;
+            }
+
+        header .inner{
+            border: 1px solid #333;
+        }
+
+        .logo {
+            
+        }
+
+        .logo img {display: block; margin : 10px auto;
+
+        }
+        
+        header nav {}
+
+        .gnb {
+            width : 483px; margin: 0px auto;
+            list-style: none;;
+        }
+
+        .gnb li{
+            border-right:1px solid #ccc;
+            margin: 0 auto;
+            width : 120px;
+            float:left;
+
+            text-align: center;
+        }
+
+        .gnb li:hover a{
+            color : green;
+        }
+
+        .gnb li:last-child{
+            border-right:0;
+        }
+
+        .gnb li a{
+            text-decoration: none; color:#333;
+
+        }
+
+        #visual {
+            width : 100%;
+            height: 300px;
+            margin : 0 auto;
+            background-image: linear-gradient(to bottom, rgb(255, 197, 241), rgb(240, 114, 240));
+            position:relative;
+            overflow: hidden; /*이미지가 밖으로 빠져나오면 숨김처리 */
+        }
+
+        #visual .inner {
+            height : 300px;
+            position: relative;
+        }
+
+        #visual .inner .main_copy{
+            background-color: green;
+            padding : 5px 10px; color #fff;
+            position: absolute; top:80px; left:30px;
+            color:white;
+            font-weight: bold;
+        }
+
+        #visual .inner .sub_copy{
+            position: absolute; top:130px; left:30px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        #visual span {
+            position:absolute;
+        }
+
+        #visual span img{
+            width : 120px;
+        }
+
+        #visual span:nth-of-type(1) {
+            top : 30px;
+            left : 430px;
+        }
+
+        #visual span:nth-of-type(2) {
+            top :70px;
+            left : 500px;
+            z-index: 1;
+        }
+
+        #visual span:nth-of-type(3) {
+            top : 60px;
+            left : 600px;
+        }
+
+        #visual .btn{
+            width : 100px;
+            height : 30px;
+            border: 1px solid #fff;
+
+            color:#fff;
+            font-size: 12px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+
+            position :absolute;
+            top : 200px; left : 30px;
+        }
+
+        #visual .btn:hover{
+            background-color: rgba(255, 255, 255, 0.7);
+            color : deeppink
+        }
+
+
+        #content {
+            width:800px;
+            margin: 10px auto;
+            box-sizing:border-box;
+        }
+
+        #content section{
+            height : 150px;
+            float:left;
+            box-sizing: border-box;
+            border:1px solid #000;
+        }
+
+        #content section:nth-of-type(1) {
+            width : 260px;
+            margin-right:10px;
+            margin-bottom : 10px;
+        }
+
+        #content section:nth-of-type(2) {
+            width : 260px;
+            margin-right:10px;
+            margin-bottom : 10px;
+        }
+
+        #content section:nth-of-type(3) {
+            width : 260px;
+            margin-bottom : 10px;
+        }
+
+        #content section:nth-of-type(4) {
+            width : 395px;
+            margin-right:10px;
+        }
+
+        #content section:nth-of-type(5) {
+            width : 395px;
+        }
+
+        footer {
+            padding : 10px 0;
+            border: 1px solid #333;
+            }
+
+        footer p{
+            text-align: center;
+            margin : 10px
+        }
+
+        footer nav {
+            
+        }
+        .btm_menu{
+            list-style: none;
+            text-align: center;            
+        }
+
+        .btm_menu li{
+            width : 200px;
+            height : 30px;
+            display:inline-block;
+            background-color: blueviolet;
+            text-align: center; line-height:30px;
+        }
+
+        .btm_menu li a{
+            display:block;
+            height : 100%;
+            color:white;
+            text-decoration: none;    
+        }
+
+        .btm_menu li a:hover{
+            background-color: skyblue;
+            color : black;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <h1 class="logo">
+                    <img src="images/logo.jpg" alt="스타벅스 로고">
+                </h1>
+                
+                <nav>
+                    <ul class="gnb clear">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">제품안내</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="visual">
+            <div class="inner">
+                <h2 class="main_copy">STARBUCKS</h2>
+                <p class="sub_copy">나이트로 콜드 브르 글라스를 드립니다.</p>
+                
+                <span><img src="images/st01.png" alt="음료1"></span>
+                <span><img src="images/st02.png" alt="음료2"></span>
+                <span><img src="images/st03.png" alt="음료3"></span>
+                <a href="#" class="btn">바로가기</a>
+            </div>
+        </div>
+
+        <div id="content" class="clear">
+            <section>컨텐츠01</section>
+            <section>컨텐츠02</section>
+            <section>컨텐츠03</section>
+            <section>컨텐츠04</section>
+            <section>컨텐츠05</section>
+        </div>
+
+        <footer>
+            <div class="inner">
+                <nav> 
+                    <ul class="btm_menu">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">법적공지</a></li>
+                        <li><a href="#">위치안내</a></li>
+                    </ul>
+                </nav>
+
+                <p>Copyright</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

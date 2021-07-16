@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>랜덤 색바꾸기</title>
+
+
+    
+</head>
+<body id="bg">
+    <button onclick="chColor()">바꾸기</button>
+
+    <script>
+        function chColor() {
+            var r = Math.floor(Math.random()*255);
+            var g = Math.floor(Math.random()*255);
+            var b = Math.floor(Math.random()*255);
+            
+            console.log(r,g,b);
+            document.getElementById("bg").style.backgroundColor
+             = `rgb(${r}, ${g}, ${b})`;
+        }
+    </script>
+
+</body>
+</html>

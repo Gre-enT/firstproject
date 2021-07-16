@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>실습2</title>
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+			#wrap{
+				width : 500px; margin: 0 auto;
+			}
+
+			#title {
+				font-family: 'Do Hyeon', sans-serif;
+				text-decoration:underline;
+				text-align:center;
+				font-size:42px;
+				color:green;
+			}
+			table {
+				border-collapse:collapse;
+				text-align:center
+			}
+
+			/*************************************************************************************/
+
+			.it {
+				font-style:italic;
+			}
+			.test {
+				text-indent:10px;
+				line-height: 2.2; /* 배수로 많이 씀 */
+			}
+
+			/*************************************************************************************/
+
+			.red {
+				color:red;
+			}
+			.blue {
+				color:blue;
+			}
+			.green {
+				color:green;
+			}
+
+			/*************************************************************************************/
+
+		</style>
+
+	</head>
+
+	<body>
+		<div id="wrap">
+
+			<h1 id="title">SangYup Lee</h1>
+			<p class="it">이메일 : testtesttest@gmail.com<br></p>
+
+			<h2>
+				<span class = "red">Who</span>
+				<span class = "blue">I</span>
+				<span class = "green">AM</span>
+			</h2>
+			<p class="test">프론트엔드 및 백엔드 기술(Front-end & Back-end  Tech.)을 공부하고 있습니다.<br>
+			현재 TIS 취업지원센터에서 취업준비를 하고있습니다.</p>
+			
+			<br>
+
+			<h2>Skills</h2>
+			<ul>
+				<li>사용 언어
+					<ul>
+						<li><mark>HTML</mark></li>
+						<li><mark>CSS</mark></li>
+						<li>Javascript</li>
+						<li>C</li>
+					</ul>
+				</li>
+
+				<li>사용 툴
+					<ul>
+						<li>Unity(3years)</li>
+						<li>gimp(3years)</li>
+						<li>Sublime Text(2years)</li>
+					</ul>
+				</li>
+			</ul>
+
+			<br>
+
+			<h2>Academic</h2>
+
+			<table border="1" width="100%" cellpadding="10">
+				<tr>
+					<th>출신 학교</td>
+					<th>전공</td>
+					<th>기간</td>
+					<th>졸업구분</td>
+				</tr>
+
+				<tr>
+					<td>ㅎㅎ고등학교</td>
+					<td>(해당없음)</td>
+					<td>2011.03~2014.02</td>
+					<td rowspan="2">졸업</td>
+				</tr>
+
+				<tr>
+					<td>ㄷㄷ대학교</td>
+					<td>정보통신공학과</td>
+					<td>2014.03~2021.02</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

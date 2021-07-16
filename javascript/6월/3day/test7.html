@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    
+</head>
+<body>
+    <p id = "total"></p>
+    <script>
+        var d = new Array();
+        d[0] = 30;
+        d[1] = "따르릉";
+        d[2] = true;
+        console.log(d);
+
+        var e = [30, "따르릉", true]
+        console.log(e)
+
+        var f = new Array(30, "따르릉", true);
+        console.log(f);
+
+
+        document.write("<h2>배열 가져오기</h2>")
+        for (var i = 0 ; i < d.length ; i++){
+            document.write(d[i], "<br>");
+        }
+
+        for (var i in d){
+            document.write(d[i], "<br>");
+        }
+    </script>
+
+</body>
+</html>

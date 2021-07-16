@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>슬라이더</title>
+    <link rel="stylesheet" href="">
+    <script src="script/jQuery_1.12.4.min.js"></script>
+    <script src="script/slide.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: inherit;
+            color: inherit;
+            font-size: inherit;
+        }
+
+        .inner {
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #header {
+            width: 100%;
+            background: #000;
+            height: 100px;
+            position: relative;
+        }
+
+        #logo {
+            position: absolute;
+            top: 19px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .sound-only {
+            position: absolute;
+            height: 0;
+            font-size: 0;
+            overflow: hidden;
+            color: transparent;
+            display: inline-block;
+        }
+
+        #logo>a {
+            display: inline-block;
+            width: 160px;
+            height: 62px;
+            text-indent: -9999px;
+            background: url(images/logo.png) no-repeat;
+        }
+
+        #gnb {
+            position: absolute;
+            top: 40px;
+            right: 0;
+        }
+        #gnb ul {
+            color: #fff;
+        }
+        #gnb ul>li {
+            height: 49px;
+            float: left;
+            text-align: center;
+            margin-left: 30px;
+        }
+
+        #gnb ul>li.event {
+            height: 30px !important;
+            padding-right: 79px;
+            padding-left: 26px;
+            margin-left: 35px;
+            background: #1860c9;
+            position: relative;
+            line-height: 30px;
+        }
+        
+        #slide {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            background: #eee;
+            padding: 40px 0 70px;
+        }
+
+        #slide .inner_slide {
+            width: 3000px;
+            height: 562px;
+            font-size: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        #slide .inner_slide li {
+            width: 1000px;
+            display: inline-block;
+        }
+
+        #slide .inner_slide li img {
+            width: 100%;
+        }
+
+        #slide .dot {
+            width: 1000px;
+            height: 20px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #slide .dot li {
+            width: 10px;
+            height: 25px;
+            border-radius: 10px;
+            background: #ddd;
+            display: inline-block;
+            margin: 30px 15px;
+        }
+
+        #slide .dot li.on {
+            width: 50px;
+            background: #a90000;
+            color:white;
+            transition: all 0.5s ease;
+        }
+
+        #content {
+            padding: 165px 0;
+        }
+
+        .pixar {
+            width: 940px;
+            height: 480px;
+            margin: 0 auto 165px;
+            padding: 0;
+        }
+
+        .pixar h3 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .pixar .p_img {
+            font-size: 0;
+            width: 3000px;
+            height: 390px;
+            margin-top: 40px;
+            padding: 0;
+        }
+
+        .pixar .p_img li {
+            display: inline-block;
+            margin-right: 40px;
+            width: 296px;
+            cursor: pointer;
+            border-top: 5px solid #fff;
+            opacity: 0.8;
+            transition: all 0.5s ease;
+        }
+
+        .pixar .p_img li:last-of-type {
+            margin-right: 0;
+        }
+
+        .pixar .p_img li:hover {
+            border-top: 5px solid #0061e4;
+            opacity: 1;
+        }
+
+        .pixar .p_img li.on {
+            opacity: 1;
+            border-top: 5px solid #0061e4;
+            box-shadow: 2px 2px 10px #222;
+            position: relative;
+            z-index: 10;
+        }
+
+        .pixar .p_img li img {
+            transition: all 0.5s ease;
+        }
+
+        .pixar .p_img li.on img {
+            transform: scale(1.2);
+        }
+
+        #footer {
+
+            color: #9b9b9b;
+            font-size: 12px;
+            background: #363636;
+            border-bottom: 1px solid #363636;
+        }
+
+        #footer .inner {
+            position: relative;
+            height: 50px;
+        }
+
+        #footer p {
+            position: absolute;
+            left: 57px;
+            line-height: 46px;
+        }
+
+        #footer p>.logo {
+            padding-right: 20px;
+            vertical-align: middle;
+        }
+
+        #footer p>span {
+            font-size: 9px;
+            letter-spacing: 0.4px;
+        }
+
+        #footer ul {
+            overflow: hidden;
+            position: absolute;
+            right: 10px;
+        }
+
+        #footer ul li {
+            float: left;
+            line-height: 46px;
+            margin-left: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 id="logo"><span class="sound-only">월트디즈니 컴퍼니 코리아</span><a href="#">월트디즈니 컴퍼니 코리아</a></h1>
+        <nav id="gnb">
+            <ul class="depth2">
+                <li><a href="https://www.instagram.com/disneykorea/" target="_blank">인스타그램</a></li>
+                <li><a href="https://www.facebook.com/DisneyKorea" target="_blank">페이스북</a></li>
+                <li><a href="https://www.youtube.com/channel/UCbv7Dcn5iNrAyd3GwgVHkIQ" target="_blank">유튜브</a></li>
+                <li><a href="timetable.jsp">편성표</a></li>
+                <li class="event"><a href="event-list.jsp">EVENT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="slide">
+        <div class="inner">
+            <ul class="inner_slide">
+                <li><img src="images/slide01.jpg" alt="0"></li>
+                <li><img src="images/slide02.jpg" alt="1"></li>
+                <li><img src="images/slide03.jpg" alt="2"></li>
+            </ul>
+        </div>
+        <ul class="dot">
+            <!-- <li class="on"></li>
+            <li></li>
+            <li></li> -->
+        </ul>
+    </div>
+    <div id="content" class="clear">
+        <div class="inner">
+            <section class="pixar">
+                <h3>Disney Poster</h3>
+                <ul class="p_img">
+                    <li><img src="images/pixar1.jpg" alt=""></li>
+                    <li><img src="images/pixar2.jpg" alt=""></li>
+                    <li><img src="images/pixar3.jpg" alt=""></li>
+                    <li><img src="images/pixar4.jpg" alt=""></li>
+                    <li><img src="images/pixar5.jpg" alt=""></li>
+                    <li><img src="images/pixar6.jpg" alt=""></li>
+                    <li><img src="images/pixar7.jpg" alt=""></li>
+                    <li><img src="images/pixar8.jpg" alt=""></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <footer id="footer" class="clear">
+        <div class="inner">
+            <p class="copyright"><img src="images/logo-sm.png" alt="월트디즈니" class="logo"><span>©Disney ©Disney/Pixar ©MARVEL © &amp; ™ Lucasfilm Ltd.</span></p>
+            <ul>
+                <li><a href="company.jsp">회사 소개</a></li>
+                <li><a href="recruit.jsp">채용</a></li>
+                <li><a href="http://disneytermsofuse.com/korean" target="_blank">이용약관</a></li>
+                <li><a href="https://disneyprivacycenter.com/privacy-policy-translations/korean/" target="_blank">개인정보보호정책</a></li>
+            </ul>
+        </div>
+    </footer>
+</body></html>

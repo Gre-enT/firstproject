@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        ul{
+            list-style:none;
+        }
+
+        #wrap{
+            width:900px;
+            margin:30px auto 0;
+        }
+
+        .clear::after{
+            content:""; display: block; clear:both;
+        }
+
+        #wrap>h1{
+            text-align: center;
+            position:relative;
+        }
+
+        h1::after{
+            content:"";
+            position:absolute;
+            width:0px;
+            height:2px;
+            background-color: red;
+            left:50%;
+            bottom:0;
+            transform:translateX(-50%);
+
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+        }
+        h1:hover::after{
+            width:380px
+        }
+
+        .sale_list {
+            margin-top : 30px;
+        }
+
+        .sale_list li{
+        }
+
+        .line1_list li, .line2_list li{
+            width: 300px;
+            float:left;
+            margin : 20px 0;
+        }
+
+        .line1_list li a, .line2_list li a{
+            text-decoration: none;
+            color:black;
+        }
+        .line1_list li a:hover .imgbox{
+            transform:scale(1.1);
+        }
+
+        .line2_list li a:hover .imgbox{
+            transform:scale(1.1);
+        }
+
+        .imgbox{
+            width: 250px;
+            height : 250px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            margin-bottom : 20px;
+            position:relative;
+
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+        }
+
+        .imgbox span{
+            color:white;
+            font-weight: bold;
+            font-size: 18px;
+            
+            width : 50px;
+            height : 50px;
+            border-radius: 50%;
+
+            text-align: center;
+            line-height: 48px;
+
+            position:absolute;
+            top : 10px;
+            left : 10px;
+        }
+
+        .sale20 {
+            background-color:green;
+        }
+
+        .sale30{
+            background-color:deeppink;
+        }
+
+        .sale40{
+            background-color:violet;
+        }
+
+        .sale{
+            width : 250px;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .won{
+            width : 250px;
+            text-align: center;
+            line-height: 3;
+        }
+        
+        .won .span{
+            font-weight: bold;
+        }
+
+        .line1_list li:nth-of-type(1) a .imgbox{
+            background-image: url(images/marke1.jpg);
+            border:2px solid green;
+        }
+
+        .line1_list li:nth-of-type(2) a .imgbox{
+            background-image: url(images/marke5.jpg);
+            border:2px solid green;
+        }
+
+        .line1_list li:nth-of-type(3) a .imgbox{
+            background-image: url(images/marke2.jpg);
+            border:2px solid deeppink;
+        }
+
+        .line2_list li:nth-of-type(1) a .imgbox{
+            background-image: url(images/marke4.jpg);
+            border:2px solid deeppink;
+        }
+
+        .line2_list li:nth-of-type(2) a .imgbox{
+            background-image: url(images/marke6.jpg);
+            border:2px solid green;
+        }
+
+        .line2_list li:nth-of-type(3) a .imgbox{
+            background-image: url(images/marke3.jpg);
+            border:2px solid violet;
+        }
+
+    </style>
+</head>
+    <div id="wrap">
+        <h1>지금 제일 잘 나가는 상품</h1>
+
+        <ul class="sale_list">
+            <li>
+                <ul class="line1_list clear">
+                    <li>
+                        <a href="#">
+                            <div class="imgbox">
+                                <span class="sale20">20%</span>
+                            </div>
+                            <p class="sale">[종근당건강]종근당건강 락토핏 생유산균 골드 5통 (250일분)</p>
+                            <p class="won"><span class="span">65,900</span> 원</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="imgbox">
+                                <span class="sale20">20%</span>
+                            </div>
+                            <p class="sale">[신세계푸드]올반 핫도그 4종 20봉 (찰5+모짜5+크런치5+치즈콕콕5)</p>
+                            <p class="won"><span class="span">20,900</span> 원</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="imgbox">
+                                <span class="sale30">30%</span>
+                            </div>
+                            <p class="sale">[지오다노]지오다노 설빅세일 맨투맨/티셔츠/셔츠/팬츠~72%OFF</p>
+                            <p class="won"><span class="span">14,900</span> 원</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li>
+
+                <ul class="line2_list clear">
+                    <li>
+                        <a href="#">
+                            <div class="imgbox">
+                                <span class="sale30">30%</span>
+                            </div>
+                            <p class="sale">[아토세이프]덴티본조르노 치약(잇몸 2개+치석 2개+구취 2개) +증정</p>
+                            <p class="won"><span class="span">13,900</span> 원</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="imgbox">
+                                <span class="sale20">20%</span>
+                            </div>
+                            <p class="sale">[잘풀리는집]잘풀리는집 순수프리미엄 30M 30롤 리뉴얼 2팩</p>
+                            <p class="won"><span class="span">28,900</span> 원</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="imgbox">
+                                <span class="sale40">40%</span>
+                            </div>
+                            <p class="sale">[페레로로쉐]페레로로쉐 T24 300G</p>
+                            <p class="won"><span class="span">10,690</span> 원</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+<body>
+    
+</body>
+</html>

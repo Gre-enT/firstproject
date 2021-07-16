@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; }
+        a { font-size: 14px; color: #333; text-decoration: none; }
+        #banner {
+            width: 1000px; height: 240px; 
+            margin: 50px auto;
+            position: relative;
+            font-size: 0;
+            overflow: hidden;
+        }
+        .imgbox {
+            width: 5000px;
+            height: 182px;
+            position: absolute; 
+            left: 0px;
+            top: 0;
+        }     
+        .imgbox>div {
+            width: 1000px;
+            float: left;
+            border: 1px solid blue;
+            box-sizing: border-box; 
+        }  
+        .imgbox>div img { width: 100%;}
+        .dot {
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0; }
+        .dot a {
+            width: 26px; height: 26px; background-color: #999; 
+            color: #fff; display: inline-block;
+            border-radius: 50%; margin: 0 3px; line-height: 26px; }
+        .dot a.on { background-color: orange; }
+        
+        .btn{
+            text-align: center;
+        }
+        .btn button{
+            margin-top: 20px;
+            border : 1px solid #ccc;
+            background-color: #fff;
+            color:#555;
+            position:absolute;
+            top:50px;
+            padding : 0 10px;
+        }
+
+        #prev { left: 50px; }
+    #next { right: 50px; } 
+
+      </style>
+      <script>
+        $(function(){
+            let now=0;
+
+            let img = $(".imgbox>div").length; //4
+
+            let imgWidth = $(".imgbox>div").outerWidth();
+            console.log(imgWidth);
+
+            $(".imgbox").width((img+1)*imgWidth);
+            $(".imgbox>div").eq(0).clone(true).insertAfter(".imgbox>div:last-child");
+            
+
+
+
+
+            let move = setInterval(play, 3000);
+
+            function play(){
+                now++;
+
+                now = now%(img+1)
+
+                $(".dot>a").eq(now%img).addClass("on").siblings(".dot>a").removeClass("on");
+                
+
+                $(".imgbox").stop().animate({
+                    left: now*imgWidth*-1
+                }, 1000, function(){
+                    if(now==img){
+                        now=0;
+                        $(".imgbox").css("left", 0);
+                    }
+                })
+            }
+            
+            $(".dot>a").on({
+                click:function(){
+                    now = $(this).index();
+                    console.log(now);
+                    $(".dot>a").eq(now).addClass("on").siblings(".dot>a").removeClass("on");
+                    $(".imgbox").stop().animate({left: now*imgWidth*-1}, 1000)
+                },
+                mouseenter:function(){
+                    clearInterval(move);
+                },
+                mouseleave:function(){
+                    move = setInterval(play, 3000);
+                }
+            })
+
+            $("#next").on({
+                click:function(){
+                    now++;
+                    console.log(now);
+                    $(".dot>a").eq(now%img).addClass("on").siblings(".dot>a").removeClass("on");
+                    $(".imgbox").stop().animate({
+                        left: now*imgWidth*-1
+                    }, 1000, function(){
+                        if(now==img){
+                            now=0;
+                            $(".imgbox").css("left", 0);
+                        }
+                    })
+                },
+                mouseenter:function(){
+                    clearInterval(move);
+                },
+                mouseleave:function(){
+                    move = setInterval(play, 3000);
+                }
+            })
+            $("#prev").on({
+                click:function(){
+                    if(now==0){
+                            now=img;
+                            $(".imgbox").css("left", img * imgWidth * -1);
+                    }
+                    now--;
+                    console.log(now);
+                    $(".dot>a").eq(now).addClass("on").siblings(".dot>a").removeClass("on");
+                    $(".imgbox").stop().animate({
+                        left: now*imgWidth*-1
+                    }, 1000)
+                },
+                mouseenter:function(){
+                    clearInterval(move);
+                },
+                mouseleave:function(){
+                    move = setInterval(play, 3000);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+  <div id="banner">
+      <div class="imgbox">
+        <div class="0">
+          <a href="#"><img src="images/b1.jpg" alt=""></a> <!-- left:0 --> 
+        </div>  
+        <div class="1">
+          <a href="#"><img src="images/b2.jpg" alt=""></a> <!-- left:-1000 -->    
+        </div>  
+        <div class="2">
+          <a href="#"><img src="images/b3.jpg" alt=""></a> <!-- left:-2000 -->     
+        </div>  
+        <div class="3">
+          <a href="#"><img src="images/b4.jpg" alt=""></a> <!-- left:-3000 -->     
+        </div>  
+      </div> 
+      <div class="dot">
+        <a href="#" class="on">1</a>  
+        <a href="#">2</a>  
+        <a href="#">3</a>  
+        <a href="#">4</a>  
+      </div> 
+
+      <div class="btn">
+          <button id="prev">&lt;</button>
+          <button id="next">&gt;</button>
+          
+      </div>
+    </div>   
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHARMING AIR</title>
+    <script src="https://kit.fontawesome.com/97e12e9253.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/sytle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $.ajax({
+            url:"css/daily.json",
+            dataType:"json",
+            success:function(data){
+                console.log(data);
+                let li="";
+                $.each(data, function(index, obj){
+                    li +="<li>"+obj.title+"</li>";
+                    li +="<li>"+obj.date+"</li>";
+
+                });
+                $(".notice_list").append(li);
+            }
+        });
+
+    $(function(){
+    $(".gnb>li").mouseenter(function(){
+    $(this).children(".sub_menu").stop().slideDown(500);
+    })
+    $(".gnb>li").mouseleave(function(){
+    $(this).children(".sub_menu").stop().slideUp(500);
+    })
+    });
+   
+        $(function(){
+            let now = 0;
+                
+            let width = $(".visual_list li").outerWidth();  // 1200px
+
+              //  $(".visual_list").css("width", listWidth* $(".visual_list>li").length);
+              $(".visual_list>li:first").clone(true).insertAfter(".visual_list>li:last");
+              let total = $(".visual_list>li").length;
+              $(".visual_list").css("width", width*total);
+
+              setInterval(function(){
+                now++;
+                let leftpos = width * -now;
+                $(".visual_list").animate({left:leftpos}, 2000, function(){
+                    if (now == total-1) {
+                        $(".visual_list").css("left",0);
+                        now = 0;
+                    }
+                });
+            }, 3000);
+              });
+
+
+            //   $(".dot>li").click(function(){
+            //     $(this).addClass("on").siblings("li").removeClass("on");
+            //         let index = $(this).index();
+            //         console.log(index);
+            //         $(".visual_list").animate({left:index * -1200}, 1000);
+            //     });
+            
+
+
+    window.open("popup.html","popup","width=500, height=400, left=200 top=100, scrollbar=no, status=no, toolbar=no")
+</script>
+
+
+</head>
+<body>
+
+
+
+    <div id="wrap">
+        <header class="clear">
+            <h1 class="logo"><a href="#"><img src="images/main_logo.gif" alt="logo"></a></h1>
+            <nav>
+                <ul class="gnb clear">
+                    <li><a href="#">항공권 예매</a>
+                        <ul class="sub_menu">
+                            <li><a href="#">항공권예약</a></li>
+                            <li><a href="#">예약조회</a></li>
+                            <li><a href="#">체크인하기</a></li>
+                            <li><a href="#">운항정보</a></li>
+                            <li><a href="#">취항지정보</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">여행 준비</a>
+                        <ul class="sub_menu">
+                            <li><a href="#">체크인 안내</a></li>
+                            <li><a href="#">사전 좌석 배정</a></li>
+                            <li><a href="#">수하물</a></li>
+                            <li><a href="#">도움 필요한 승객</a></li>
+                            <li><a href="#">출입국 신고서</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">여행</a>
+                        <ul class="sub_menu">
+                            <li><a href="#">공항에서</a></li>
+                            <li><a href="#">기내에서</a></li>
+                            <li><a href="#">항공기정보</a></li>
+                            <li><a href="#">부가서비스</a></li>
+                            <li><a href="#">회원혜택존</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">마이페이지</a>
+                        <ul class="sub_menu">
+                            <li><a href="#">나의 예약</a></li>
+                            <li><a href="#">나의 포인트</a></li>
+                            <li><a href="#">나의 쿠폰</a></li>
+                            <li><a href="#">나의 라운지</a></li>
+                            <li><a href="#">나의 정보수정</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div id="visual">
+            <ul class="visual_list clear">
+                <li class="v_list1 clear">
+                    <a href="#">
+                        <img src="images/flight ii.JPG" alt="event1">
+                        <i class="fas fa-comment-alt"></i>
+                        <p class="list_text">
+                            <span class="text_title">무착륙 관광비행<br></span> <br> 
+                            인천출발VS김포출발<br> 
+                            골라서 떠나세요! <br>
+                            <span class="date"> 판매기간:<br>
+                            06.01 ~ 08.08 .2021</span>  
+                        </p>
+                    </a>
+                </li>
+ 
+                <li class="v_list2">
+                    <a href="#">
+                        <img src="images/halla ii.JPG" alt="event2">
+                        <i class="fas fa-comment-alt"></i>
+                        <p class="list_text">
+                            <span class="text_title">한라산 Day Trip <br></span>  <br>
+                            당일치기로 가능한  <br>
+                            한라산 DAYTRIP!<br> 
+                            <span class="date"> 판매기간:<br>
+                                06.01 ~ 06.30 .2021</span>
+                        </p>
+                    </a>
+                </li>
+                <li class="v_list3">
+                    <a href="#">
+                        <img src="images/1st ii.PNG" alt="event3">
+                        <i class="fas fa-comment-alt"></i>
+                        <p class="list_text">
+                            <span class="text_title">1 ANNIVERSARY <br></span>  <br>
+                            창사 1주년 기념 <br>
+                            10% 포인트 추가적립!<br> 
+                            <span class="date"> 이벤트기간:<br>
+                                06.01 ~ 06.30 .2021</span>
+                        </p>
+                    </a>
+                    </li>
+            </ul>
+            
+            <div id="slider">
+                <ul class="dot">
+                    <li class="on">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+              </div>  
+        </div>
+
+ 
+
+        <div id="content" class="clear">
+            <section class="notice">
+                <h3 class="title"><a href="#">공지사항</a></h3>
+                    <ul class="notice_list">
+                        <!-- <li class="clear">
+                            <a href="#">국내선 유류할증료 공지(7월)</a>
+                            <span>2021.06.08</span>
+                        </li>
+                        <li>
+                            <a href="#">국제선 유류할증료 공지(7월)</a>
+                            <span>2021.06.08</span>
+                        </li>
+                        <li>
+                            <a href="#">홈페이지 시스템 점검 안내</a>
+                            <span>2021.06.01</span>
+                        </li> -->
+                 
+                    </ul>
+            </section>
+            <section class="event_trip">
+                <h3 class="title"><a href="#">지금 떠나기 좋은 여행</a></h3>
+                <ul class="trip_img clear">
+                    <li class="t_img1"><a href="#">
+                        <img src="images/swiss.GIF" alt="swiss"></a> 
+                        <h4 class=trip_text>
+                            인천⇒스위스
+                        </h4>
+                            <p class="krw">KRW <span class="ppl">899,900</span> ~</p>
+                     
+                        
+                    </li>
+                    <li class="t_img2"><a href="#">
+                        <img src="images/malaysia.GIF" alt="malaysia"> </a>
+                        <h4 class=trip_text>
+                            인천⇒말레이시아
+                        </h4>
+                        <p class="krw">KRW <span class="ppl">399,900</span> ~</p>
+                       
+                    </li>
+                    <li class="t_img3"><a href="#">
+                        <img src="images/jeju.GIF" alt="jeju"> </a>
+                        <h4 class=trip_text>
+                            김포⇒제주
+                        </h4>
+                        <p class="krw">KRW <span class="ppl">99,900</span> ~</p>    
+                       
+                    </li>
+                </ul>
+            </section>
+            <section class="covid19">
+                <h3 class="title"><a href="#">코로나19 업데이트 센터</a></h3>
+                <div class="imgbox"><a href="#"><img src="images/covid19.GIF" alt="covid19"></a></div>
+                <h4 class="covid19_text"><a href="#">항공편 운항 등 <strong>COVID19</strong>와<br>
+                                                    최신 정보를 확인하실 수 있습니다.</a></h4>
+            </section>
+        </div>
+ 
+
+        <footer class="clear">
+            <div class="btm_logo"><a href="#"><img src="images/logo.GIF" alt="btm_logo"></a></div>
+            <p class="copyright">&copy;사업자등록번호:080-88-080808 | 대표이사: 차 은 미<br>
+                 Copyright CHARMINGAIR. All Rights Reserved.</p>
+            <select name="" id="site">
+                <option value="#"><span>VALUE ALLIANCE</span></option>
+                <option value="#">KOREANAIR</option>
+                <option value="#">ASIANA AIRLINES</option>
+            </select>
+        </footer>
+ 
+
+    </div>
+</body>
+</html>

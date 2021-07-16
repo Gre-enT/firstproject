@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        #wrap{
+            width : 900px;
+            height : 700px;
+            padding : 10px;
+            text-align: center;
+            margin : 0 auto;
+            
+            display:grid;
+
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr 4fr 0.5fr;
+            grid-gap:10px;
+        }
+        #wrap>*{
+            border: 1px solid #333;
+        }
+
+        header{
+            grid-column : 1 / 5;
+            grid-row : 1 / 2;
+        }
+        nav{
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+        }
+        #content{
+            padding : 20px;
+            text-align: left;
+            grid-column: 2 / 5;
+            grid-row: 2 / 3;
+        }
+        #content img{
+            width : 200px;
+            float : left;
+            margin : 10px 10px 0 0;
+        }
+
+        footer{
+            grid-column: 2 / 5;
+            grid-row: 3 / 4;
+        }
+
+
+        @media screen and (max-width: 480px) {
+            #wrap{
+                width : 100%;
+                height : auto;
+
+                grid-template-rows: 1fr 0.5fr 4fr 0.5fr;
+                grid-gap:10px 0;
+            }
+
+            header{
+            grid-column : 1 / 5;
+            grid-row : 1 / 2;
+            }
+
+            nav{
+                grid-column: 1 / 5;
+                grid-row:2 / 3;
+            }
+            #content{
+                grid-column: 1 / 5;
+                grid-row:3 / 4;
+            }
+            #content img {
+                width : 100%;
+                float : none;
+            }
+            footer{
+                grid-column: 1 / 5;
+                grid-row:4 / 5;
+            }
+        }
+
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1>Header</h1>
+        </header>
+        <nav>
+            <h2>Nav</h2>
+        </nav>
+        <div id="content">
+            <h2>Content</h2>
+            <img src="images/test3.png" alt="">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione nisi nesciunt sunt rerum ducimus est facilis consequuntur velit! Dolorem maxime commodi exercitationem id vitae cumque distinctio natus doloremque totam necessitatibus.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, eligendi esse explicabo itaque aspernatur repellat ullam suscipit, ab optio odio mollitia nemo necessitatibus recusandae quo aperiam impedit! Provident, adipisci repudiandae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At sed iure ipsa ad alias explicabo corrupti! Necessitatibus cum, at quae ullam nihil odit distinctio illum repudiandae? Officiis voluptas officia quo.</p>
+        </div>
+        <footer>
+            <h2>Footer</h2>
+        </footer>
+    </div>        
+</body>
+</html>

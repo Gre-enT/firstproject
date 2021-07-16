@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>구구단 테이블</title>
+
+    <script src="js/jquery.js"></script>
+
+</head>
+<body>
+
+    <script>
+        var count = 1;
+        var t = "<table id=\"table\" border=\"1\" width=\"800\" height=\"400\" style=\"text-align:center\">";
+        for(i=0; i<=9; i++){
+            t += "<tr>";
+                
+            for(j=1; j<=9; j++){
+                if(i==0){
+                    t += "<th>" + j + "단</th>";
+                }
+                else{
+                    // if(i%10==9 || j%10==9 || (i*j)%10==9) {
+                    //     t += "<td style=\"background-color:black; color:white;\">" + j + " * " + i + "=" + j*i +"</td>";
+                    // }
+                    if(i+j==6 || i+j==14 || i-j==4 || j-i==4){
+                        t += "<td style=\"background-color:blue; color:white;\">" + j + " * " + i + "=" + j*i +"</td>";
+                    }
+                    else if(i==j || i+j==10){
+                        t += "<td style=\"background-color:yellow\">" + j + " * " + i + "=" + j*i +"</td>";
+                    }
+                    else if((i+j)%4 == 0){
+                        t += "<td style=\"background-color:pink\">" + j + " * " + i + "=" + j*i +"</td>";
+                    }
+                    else if((j*i)%10 == 0){
+                        t += "<td style=\"background-color:skyblue\">" + j + " * " + i + "=" + j*i +"</td>";
+                    }
+                    else{
+                        t += "<td>" + j + " * " + i + "=" + j*i +"</td>";
+                    }
+                }
+            }
+
+            t += "</tr>";
+        }
+        t += "</table>"
+
+        console.log(t);
+        document.write(t);
+
+
+        function findNine(){
+            $("#table td:contains('9')")
+            .css({"background-color":"#000", "color":"#fff"});
+        };
+
+        findNine();
+
+    </script>
+</body>
+</html>

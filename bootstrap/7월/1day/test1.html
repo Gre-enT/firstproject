@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <title>부트스트랩4</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+    <style>
+        div[class^="col-sm"]{
+            border: 1px solid cyan;
+        }
+        .container{
+            border:1px solid red;
+        }
+        .row{
+            border:1px solid green;
+            margin : 10px 0
+        }
+        .container-fluid{
+            border:1px solid blue;
+        }
+        .col {
+            border:2px solid orange;
+            box-sizing: border-box;
+        }
+    </style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">col-sm-3</div>
+            <div class="col-sm-3">col-sm-3</div>
+            <div class="col-sm-3">col-sm-3</div>
+            <div class="col-sm-3">col-sm-3</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">col-sm-4</div>
+            <div class="col-sm-9">col-sm-8</div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+    </div>
+
+    <div class="container">
+        <h1 class="display-1">bootstrap</h1>
+        <h1 class="display-2">bootstrap</h1>
+        <h1 class="display-3">bootstrap</h1>
+        <h1 class="display-4">bootstrap</h1>
+        <h1> h1 제목입니다. bootstrap / <small>bootstrap</small></h1>
+        <h2> h2 제목입니다. bootstrap / <small>bootstrap</small></h2>
+        <h3> h3 제목입니다. bootstrap / <small>bootstrap</small></h3>
+        <h4> h4 제목입니다. bootstrap / <small>bootstrap</small></h4>
+        <h5> h5 제목입니다. bootstrap / <small>bootstrap</small></h5>
+    </div>
+
+
+    <div class="container">
+        <button class="btn"> btn</button>
+        <button class="btn btn-primary"> btn-primary</button>
+        <button class="btn btn-secondary"> btn-secondary</button>
+        <button class="btn btn-success"> btn-success</button>
+        <button class="btn btn-info"> btn-info</button>
+        <button class="btn btn-warning"> btn-warning</button>
+        <button class="btn btn-danger"> btn-danger</button>
+        <button class="btn btn-dark"> btn-dark</button>
+        <button class="btn btn-light"> btn-light</button>
+        <button class="btn btn-link"> btn-link</button>
+    </div>
+</body>
+</html>

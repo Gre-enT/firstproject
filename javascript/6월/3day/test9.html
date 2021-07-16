@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    
+</head>
+<body>
+    <p id = "total"></p>
+    <script>
+        var txt = new String("javascript");
+        var txt2 = "javascript";
+
+        var t = "Hello Thank you good luck to you";
+
+        document.write( t.charAt(16), "<br>"); //g
+        document.write( t.indexOf("you"), "<br>"); //12
+        document.write( t.indexOf("you", 16), "<br>");
+        document.write( t.lastIndexOf("you"), "<br>");
+        document.write( t.lastIndexOf("you", 25), "<br>");
+        document.write( t.match("luck"), "<br>");
+        document.write( t.search("you"), "<br>");
+        document.write( t.substr(21,4), "<br>");
+        document.write( t.substring(6,12), "<br>");
+        document.write( t.replace("you", "me"), "<br>");
+        document.write( t.toLowerCase(), "<br>");
+        document.write( t.toUpperCase(), "<br>");
+        document.write( t.length, "<br>");
+        var s = t.split(" ");
+        document.write(s, "<br>");
+        document.write(s[0], "<br>");
+        document.write(s[4], "<br>");
+
+
+        var str = "A";
+        var t = str.charCodeAt(0);
+        document.write(t);
+        
+
+    </script>
+
+</body>
+</html>

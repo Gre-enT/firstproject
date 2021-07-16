@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>284p</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        *{
+            margin : 0;
+            padding : 0;
+        }
+
+        div{
+            padding:20px;
+            margin : 20px;
+            background-color: orange;
+            border: 5px solid red;
+
+            position: absolute;
+            left: 50px;
+            top : 50px;
+        }
+
+        p{
+            position : relative;
+            left : 100px;
+            top : 100px;
+        }
+
+    </style>
+
+    <script>
+        $(function(){
+            $("div").width("150px").height("150px");
+            console.log("width : " + $("div").width() + "px");
+            console.log("width : " + $("div").height() + "px");
+            console.log("innerWidth+padding : " + $("div").innerWidth() + "px");
+            console.log("innerHeight+padding : " + $("div").innerHeight() + "px");
+            console.log("outerWidth+padding : " + $("div").outerWidth() + "px");
+            console.log("outerHeight+padding : " + $("div").outerHeight() + "px");
+            console.log($("div").offset());
+            console.log("offset_left : " + $("div").offset().left + "px");
+            console.log("offset_top : " + $("div").offset().top + "px");
+
+            console.log($("div").position());
+            console.log("position_left : " + $("div").position().left + "px");
+            console.log("position_top : " + $("div").position().top + "px");
+        })
+    </script>
+
+</head>
+<body>
+    <p>
+        <div>내용</div>    
+    </p>
+</body>
+</html>

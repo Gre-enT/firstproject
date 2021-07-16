@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .list{
+            width:800px;
+            width:0 auto;
+            list-style: none;
+        }
+        
+        .list li{
+            width:260px; margin-right:10px;
+            border: 1px solid #ccc;
+            padding:5px;
+            box-sizing: border-box;
+            float:left;
+        }
+        .list li:last-child{
+            margin-right:0;
+        }
+
+        .list li a {
+            display:block;
+            position: relative;
+            border: 1px solid red;
+            overflow: hidden;
+        }
+        .list li img {
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+            
+            display:block;
+            width:100%;
+        }
+
+        .list li p {
+            margin:20px 0; text-align:center;
+            text-align: center;
+        }
+
+        .list li span{
+            background-color: steelblue;
+            color:#fff;
+            padding:5px;
+            position:absolute;
+            left:50%; top:-200px;
+            transform:translate(-50%, -50%);
+            opacity: 0;
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+        }
+
+        .list li:hover span{
+            top:50%;
+            opacity: 1;
+        }
+
+        .list li:hover img{
+            transform:scale(1.1);
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul class="list">
+        <li>
+            <a href="#"><img src="image/test2.jpg" alt="">
+                <span>바로가기</span></a>
+            <p>스페셜 강의</p>
+        </li>
+        <li>
+            <a href="#"><img src="image/test2.jpg" alt="">
+                <span>바로가기</span></a>
+            <p>스페셜 강의</p>
+        </li>
+        <li>
+            <a href="#"><img src="image/test2.jpg" alt="">
+                <span>바로가기</span>
+            </a>
+            <p>스페셜 강의</p>
+        </li>
+    </ul>
+    
+</body>
+</html>

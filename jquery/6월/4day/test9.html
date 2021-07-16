@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>삭제관련 관련 메서드</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            let city = ["서울", "대구", "부산", "대전"];
+
+            $.each(city, function(index, value){
+                console.log(index + " : " + value);
+            });
+
+            let subInfo = {
+                subject:"html",
+                grade:1,
+                day:20 
+            }
+
+            $.each(subInfo, function(key, value){
+                console.log(key + " : " + value)
+            });
+
+            $("div").each(function(index, element){
+                console.log(index);
+                console.log(element);
+            })
+
+            let test = document.getElementsByTagName("div");
+            console.log(test);
+            $(test).each(function(index, element){
+                console.log(index);
+                console.log(element);
+            })
+
+
+            let newCity = $.map(city, function(value, index){
+                if(index>2){
+                    return value;
+                }
+            })
+
+            console.log(newCity);
+
+
+            let newCity2 = $.map(city, function(value, index){
+                console.log(value);
+                console.log(index);
+            })
+
+        });
+    </script>
+</head>
+<body>
+    <div class="m1">내용1</div>
+    <div class="m2">내용2</div>
+    <div class="m3">내용3</div>    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        ul, li {margin : 0; padding: 0;}
+        .gnb {
+            list-style: none;
+        }
+
+        .gnb>li{
+            float:left;
+            background-color: skyblue;
+            position:relative;
+            width : 120px; height:40px;
+            text-align: center; line-height: 40px;
+            }
+        
+        .gnb>li:hover .submenu{
+            display:block;
+        }
+
+        .submenu {
+            position:absolute; top:40px; left:0px;
+            width:100%; list-style: none;
+            display:none;
+        }
+
+        .submenu>li {
+            border:2px solid blue;
+            border-top:0;
+            box-sizing:border-box;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    <nav>
+        <ul class="gnb">
+            <li><a href="#">대메뉴1</a>
+                <ul class="submenu">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">대메뉴2</a>
+                <ul class="submenu">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">대메뉴3</a>
+                <ul class="submenu">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">대메뉴4</a>
+                <ul class="submenu">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+body, h1, h2, h3, h4, h5, p, ul, li, img, ol, dl, dt, dd, form, fieldset, label, input, a{ margin: 0; padding: 0;} 
+nav ul { list-style: none; }
+ul { list-style: none;}
+a { text-decoration: none; color: #fff; }
+.clear::after { content: ""; display: block; clear: both; }

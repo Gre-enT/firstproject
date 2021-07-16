@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>stop() 메서드</title>
+    <style>
+        #m1 {
+            background-color: skyblue;
+        }
+    </style>
+        <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#m1").append("<p> append 추가 </p>");
+            $("#m1").prepend("<p> prepend 추가 </p>");
+            $("#m1").after("<p> after 추가 </p>");
+            $("#m1").before("<p> before 추가 </p>");
+
+            $("<p> appendTo 추가 </p>").appendTo("#m2");
+            $("<p> prependTo 추가 </p>").prependTo("#m2");
+            $("<p> intertAfter 추가 </p>").insertAfter("#m2");
+            $("<p> intertBefore 추가 </p>").insertBefore("#m2");
+        })
+    </script>
+</head>
+<body>
+    <div id="m1"><strong>내용1</strong></div>
+    <div id="m2"><strong>내용2</strong></div>
+</body>
+</html>

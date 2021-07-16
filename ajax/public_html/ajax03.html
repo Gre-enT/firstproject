@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(function(){
+            $.ajax({
+                url: "data/dataset.xml",
+                dataType: "xml",
+                success: function(data){
+                    let $data = $(data).find("record"); // data를 객체로 만들고 record를 기준으로 검색
+
+                    let table = $("<table>")
+                    if($data.length > 0) {
+                        $.each($data, function(index, value){
+                            let $id = $(value).find("id").text();
+                            let $first_name = $(value).find("first_name").text();
+                            let $last_name = $(value).find("last_name").text();
+                            let $email = $(value).find("email").text();
+                            let $gender = $(value).find("gender").text();
+
+                            let row = $("<tr>").append(
+                            $("<td>").text($id),
+                            $("<td>").text($last_name),
+                            $("<td>").text($last_name),
+                            $("<tdr").text($email),
+                            $("<td>").text($gender)
+                            );
+                            table.append(row);
+                        });
+                    }
+                    $("#wrap").append(table);
+                },
+                error: function(){
+                    alert("실패")
+                }
+            })
+        })
+    </script>
+
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border:1px solid #ccc;
+            margin : 0;
+            padding : 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var result = confirm("회원을 탈퇴하시겠습니까?");
+
+        if(result){
+            result = confirm("정말로 탈퇴하시겠습니까?")
+
+            if(result){
+                alert("탈퇴 처리 되었습니다.")
+            } else{
+            alert("탈퇴가 취소 되었습니다.");
+            }
+
+        } else{
+            alert("탈퇴가 취소 되었습니다.");
+        }
+
+    </script>
+
+</body>
+</html>

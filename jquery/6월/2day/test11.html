@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아코디언 메뉴</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+       * { margin: 0; padding: 0; }
+       li { list-style: none; }
+       a { color: #999; font-size: 16px; text-decoration: none; } 
+       #m_menu { position: absolute; width: 50%; height: 100%; background-color: #262626; }
+       /* 대메뉴 a + 서브메뉴 a */
+       #m_menu a { display: block; padding: 20px; border-top: 1px solid #2e2e2e; border-bottom: 1px solid #2e2e2e;  }  
+       /* 대메뉴 a */
+       #m_menu a.m { background-color: #111; font-weight: bold; }
+       #m_menu a.m.on {color: orange;}
+
+       /* 서브 메뉴 */
+       #m_menu ul a { background-color: #3a3a3a; text-indent: 20px; }
+       #m_menu ul { display: none; }
+       #m_menu ul.on { display: block; }
+    </style>
+</head>
+<body>
+<!--
+      <li><a href="#" class="m on">대메뉴1</a>
+           <ul class="on">
+               <li><a href="#" class="on">대메뉴1_서브메뉴1</a></li>
+               <li><a href="#">대메뉴1_서브메뉴2</a></li>
+           </ul>
+       </li>
+-->
+   <ul id="m_menu">
+       <li><a href="#" class="m">대메뉴1</a>
+           <ul class="">
+               <li><a href="#">대메뉴1_서브메뉴1</a></li>
+               <li><a href="#">대메뉴1_서브메뉴2</a></li>
+           </ul>
+       </li>
+       <li><a href="#" class="m">대메뉴2</a>
+            <ul>
+                <li><a href="#">대메뉴2_서브메뉴1</a></li>
+                <li><a href="#">대메뉴2_서브메뉴2</a></li>
+            </ul>
+       </li>
+       <li><a href="#" class="m">대메뉴3</a>
+            <ul>
+                <li><a href="#">대메뉴3_서브메뉴1</a></li>
+                <li><a href="#">대메뉴3_서브메뉴2</a></li>
+                <li><a href="#">대메뉴3_서브메뉴3</a></li>
+            </ul>
+       </li>
+   </ul> 
+   <script>
+
+   </script>
+</body>
+</html>

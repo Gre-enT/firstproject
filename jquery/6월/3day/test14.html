@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; }
+        .subject {
+            width: 400px;
+            height: 400px;
+            background-color: coral; 
+            border: 10px solid red;
+            border-radius: 50%; 
+            text-align: center;
+            line-height: 400px;
+            color: #fff; 
+            font-size: 32px; position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%); }
+        .tip {
+            width: 200px;
+            height: 30px;
+            border-radius: 20px; 
+            background-color: rgba(255,255,255,0.8);
+            color: darkorange; font-weight: bold;
+            text-align: center; opacity: 0; 
+            transition: opacity .5s ease;    
+            position: absolute; line-height: 30px; 
+            border: 2px solid orange; }
+        .tip.on { opacity: 1; }        
+    </style>
+
+    <script>
+        $(function(){
+            $(".subject").mousemove(function(e){
+                // console.log(e);
+                let x = e.pageX;
+                let y = e.pageY;
+
+                console.log(x, y)
+
+                $(".tip").css({
+                    left:x-20,
+                    top:y-50
+                }).addClass("on");
+            })
+            $(".subject").mouseout(function(){
+                $(".tip").removeClass("on");
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="subject">학습 과목</div> 
+    <div class="tip">
+        HTML, CSS, jQuery
+    </div> 
+</body>
+</html>

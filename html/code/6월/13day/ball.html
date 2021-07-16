@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .ball{
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+            background-image: radial-gradient(green, greenyellow);
+            animation-name:play;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0,-5.56,1,5.62);
+
+        }
+
+        @keyframes play{
+            0% {
+                transform:translate(0,0);
+            }
+            25% {
+                transform:translate(200px,200px);
+            }
+            50% {
+                transform:translate(400px,0px);
+            }
+            75% {
+                transform:translate(600px,200px);
+            }
+            100% {
+                transform:translate(800px,0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball"></div>
+</body>
+</html>

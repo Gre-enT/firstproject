@@ -1,0 +1,4 @@
+http://placehold.it/320x100
+http://placehold.it/320x100/E8117F/ffffff?text=sample
+
+샘플이미지 사이트

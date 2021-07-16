@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+
+    <style>
+        #wrap{
+            perspective: :500px;
+            width:200px;
+            height:200px;
+            margin:0 auto;
+        }
+        .box {
+            width:100px;
+            height:100px;
+            background-color: skyblue;
+            text-align: center;
+            line-height:100px;
+
+            left:0; top:0;
+            margin:0 5px;
+            animation-name:move;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            
+        }
+
+        @keyframes move{
+            0% {
+                transform:rotateX(0);
+                
+            }
+            25% {
+                transform:rotateX(180deg) rotateY(0);
+                background-color: red;
+            }
+            50% {
+                transform:rotateX(180deg) rotateY(180deg);
+                background-color:greenyellow;
+            }
+            75% {
+                transform:rotateX(0) rotateY(180deg);
+                background-color:pink
+            }
+
+            100% {
+                transform:rotate(0,0);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <div class="box">box</div>
+    </div>
+</body>
+</html>

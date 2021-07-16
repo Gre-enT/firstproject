@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        #btnbox button { padding: 5px 20px; }
+        #box>div { width: 100px; height: 100px; 
+                margin: 20px; float: left; 
+                text-align: center; font-size: 42px; }
+        .box1 { background-color: bisque; }
+        .box2 { background-color: burlywood; }
+        .box3 { background-color: darkkhaki; }
+        .box4 { background-color: cadetblue; }
+        .box5 { background-color: coral; }
+    </style>
+    <script>
+        $(function(){
+            $("#btnbox>button").click(function(){
+                let index = $(this).index();
+                console.log(index);
+                
+                $("#box>div").css("border-radius", "0");
+                $("#box>div").eq(index).css("border-radius", "50%");
+            })
+            $("button.reset").click(function(){
+                $("#box>div").css("border-radius", "0");
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="btnbox">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button class="reset">reset</button>
+        
+    </div>  
+    <div id="box">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>  
+    </div>  
+</body>
+</html>

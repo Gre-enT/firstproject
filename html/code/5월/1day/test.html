@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>연습</title>
+	</head>
+
+		<body>
+			<!-- 중요도에 따라 나눔 -->
+			<h1>안녕하세요.</h1>
+			<h2>안녕하세요.</h2>
+			<h3>안녕하세요.</h3>
+			<h4>안녕하세요.</h4>
+			<h5>안녕하세요.</h5>
+			<h6>안녕하세요.</h6>
+
+			<p>
+				반갑습니다.
+			</p>
+
+			<p>
+				태그는 웹 페이지를 만드는데 <strong>필요한 명령어</strong>이다.<br>
+				이러한 명령어가 적용될 내용은 <b>여는 태그와 닫는 태그</b> 사이에 작성<br>
+				태그는 <i>대소문자를 구분</i>하지 않지만 <em>소문자로 작성하도록 권고</em>하는 사항이다</p>
+
+			<p>
+				viewport요소는 <mark>페이지의 크기</mark>와 <small>배율을 제어하는 방법</small>에 대한 브라우저 지침을 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 제공<br>
+				<sub>width=device-width</sub> 페이지의 너비를 장치의 화면 너비에 따라 설정합니다.<br>
+				<sup>initial-scale=1.0</sup> 브라우저가 <q>페이지를 처음 로드할 때 초기 <del>줌레벨</del>을 설정</q>합니다.<br>
+			</p>
+<hr>
+
+			<pre>
+				이러한 명령어가 적용될 내용은
+						여는 태그와 닫는 태그 사이				에 작성
+				태그는 대소문자를 구분하지 않지만
+				소문자로 작성하도록 권고하는 사항이다.
+			</pre>
+
+			<!-- 순서가 없는 목록, 다른 태그를 섞지 않고 li만 사용  -->
+			<ul>
+				<li>사과</li>
+				<li>오렌지</li>
+				<li>수박</li>
+				<li>키위</li>
+			</ul>
+	
+			<br>
+
+			<!-- 순서가 있는 목록, 다른 태그를 섞지 않고 li만 사용  -->
+			<ol>
+				<li>사과</li>
+				<li>오렌지</li>
+				<li>수박</li>
+				<li>키위</li>
+			</ol>
+			
+			<br>
+
+			<!-- 제목이 있는 목록 -->
+			<dl>
+				<!-- 제목 태그 -->
+				<dt>제목 있는 목록</dt>
+				<dd>2123</dd>
+				<dd>32123</dd>
+				<dd>332142</dd>
+			</dl>
+
+			<a href = "http://www.naver.com" target="_blank">네이버 링크</a>
+			<img src="https://ssl.pstatic.net/tveta/libs/1338/1338725/cbec948c138a9fc21801_20210520154947179.jpg" alt = "햄버거 배너" width = "400">
+			<hr>
+			<a href = "http://www.naver.com" target="_blank"><img src="img.jpg" alt="청소기 배너" width = "400"></a>
+
+			<br><br>
+
+			<table border = "1" width = "200">
+				<tr>
+					<th colspan = "3">1-1</th>
+				</tr>
+
+				<tr >
+					<td rowspan = "2">2-1</td>
+					<td>2-2</td>
+					<td>2-3</td>
+				</tr>
+
+				<tr>
+					<td>3-2</td>
+					<td>3-3</td>
+				</tr>
+
+				<tr>
+					<td>저녁1</td>
+					<td>저녁2</td>
+					<td>저녁3</td>
+				</tr>
+			</table>
+
+			<br><hr><br>
+
+			<table border = "1" width = "200">
+				<tr>
+					<th>구분</th>
+					<th>월</th>
+					<th>수</th>
+					<th>금</th>
+				</tr>
+
+				<tr >
+					<!-- colspan : 가로 합침, rowspan : 세로 합침 -->
+					<td rowspan = "3">메뉴</td>
+					<td colspan = "3" style="text-align: center">아침</td>
+				</tr>
+
+				<tr>
+					<td>점심1</td>
+					<td>점심2</td>
+					<td>점심3</td>
+				</tr>
+
+				<tr>
+					<td>저녁1</td>
+					<td>저녁2</td>
+					<td>저녁3</td>
+				</tr>
+			</table>
+
+			<br><hr><br>
+
+			<!-- cellspacing : 셀 간격, cellpadding : 셀 내부 간격 -->
+			<table border = "1" cellspacing = "0" cellpadding = "10">
+				<colgroup>
+					<col>
+					<col width = "200" style="background:yellow">						
+					<col>
+					<col width = "200" style="background:blue">
+				</colgroup>
+
+				<caption>요일 메뉴</caption>
+				<thead>
+					<tr>
+						<th>구분</th>
+						<th>월</th>
+						<th>수</th>
+						<th>금</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr >
+						<td rowspan = "3">메뉴</td>
+						<!-- align : 정렬 -->
+						<td colspan = "3" align="center">아침</td>
+					</tr>
+
+					<tr>
+						<td>점심1</td>
+						<td>점심2</td>
+						<td>점심3</td>
+					</tr>
+
+					<tr>
+						<td>저녁1</td>
+						<td>저녁2</td>
+						<td>저녁3</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="4" style="text-align: center">메뉴 테이블</td>
+					</tr>
+				</tfoot>
+			</table>
+
+			<br><hr><br>
+
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.2807025479183!2d126.89389431564713!3d37.52487983426968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9eee8bd6f237%3A0xe01d0981c8850e07!2z7JiB65Ox7Y-s6rWs7LKt7Jet!5e0!3m2!1sko!2skr!4v1621918096645!5m2!1sko!2skr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		</body>
+
+</html>

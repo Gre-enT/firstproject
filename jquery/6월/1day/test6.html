@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선택자3</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <a href=""><img src="images/1.jpg" alt="가위"></a>
+    <!-- 바위 변경, 클릭하면 네이버 이동, 새창 / alt 바위 보더 red -->
+    <script>
+        $("[href]").click(function(){
+            $(this).attr({
+            "href":"https://www.naver.com",
+            "target":"_blank"
+           });
+
+           $("a>img:first-child").attr({
+            "src":"images/2.jpg",
+            "alt":"바위",
+            }).css("border","10px solid red");
+
+        })
+
+    </script>
+</body>
+</html>

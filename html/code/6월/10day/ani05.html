@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+
+    <style>
+        #wrap{
+            border:5px solid #333;
+            padding:10px;
+            width: 700px;
+            margin : 0 auto;
+            
+        }
+        #wrap>div {
+            height:40px;
+            width:10%;
+            background-color: orange;
+            margin:5px 0;
+            text-align: center;
+
+            transition-property: all;
+            transition-duration: 3s;
+        }
+
+        #wrap:hover div{
+            width: 100%
+        }
+
+        .bar1 {
+            transition-timing-function: ease;
+        }
+        .bar2 {
+            transition-timing-function: ease-in;
+        }
+        .bar3 {
+            transition-timing-function: ease-in-out;
+        }
+        .bar4 {
+            transition-timing-function: ease-out;
+        }
+        .bar5 {
+            transition-timing-function: linear;
+        }
+
+        @keyframes move{
+            0% {
+                transform:rotateX(0);
+                
+            }
+            25% {
+            }
+            50% {
+            }
+            75% {
+            }
+
+            100% {
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+     <div class="bar1">ease</div>
+     <div class="bar2">ease-in</div>
+     <div class="bar3">ease-in-out</div>
+     <div class="bar4">ease-out</div>
+     <div class="bar5">linear</div>
+    </div>
+</body>
+</html>

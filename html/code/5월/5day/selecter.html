@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        /* ^는 특정 단어나 문자로 시작하면 선택 */
+        li[class^="eng"] {
+            background-color:red;
+        }
+        
+        /* $는 특정 단어나 문자로 끝나면 선택 */
+        li[class$="1"] {
+            color:blue;
+        }
+
+        /* *는 특정 단어나 문자가 들어가면 선택 */
+        li[class*="g"]{
+            font-size:20px;
+        }
+
+        /* ^는 특정 단어가 시작하면 선택 - 띄어쓰기로 구분 */
+        li[class~="en"] {text-decoration: underline;}
+
+        p::first-line {
+            background-color : yellow;
+        }
+
+        p:first-letter{
+            color:red;
+        }
+
+        p::selection {
+            background-color:blue;
+        }
+
+        :not(li){
+            border:1px solid red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>외국어 서비스</h1>    
+
+    <ul>
+        <li class="en g-1">영어-미국식</li>
+        <li class="eng-2">영어-영국식</li>
+        <li class="kor-1">한국어</li>
+        <li class="ger-1">독일어</li>
+        <li class="en k-2">엔카?</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nesciunt aperiam, consectetur mollitia at reiciendis sunt vero incidunt praesentium alias esse fugit quibusdam perferendis facilis voluptas cupiditate officiis iste maxime!</p>
+</body>
+</html>

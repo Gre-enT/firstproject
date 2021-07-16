@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+.tit_red { color: #c84040; font-size: 18px; border-bottom: 2px dashed #c84040; padding-bottom: 10px; 
+}
+
+#content{
+    background-color: #eee;
+    padding : 40px 0;
+}
+
+#content .inner{
+    padding:20px;
+}
+
+#content .inner>p{
+    margin-top : 20px;
+}
+
+#content .inner form{
+    margin-top : 20px;
+}
+
+.content_fieldset{
+    border:0;
+}
+
+.form_list{
+    list-style: none;
+}
+
+.form_list li{
+    padding : 10px 0;
+}
+
+.form_list li label{
+    display: inline-block;
+    width:150px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.form_list li label[for="usr_ask"] {
+    vertical-align: top;
+}
+
+.form_list li input{
+    padding : 7px;
+    width: 300px;
+    border: 2px solid teal;
+}
+
+.form_list li select{
+    padding : 7px;
+    width: 318px;
+    border: 2px solid teal;
+    
+}
+
+.form_list li textarea{
+    padding : 7px;
+    box-sizing: border-box;
+    border:2px solid teal;
+}
+
+.form_list li textarea::placeholder{
+    color : tomato;
+}
+
+.form_list li input:focus, .form_list li select:focus, .form_list li textarea:focus {
+    border:2px solid red;
+    outline:0;
+}
+
+
+.content_fieldset button{
+    display:block;
+    background-color: #c84040;
+    color:white;
+    width : 250px; margin: 10px auto;
+    height:30px auto;
+    line-height:50px;
+    text-align: center;
+    border-radius: 5px;
+    clear:both;
+    border:0;
+}
+
+

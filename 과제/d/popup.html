@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <style>
+        #popup {position: relative;}
+        #popup img {border-radius: 20px; height: 400px;}
+        #popup .text {position: absolute; top:60px; left:80px;}
+        #popup .text .nm {color:beige;}
+        #popup .text p {color:beige;}
+        .esc { position: absolute; top:100px; left:240px; 
+            background-color: rgba(204,153,255,0.7); border-radius: 20px; width:100px;}
+        .esc a {color:beige; text-decoration: none; font-size: 20px; font-weight: bold;
+                text-align: center;}
+        
+        
+    </style>
+</head>
+<body>
+    <div id="popup">
+        <img src="images/az.GIF" alt="" width="500">
+        <br>
+        <button onclick="window.close()">닫기</button>
+       
+        <div class="text">
+            <h1 class="nm">
+                백신 접종자 할인혜택
+            </h1>
+            <p>
+                접종 인증하고, 혜택받기
+                <span>07.01~07.31 .2021</span>
+            </p>
+            <div id="box">
+             <p class="esc"> <a href="#"> 바로가기</a> </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

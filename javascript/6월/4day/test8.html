@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>간격</title>    
+</head>
+<body>
+    <button onclick="clearInterval(auto_1)">증가 정지</button>
+    <button onclick="auto_1">증가 시작</button>
+    
+    <button onclick="clearInterval(auto_2)">감소 정지</button>
+    <button onclick="auto_2">감소 시작</button>
+    <script>
+        var addNum = 0;
+        var subNum = 1000;
+        var count = 0;
+        var auto_1 = setInterval(
+            function() {
+                addNum++;
+
+            }, 100
+        )
+        var auto_2 = setInterval(
+            function() {
+                subNum--;
+            }, 100
+        )
+
+        var intv = setInterval(
+            function() {
+                console.log(addNum);
+                console.log(subNum);
+            }, 1000
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>갤러리</title>
+
+    <style>
+        body{
+            background-color: rgb(190, 238, 255);
+        }
+        #imgbox{
+            width : 800px;
+            margin : 50px auto;
+        }
+        .img_list{
+            list-style: none;
+        }
+        .img_list::after{
+            content:""; display:block; clear: both;
+        }
+        .img_list li{
+            float : left;
+            width : 31%;
+            margin : 1%;
+            font-size: 0;
+            filter: grayscale(1);
+        }
+        .img_list li:hover{
+            filter: grayscale(0);
+            transition:0.5s;
+            transform:scale(1.05);
+        }
+        .img_list img{
+            border : 3px solid white;
+            width : 100%
+        }
+
+        #lightBox {
+            position:fixed;
+            left:0; right:0; top:0; bottom:0;
+            background-color: rgba(0, 0, 0,0.8);
+            display : none;
+        }
+        #lightBox img{
+            border : 5px solid white;
+            display:block;
+            margin : 150px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="imgbox">
+        <ul class="img_list">
+            <li><img src="images/tree-1-thumb.jpg" alt="1" data-src="images/tree-1.jpg"></li>
+            <li><img src="images/tree-2-thumb.jpg" alt="2" data-src="images/tree-2.jpg"></li>
+            <li><img src="images/tree-3-thumb.jpg" alt="3" data-src="images/tree-3.jpg"></li>
+            <li><img src="images/tree-4-thumb.jpg" alt="4" data-src="images/tree-4.jpg"></li>
+            <li><img src="images/tree-5-thumb.jpg" alt="5" data-src="images/tree-5.jpg"></li>
+            <li><img src="images/tree-6-thumb.jpg" alt="6" data-src="images/tree-6.jpg"></li>
+        </ul>
+        <div id="lightBox">
+            <img src="images/tree-1.jpg" alt="" id="lightBoxImg">
+        </div>
+    </div>
+    <script>
+        var popup = document.querySelectorAll("img")
+
+        console.log(popup);
+
+        for(let i in popup) {
+            console.log(i);
+            var lightBox = document.getElementById("lightBox");
+
+            if(i<6){
+                popup[i].onclick = function(){
+                    lightBox.style.display = "block";
+                    popup[6].setAttribute("src", this.getAttribute("data-src"));
+                }
+            }
+            else if(i==6){
+                popup[i].onclick = function(){   
+                    lightBox.style.display = "none";
+                }
+            }
+        }
+
+        console.log(popup.item);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+* { margin: 0; padding: 0; }  
+#slider { width: 700px; margin: 50px auto; border: 2px solid red; overflow: hidden; }  
+.imglist { list-style: none; width: 3500px; transform: translateX(0); transition: transform 1s; font-size: 0;  }
+.imglist li { width: 700px; float: left; }
+.imglist li img { width: 100%;}
+.clear::after { content: ""; clear: both; display: block; }
+    </style>
+</head>
+<body>
+  <div id="slider">
+     <ul class="imglist clear">
+         <li><img src="images/main_img01.png" alt=""></li>
+         <li><img src="images/main_img02.png" alt=""></li>
+         <li><img src="images/main_img03.png" alt=""></li>
+         <li><img src="images/main_img04.png" alt=""></li>
+         <li><img src="images/main_img01.png" alt=""></li>
+     </ul> 
+  </div> 
+  <script>
+      let num = 0;
+      let imglist = document.querySelector(".imglist");
+
+
+      setInterval(function(){
+        num++;
+        if(num>4){
+            num = 0;
+            imglist.style.transition = "none";
+            imglist.style.transform = "translateX(0)";
+            
+        }
+        else{
+            imglist.style.transition = "transform 1s";
+            imglist.style.transform = "translateX(" + num*-700 + "px)";
+        }
+        
+
+
+
+
+      }, 2000)
+
+  </script>  
+</body>
+</html>

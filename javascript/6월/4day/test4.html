@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    
+</head>
+<body>
+    <p id = "menu"></p>
+    <script>
+        var menu = ["라면", "떡볶이", "치킨", "피자", "냉면"];
+        var rdn = Math.random();
+
+        console.log(rdn);
+
+        var num = Math.floor(rdn*menu.length);
+        console.log(num);
+
+
+        document.write(num, "<br>")
+
+        document.getElementById("menu").innerHTML = "오늘 점심 메뉴는 " + menu[num] + "입니다.";
+
+
+      
+
+    </script>
+
+</body>
+</html>

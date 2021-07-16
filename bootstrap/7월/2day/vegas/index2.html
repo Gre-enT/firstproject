@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>풀페이지</title>
+		<link rel="stylesheet" href="css/vegas.css">
+		<script src="js/jquery-2.1.3.min.js"></script>
+		<script src="js/vegas.min.js"></script>
+
+		<script>
+			$(function(){	
+				$("body").vegas({
+					slides: [
+						{
+                            video:{
+                                src:["bgimg/bg4.mp4"],
+                                // 동영상은 연속 실행이 되지 않음
+                                mute:true
+                            }
+                        },
+                        {
+                            video:{
+                                src:["bgimg/bg5.mp4"],
+                                // 동영상은 연속 실행이 되지 않음
+                                mute:true
+                            }
+                        }
+					],
+					// delay: 3000, //지연시간
+					// transition: "slideLeft2" // 이미지 동영상 모두 전환 효과
+                    overlay: "bgimg/02.png"
+				})
+			});
+		</script>	
+			
+	</head>
+	<body> 
+		<h1> 풀페이스 이미지 배경 베가스 플러그인 </h1>
+	</body>
+</html>
+
+
+
+
+
+

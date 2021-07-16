@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #wrap {width: 800px; margin : 0 auto;
+        position:relative;
+        }
+        /* ::를 사용해서 가상의 공간을 생성함.*/
+        #content::after {content:""; display: block; clear:both;}
+        #content {
+            }
+
+        header, aside, section, footer {border:2px solid red;
+        margin : 5px 5px}
+
+        header {
+            padding:10px;
+            box-sizing: border-box;
+        }
+
+        aside ul { border:2px solid blue;
+        margin : 10px 5px;}
+
+        section article {border:2px solid green;
+        margin : 10px 0;
+        }
+
+        aside {width : 140px;
+        height : 250px;
+        float:left;}
+
+        section {
+            width : 636px;
+            height : 600px;
+            padding : 15px;
+            box-sizing: border-box;
+            float:right;
+        }
+
+        footer {
+            padding : 20px;
+            box-sizing: border-box;
+        }
+
+        #box {
+            width : 150px;
+            height : 200px;
+            background-color: deeppink;
+            padding:10px;
+            box-sizing: border-box;
+            position:absolute;
+            top:158px; right : -160px; }
+
+        #top {width:50px;height:50px;
+        background-color: forestgreen;
+        border-radius: 50%;
+        text-align: center;
+        position:fixed;
+        bottom:20px; right:20px;}
+
+        #top a{text-decoration:none;
+        line-height: 50px;
+        color:#fff;}
+
+        html {scroll-behavior: smooth;}
+
+        aside .menu {
+            position:relative
+        }
+        #circle {
+            width : 20px;
+            height : 20px;
+            background-color:blue;
+            top:50%; left:50%;
+            border-radius: 50%;
+            margin : -10px 0 0 -10px;
+            position:absolute;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="wrap">
+
+        <header>
+            <h1>상단부분</h1>
+            <p>이 부분은 상단입니다.</p>
+
+            <div id="top"><a href="#wrap">TOP</a></div>
+
+        </header>
+
+        <div id="content">
+
+            <aside>
+                <ul class="menu">좌측 메뉴
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴4</a></li>
+                    <li><a href="#">메뉴5</a></li>
+                    <li><a href="#">메뉴6</a></li>
+                    <div id="circle"></div>
+                </ul>
+            </aside>
+
+            <section>
+                <h2>본문 제목입니다.</h2>
+
+                <article><p>본문 내용 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi beatae molestiae architecto aspernatur eaque ex a dicta, natus aperiam obcaecati optio quod quibusdam libero quo? Quasi unde ducimus eveniet ut!</p></article>
+
+                <article><p>본문 내용 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut minima officiis perferendis repellat, nam labore nisi corporis. Laudantium voluptates saepe rem incidunt, odit non doloremque, maiores porro optio recusandae commodi?</p></article>
+
+                <article><p>본문 내용 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi beatae molestiae architecto aspernatur eaque ex a dicta, natus aperiam obcaecati optio quod quibusdam libero quo? Quasi unde ducimus eveniet ut!</p></article>
+
+                <article><p>본문 내용 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut minima officiis perferendis repellat, nam labore nisi corporis. Laudantium voluptates saepe rem incidunt, odit non doloremque, maiores porro optio recusandae commodi?</p></article>
+
+            </section>
+
+            <div id="box">
+                <h3>바로가기</h3>
+                <ul>
+                    <li><a href="#">바로가기1</a></li>
+                    <li><a href="#">바로가기2</a></li>
+                    <li><a href="#">바로가기3</a></li>
+                </ul>
+            </div>
+
+        </div><!-- id="content"-->
+
+
+        <footer>
+            <h2>하단 푸터 입니다.</h2>
+            <p>이것이 당신의 저작권과 주소입니다.<br>
+            뭐야 돌려줘요.</p>
+
+            
+        </footer>
+
+    </div>
+    
+</body>
+</html>

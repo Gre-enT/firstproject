@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        #popup{
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            background-color: rgba(0, 0, 0, 0.8);
+
+        }
+
+        .modal{
+            width : 400px;
+            height : 300px;
+            padding : 50px;
+            margin : 100px auto;
+            background: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="popup">
+        <div class="modal">
+            <h1>팝업</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, eligendi quia vitae nemo non temporibus impedit tempore alias neque vel reprehenderit cum provident qui, quaerat beatae minus amet, assumenda dolore.</p>
+        </div>
+    </div>
+
+
+    <script>
+        $(".modal").click(function(){
+            $("#popup").css("display", "none");
+        })
+    </script>
+</body>
+</html>

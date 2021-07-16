@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+body, h1, h2, h3, h4, h5, h6, ul, li, ol, dl, dt, dd, p { margin: 0; padding: 0; }
+
+div, header, footer, section, aside, nav { box-sizing: border-box; }
+
+a { text-decoration: none; color: #333; }
+ul { list-style: none; }
+img { vertical-align: top; }
+.clear::after { content: ""; 
+ display: block; clear: both; }
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>오늘은 날씨가 좋습니다.</title>
+</head>
+<body>
+    <p id="test"></p>
+    <!-- <button onclick="alert('test')">확인</button> -->
+    <button onclick="test2">확인</button>
+    <script>
+        var x = 'it\'s'
+        var k = "아주";
+        var y = "오늘은 날씨가 " + k + " 좋습니다.";
+        var price = 1000;
+        var num = 5;
+        var test1 = "붕어빵은 " + price + "원에 " + num + "개 입니다.";
+        var test2 = `붕어빵은 ${price}원에 ${num}개 입니다.`
+
+        function test3() {
+            document.write(test1); 
+            console.log(test2);  
+        }
+
+        document.write(y);
+        test3();
+        document.write(test2);
+
+        document.getElementById("test").innerHTML = test2;
+
+    </script>    
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .hi{
+            font-size:24px;
+            color:blue;
+        }
+        .imgName{
+            width:300px;
+            border:2px solid skyblue;
+        }
+
+        .popup {
+            position:fixed;
+            left:50%;
+            top:100px;
+            margin-left:-300px;
+            z-index:99;
+            width: 400px;
+            padding : 30px;
+            background-color: #fff;;
+            border:2px solid #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1 v-on:click="popup"> {{ userName }}씨 안녕하세요</h1>
+        <input type="text" v-model="userName">
+        <hr>
+        <p v-on:click="toggle">오늘의 날씨 : {{ weather }}</p>
+        <hr>
+        <a :href="aUrl" target="_blank">
+            <img :src="imgSrc" :alt="imgAlt">
+        </a>
+
+        <div v-on:click="close" v-if="show==true">
+            <p> 오늘의 날씨는 {{ weather }} 입니다</p>
+            
+            <img :src="imgSrc" :alt="imgAlt">
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                show:false,
+                userName:"홍길동",
+                weather:"맑음",
+                aUrl:"https://www.naver.com",
+                imgSrc:"https://picsum.photos/400",
+                imgAlt:"네이버 연결",
+            },
+
+            methods:{
+                popup:function(){
+                    this.show = true;
+                },
+                close: function(){
+                    this.show = false;
+                },
+                toggle: function(){
+                    this.show = !this.show;
+                }
+            }
+
+        });
+    </script>
+</body>
+</html> 

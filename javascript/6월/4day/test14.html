@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바시계</title>
+
+
+    <style>
+        #time {
+            border:2px solid #ccc;
+            padding : 20px;
+            text-align: center;
+            width : 500px;
+            margin : 0 auto;
+            background-color: aliceblue;
+            color : darkslategray;
+        }
+    </style>
+</head>
+<body>
+    <h1>자바스크립트 시계</h1>
+    <h2 id="time"></h2>
+
+    <script>
+        var clockShow = document.getElementById("time");
+
+        function clock(){
+            var date = new Date();
+            var clockMonth = date.getMonth();
+            var clockDay = date.getDate();
+            var clockWeek = date.getDay();
+            console.log(clockMonth+1);
+            console.log(clockDay);
+            console.log(clockWeek);
+
+            var week = ["(일)", "(월)", "(화)", "(수)", "(목)", "(금)", "(토)"]
+            console.log(week[clockWeek]);
+
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+
+
+            var realTime =
+            `${hours < 10 ? `0${hours}` : hours}  :  ${minutes < 10 ? `0${minutes}` : minutes}  :  ${seconds < 10 ? `0${seconds}` : seconds}`;
+
+            console.log(realTime);
+
+            clockShow.innerHTML = `${clockMonth+1}/${clockDay} ${week[clockWeek]} <br> ${realTime}`;
+        }
+        clock();
+        setInterval(clock, 1000);
+    </script>
+</body>
+</html>

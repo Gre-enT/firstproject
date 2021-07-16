@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선택자2</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>선택자</h1>
+    <div class="outer">
+        <div class="inner">박스</div>
+    </div>
+    <ul>
+        <li>m1</li>
+        <li>m2</li>
+        <li>m3</li>
+        <li>m4</li>
+        <li>m5</li>
+    </ul>
+
+    <ol>
+        <li>o1</li>
+        <li>o2</li>
+        <li>o3</li>
+        <li>o4</li>
+        <li>o5</li>
+    </ol>
+
+    <button>클릭</button>
+
+    <script>
+        $("button").click(function(){
+            $("ul>li:odd").css("background", "yellow");
+
+        });
+        $("ul>li").click(function(){
+            $(this).css({
+                "font-size": "32px",
+                "color": "red"
+            });
+        });
+
+        $("ol>li:eq(2)").css("background", "yellow");
+        $("ol>li:lt(2)").css("background", "red");
+        $("ol>li:gt(2)").css("background", "blue");
+
+        $(".inner:only-child").css("color", "red")
+
+        $("ol>li").slice(1,3).css("font-weight", "bold");
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선택자</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        .on{
+            font-style: italic;
+            font-size:40px;
+            color : #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">LOGO</h1>
+        <div class="join">회원가입</div>
+
+        <nav>
+            <ul class="gnb">
+                <li><a>대메뉴1</a>
+                    <ul class="sub_menu">
+                        <li>서브메뉴 1-1</li>
+                        <li>서브메뉴 1-2</li>
+                        <li>서브메뉴 1-3</li>
+                        <li>서브메뉴 1-4</li>
+                        <li>서브메뉴 1-5</li>
+                    </ul>
+                </li>
+                <li><a href="https://www.google.com">대메뉴2</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">배너</div>
+
+    <div id="visual">
+        <p>비쥬얼</p>
+    </div>
+
+    <div id="content">
+        <div class="left"></div>
+        <div class="right">
+            <p class="until">본문단</p>
+        </div>
+    </div>
+
+    <div class="banner">배너</div>
+
+    <footer id="footer">
+        하단
+    </footer>
+
+
+
+    <p id="test">안녕하세요</p>
+
+    <script>
+        // $(".logo").css("border", "2px solid skyblue);
+        $(".logo").css({
+            "border": "2px solid skyblue",
+            "color":"blue",
+            "text-align":"center",
+            "padding":20
+        });
+
+        $("nav").css({
+            "border": "2px solid orange"
+        });
+
+        $(".gnb>li").css({
+            "border-left" : "5px solid red"
+        });
+
+        $("#visual~.banner").css({      // A ~ B는 A 다음에 오는 B(형제레벨)를 선택
+            "background-color" : "skyblue"
+        });
+
+        $("p.until").css({
+            "color" : "red"
+        })
+
+        $(".left, .right").css({
+            "border":"2px solid #333"
+        })
+
+        $(".sub_menu>li").css({
+            "border":"2px solid blue"
+        });
+        $(".sub_menu>li:last").css({
+            "background-color":"yellow"
+        });
+        $(".sub_menu>li:odd").css({ // odd : 짝수
+            "background-color":"green"
+        });
+        $(".sub_menu>li").eq(0).css({
+            "color":"orange"
+        });
+
+
+        $(":root").css("background", "#555");
+        $(".until").closest("div").css("border", "5px solid white");
+
+        $(".sub_menu").parent().css("background", "red");
+
+        $("#content").children().css("background", "blue");
+
+        $("nav").prevAll().css("font-weight", "bold");
+        $('.sub_menu>li:nth-child(5)').prevUntil(".sub_menu>li:nth-child(2)").css("color", "#fff");
+        //$(선택요소).prevUntil(범위선택요소);
+
+        $("header").siblings().css("text-align", "right");
+
+
+        $(".join").click(function(){
+            $(this).toggleClass("on");
+            $(this).removeClass("join");
+            $(this).toggleClass("test");
+            $(this).text("<q>안녕하세요</q>");
+        });
+
+        $(".logo").click(function(){
+            $(this).text("<h1>제목입니다.</h1>")
+        });
+
+        $(".gnb>li:first>a").css("color", "skyblue")
+                            .attr("href", "https://www.naver.com");
+        let test = $(".gnb>li:last>a").css("color", "yellowgreen")
+                            .attr("href");
+        console.log(test);
+    </script>
+</body>
+</html>

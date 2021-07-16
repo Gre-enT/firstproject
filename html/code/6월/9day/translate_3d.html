@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .origin{
+            width:350px; height:200px;
+            border:1px solid #333;
+            float:left; margin:40px;
+            perspective: 200px;
+        }
+        .origin img {
+            width: 100%;
+        }
+
+        .origin>div {
+            transition-property: transform;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+        }
+
+        .translateX:hover{
+            transform:translateX(100px);
+        }
+
+        .translateY:hover{
+            transform: translateY(100px);
+        }
+
+        .translate:hover{
+            transform: translate(100px,100px);
+        }
+
+        .translateZ:hover{
+            transform: translateZ(-100px);
+        }
+
+        .translate3D:hover{
+            transform: translate3D(100px, 100px, -300px);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="origin">
+        <div class="translateX">
+            <img src="image/text.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="translateY">
+            <img src="image/text.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="translate">
+            <img src="image/text.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="translateZ">
+            <img src="image/text.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="translate3D">
+            <img src="image/text.jpg" alt="">
+        </div>
+    </div>
+
+
+
+</body>
+</html>

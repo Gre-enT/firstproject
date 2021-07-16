@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        body {
+            height : 2000px;
+            background-image: linear-gradient(to bottom, blue, red);
+        }
+        #wrap {
+            width : 500px;
+            margin: 0 auto;
+            padding : 10px;
+        }
+        #content{
+            height : 400px;
+            border : 5px solid blue;
+            position : relative;
+            background-image: radial-gradient(yellow, red);
+        }
+
+        #content div{
+            position:absolute
+        }
+
+        #content .box {
+            width : 50px;
+            height : 50px;
+            background-color: green;
+            color:white;
+            text-align:center;
+            line-height: 50px;
+        }
+
+        #box1 {
+            top : 10px; left: 10px;
+        }
+
+        #box2 {
+            top : 10px; right : 10px;
+        }
+
+        #box3 {
+            bottom : 10px; left : 10px;
+        }
+
+        #box4 {
+            bottom : 10px; right : 10px
+        }
+
+        #TC {
+            width : 80px;
+            height : 40px;
+            background-color: #aaa;
+            font-size:12px;
+            text-align: center;
+            line-height: 40px;
+            color:white;
+            top:10px; left : 50%;
+            margin : 0 0 0 -40px;
+        }
+
+        #circle {
+            width : 100px;
+            height : 100px;
+            background-color: deeppink;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            color:white; 
+            top : 50%; left : 50%;
+            margin : -50px 0 0 -50px;
+        }
+
+        .top{
+            width:50px;
+            height:50px;
+            background-color: deeppink;
+            position:fixed;
+            border-radius: 50%;
+            bottom: 20px;
+            right : 20px;
+            text-align: center;
+        }
+
+        .top a{
+            text-decoration:none;
+            line-height: 50px;
+            color:#fff;
+        }
+
+        .banner {
+            width : 100px;
+            height : 300px;
+            background-color: deeppink;
+            color : white;
+            text-align: center;
+            line-height: 300px;
+
+            position:absolute;
+            top: -5px; left : -120px;
+        }
+
+
+        footer {
+            height : 100px;
+            border:5px solid blue;
+            margin-top :20px;
+            position:relative;
+            background-image: radial-gradient(circle, green, pink);
+        }
+
+        footer span{
+            width:50px;
+            height:50px;
+            font-weight:bold;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            position:absolute;
+            top : 50%; margin-top: -25px;
+        }
+
+        footer span:first-child {
+            color:white;
+            background-color: red;
+            right:80px;
+        }
+
+        footer span:nth-of-type(2) {
+            color:white;
+            background-color: blue;
+            z-index: 1;
+            right:45px;
+        }
+
+        footer span:nth-of-type(3) {
+            color:white;
+            background-color: black;
+            right:10px;
+        }
+
+        footer span:last-child {
+            width:100px;
+            height:100px;
+            border:5px solid blue;
+            border-radius: 0%;
+            color:white;
+            background-color: skyblue;
+            top : 0;
+            margin-top : -5px;
+            right: -140px;
+            line-height: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="out">
+            <div class="top"><a href="#wrap">TOP</a></div>
+        </div>
+
+        <div id="content">
+            <div id="box1" class="box">1</div>
+            <div id="box2" class="box">2</div>
+            <div id="box3" class="box">3</div>
+            <div id="box4" class="box">4</div>
+            <div id="TC">TOP/CENTER</div>
+            <div id="circle">중앙배치</div>
+
+            <div class="banner">배너</div>
+        </div>
+
+        <footer>
+            <span>S</span>
+            <span>N</span>
+            <span>S</span>
+
+            <span>TEST</span>
+        </footer>
+
+    </div>
+</body>
+</html>

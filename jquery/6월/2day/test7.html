@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        ul{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        .gnb>li{
+            float:left;
+            padding:10px 20px;
+            background: yellow;
+            position : relative;
+        }
+
+        .sub_menu{
+            position:absolute;
+            top :50px;
+            width : 100%;
+            background: skyblue;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="gnb">
+            <li>대메뉴 1-1
+                <ul class="sub_menu">
+                    <li>서브 1-1</li>
+                    <li>서브 1-2</li>
+                    <li>서브 1-3</li>
+                    <li>서브 1-4</li>
+                    <li>서브 1-5</li>
+                </ul>
+            </li>
+
+            <li>대메뉴 1-2
+                <ul class="sub_menu">
+                    <li>서브 2-1</li>
+                    <li>서브 2-2</li>
+                    <li>서브 2-3</li>
+                    <li>서브 2-4</li>
+                    <li>서브 2-5</li>
+                </ul>
+            </li>
+
+            <li>대메뉴 1-3
+                <ul class="sub_menu">
+                    <li>서브 3-1</li>
+                    <li>서브 3-2</li>
+                    <li>서브 3-3</li>
+                    <li>서브 3-4</li>
+                    <li>서브 3-5</li>
+                </ul>
+            </li>
+
+            <li>대메뉴 1-4
+                <ul class="sub_menu">
+                    <li>서브 4-1</li>
+                    <li>서브 4-2</li>
+                    <li>서브 4-3</li>
+                    <li>서브 4-4</li>
+                    <li>서브 4-5</li>
+                </ul>
+            </li>
+
+            <li>대메뉴 1-5
+                <ul class="sub_menu">
+                    <li>서브 5-1</li>
+                    <li>서브 5-2</li>
+                    <li>서브 5-3</li>
+                    <li>서브 5-4</li>
+                    <li>서브 5-5</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <script>
+        $(function(){
+            $(".gnb>li").mouseover(function(){
+                $(this).children(".sub_menu").stop().slideDown(500);
+            })
+            
+            $(".gnb>li").mouseout(function(){
+                $(this).children(".sub_menu").stop().slideUp(500);
+            })
+            
+        })
+    </script>
+</body>
+</html>

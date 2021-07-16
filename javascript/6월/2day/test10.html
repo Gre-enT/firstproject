@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var price = prompt("오늘의 지출액을 입력하세요.", "");
+        var money = 10000;
+
+        var left = money - price;
+        var over = price - money;
+
+        if(price < money){
+            document.write("용돈 관리를 잘했습니다. " + left + "원 절약했습니다.");
+        } else{
+            document.write("용돈 관리를 못했습니다. " + over + "원 초과했습니다.");
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #imgbox{
+            width:350px;
+            height:300px;
+            margin:50px auto;
+            overflow: hidden;
+            border:5px solid skyblue;
+            font-size:0;
+        }
+        #imgbox img{
+            width:100%;
+        }
+
+        #btnbox{
+            width:350px;
+            margin:0px auto;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="imgbox"><img src="images/coffee-1.jpg" alt=""></div>
+    <div id="btnbox">
+        <button class="prev">이전</button>    
+        <button class="next">다음</button>
+    </div>
+
+    <script>
+        let num = 1;
+
+        let img = document.querySelector("#imgbox>img");
+        let btnNext = document.querySelector(".next");
+        let btnPrev = document.querySelector(".prev");
+
+        btnNext.addEventListener("click", next);
+        btnPrev.addEventListener("click", prev);
+
+        function next() {
+            if(num < 3){
+                num++;
+            }
+            else {
+                num=1;
+            }
+
+            img.setAttribute("src", "images/coffee-" + num + ".jpg")
+            console.log(num);
+        }
+        function prev() {
+            if(num > 1){
+                num--;
+            }
+            else {
+                num=3;
+            }
+
+            img.setAttribute("src", "images/coffee-" + num + ".jpg")
+            console.log(num);
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        h1{
+            text-align: center;
+            font-size:82px;
+            padding:100px 0;
+        }
+        header {
+            height: 50vw;
+            position : relative;
+            overflow: hidden;
+        }
+        #bg{
+            position:fixed;
+            left:0;
+            top:0;
+            width:100%;
+            z-index:-1;
+        }
+        @media screen and (max-width:500px){
+            
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+        <h1>영상 배경 출력하기</h1>
+        <video id="bg" src="videos/Rainy Day.mp4" autoplay loop controls preload="auto" poster="images/dslr.png" muted width="50%"></video>
+    </header>
+</body>
+</html>

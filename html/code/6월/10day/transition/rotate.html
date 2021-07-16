@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      .origin { width: 350px; height: 200px; 
+                border: 1px solid #333; 
+                float: left; margin: 40px; }  
+      .origin img { width: 100%; } 
+
+      .origin>div { transition-property: transform; 
+                    transition-duration: 1s; 
+                    transition-timing-function: ease; }
+
+      .rotate:hover { transform: rotate(180deg); }
+      .rotate2:hover { transform: rotate(-180deg); }
+
+    </style>
+</head>
+<body>
+  <div class="origin">
+    <div class="rotate">
+     <img src="test.jpg" alt="">   
+    </div>  
+  </div> 
+  <div class="origin">
+    <div class="rotate2">
+     <img src="test.jpg" alt="">   
+    </div>  
+  </div>
+</body>
+</html>

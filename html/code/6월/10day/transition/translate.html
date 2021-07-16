@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      .origin { width: 350px; height: 200px; 
+                border: 1px solid #333; 
+                float: left; margin: 40px; }  
+      .origin img { width: 100%; } 
+
+      .origin>div { transition-property: transform; 
+                    transition-duration: 1s; 
+                    transition-timing-function: ease; }
+
+      .translateX:hover { transform: translateX(100px); }
+      .translateY:hover { transform: translateY(100px); }
+      .translate:hover { transform: translate(50px, 50px); }
+
+    </style>
+</head>
+<body>
+  <div class="origin">
+    <div class="translateX">
+     <img src="test.jpg" alt="">   
+    </div>  
+  </div> 
+  <div class="origin">
+    <div class="translateY">
+     <img src="test.jpg" alt="">   
+    </div>  
+  </div> 
+  <div class="origin">
+    <div class="translate">
+     <img src="test.jpg" alt="">   
+    </div>  
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.11.0/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+        class Counter = () => {
+            console.log( useState());
+
+            return (
+                <div>
+                    <h1>0</h1>
+                    <button onClick={ () => {count = count +1} }>+</button>
+                    <button onClick={ count = 0 }>reset</button>
+                </div>
+            )
+        }
+
+
+        ReactDOM.render(
+            <Counter></Counter>
+            document.getElementById('app')
+        );
+    </script>
+</body>
+</html>

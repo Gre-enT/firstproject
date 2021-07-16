@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    
+</head>
+<body>
+    <p id = "total"></p>
+    <script>
+        var car = ["볼보", "미니쿠퍼", "지프", "티코", "전기차"];
+
+
+        var list = "";
+
+        document.write(car, car.length, "<br><br>")
+
+        
+        list += "<ul>"
+            for(var i in car){
+                list += "<li>" + car[i] + "</li>";
+            }
+        list += "</ul>"
+
+        document.write(list);
+      
+
+    </script>
+
+</body>
+</html>

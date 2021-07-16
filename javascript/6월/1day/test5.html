@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>관계연산자 // 양쪽 데이터 비교</title>
+</head>
+<body>
+    <p id="test1"></p>
+    <br>
+    <p id="test2"></p>
+    <br>
+    <p id="test3"></p>
+    <br>
+    <p id="test4"></p>
+    
+
+    <script>
+        var x = 6;
+        var y = 3;
+
+        //양쪽 &&
+
+        document.getElementById("test1").innerHTML =
+        (x < 10 && y > 1) + "<br>" +
+        (x > 10 && y > 1) + "<br>" +
+        (x < 10 && y < 1) + "<br>" +
+        (x > 10 && y < 1)
+
+
+
+        document.getElementById("test2").innerHTML =
+        (x < 10 || y > 1) + "<br>" +
+        (x > 10 || y > 1) + "<br>" +
+        (x < 10 || y < 1) + "<br>" +
+        (x > 10 || y < 1)
+
+
+
+        document.getElementById("test3").innerHTML =
+        !(x < 10 && y > 1) + "<br>" +
+        !(x > 10 && y > 1) + "<br>" +
+        !(x < 10 && y < 1) + "<br>" +
+        !(x > 10 && y < 1)
+
+
+
+        document.getElementById("test4").innerHTML =
+        !(x < 10 || y > 1) + "<br>" +
+        !(x > 10 || y > 1) + "<br>" +
+        !(x < 10 || y < 1) + "<br>" +
+        !(x > 10 || y < 1)
+
+        
+        
+    </script>
+
+</body>
+</html>

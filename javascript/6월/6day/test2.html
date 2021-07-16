@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>D-Day 계산</title>
+</head>
+<body>
+    <h1 id="title">음식리스트</h1>
+
+    <ul>
+        <li class="item">짜장면</li>
+        <li class="item">피자</li>
+        <li class="item">햄버거</li>
+        <li class="item">떡볶이</li>
+        <li class="item">치킨</li>
+    </ul>
+    <button onclick="change()">변경</button>
+
+    <img src="d-day_sos/images/easys-1.jpg" alt="여자어린이" id="cover">
+    
+
+		<script>
+            function change() {
+                var main = document.getElementsByTagName("body");
+                
+                var title = document.getElementById("title");
+                // title[0].innerHTML = "타이틀";
+
+                main[0].style.backgroundColor = "#ddd";
+                main[0].style.color = "blue";
+                
+                main[0].style.textDecoration = "underLine";
+
+
+                document.getElementsByTagName("li");
+                for(i in item){
+                    item[i].style.backgroundColor = ""
+                }
+            }
+
+            let cover = document.getElementById("cover");
+
+            cover.addEventListener("mouseover", function(){
+                // alert("test");
+                cover.src = "d-day_sos/images/easys-2.jpg"
+                // cover.setAttribute("alt", "남자어린이")
+                cover.alt = "남자어린이";
+            });
+            cover.addEventListener("mouseout", function(){
+                // alert("test");
+                cover.src = "d-day_sos/images/easys-1.jpg"
+                // cover.setAttribute("alt", "여자어린이")
+                cover.alt = "여자어린이";
+            });
+
+		</script>
+
+</body>
+</html>

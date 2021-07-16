@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3의 배수 갯수</title>
+
+
+    <style>
+        tr[]{
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var num = prompt("3의 갯수 구하는 프로그램");
+        var count = 0;
+        for(var i=1; i<=num; i++){
+            if(i%3 == 0){
+                count++;
+                
+                console.log(i);
+                document.write(i + ", ");
+                if(count%10 == 0){
+                    document.write("<br>");
+                }
+            }
+
+        }   
+
+        document.write("<br>1부터 " + num + "까지 3의 배수는 " + count + "개 입니다.");
+
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>document</title>
+
+
+    <style>
+        .box{
+            width : 100px;
+            height : 100px;
+            background-color:yellow;
+            margin: 50px auto;
+        }
+        .box2{
+            width : 100px;
+            height : 100px;
+            background-color:yellow;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    
+
+		<script>
+            var box = document.getElementsByClassName("box");
+            box[0].addEventListener("mouseover", function(){
+                box[0].style.borderRadius = "50%"
+                box[0].style.backgroundColor = "red"
+                
+            });
+            box[0].addEventListener("mouseout", function(){
+                box[0].style.borderRadius = ""
+                box[0].style.backgroundColor = ""
+            });
+
+
+
+            let box2 = document.querySelector(".box2");
+
+            box2.addEventListener("mouseover", function(){
+                box2.style.borderRadius = "50%"
+                box2.style.backgroundColor = "red"
+                
+            });
+            box2.addEventListener("mouseout", function(){
+                box2.style.borderRadius = ""
+                box2.style.backgroundColor = ""
+            });
+
+		</script>
+
+</body>
+</html>

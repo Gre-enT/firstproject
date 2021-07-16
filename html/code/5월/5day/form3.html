@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>지원서</title>
+
+    <style>
+        #wrap{
+            width:630px; margin:0 auto;
+        }
+
+        fieldset {
+            /* border:none; 필드셋에 있는 경계를 지울 수 있음 */
+            padding : 20px 40px;
+        }
+
+        form ul {
+            list-style: none;
+            padding:0;
+        }
+        
+        form ul li {
+            margin-bottom: 5px;
+        }
+
+        form ul li label{
+            display : inline-block;
+            width : 60px;
+            vertical-align: middle;
+        }
+
+        form ul p, form li p, fieldset p:nth-of-type(2){
+            font-weight: bold;
+            color : rgb(36, 138, 197)
+        }
+
+        :checked +spam{
+            color:white;
+            background-color: cadetblue;
+        }
+
+        /* border가 아니라 outline를 사용해야 함. */
+        input:focus, textarea:focus{
+            outline:1px solid blue;
+        }
+
+        .fill>li>ul>li{
+            line-height: 1.8
+        }
+
+        .fill>li {
+            margin-bottom : 40px;
+        }
+
+        .btn_box {
+            text-align: center;
+        }
+
+        .btn_box input:nth-of-type(1) {
+            background-color: blueviolet; color:#fff;
+            border:none; padding:10px 20px;
+            border-radius: 5px;
+        }
+
+        .btn_box input:nth-of-type(2) {
+            background-color: crimson; color:#fff;
+            border:none; padding:10px 20px;
+            border-radius: 5px;
+        }
+
+        #skill {
+            border-collapse: collapse;
+            width : 500px;
+            margin-bottom:30px;
+        }
+
+        #skill tr:first-child th{
+            height : 50px;
+            background-color: cadetblue;
+            color:white;
+        }
+
+        #skill tr:first-child th:first-child{
+            background-color: purple;
+            color:white;
+        }
+
+        #skill tr:last-child td:first-child{
+            background-color: purple;
+            color:white;
+        }
+
+
+        #skill tr td{
+            padding : 15px;
+            text-align: center;
+        }
+
+        #skill tr td, #skill tr th {
+            border:1px solid #333;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="wrap">
+
+        <form action="127.0.0.1.php">
+            <fieldset>
+                <h1>프런트엔드 개발자 지원서</h1>
+                <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+                <hr>
+                
+                <ul class="fill" >
+                    <li>
+                        <p>개인정보</p>
+                        <ul class="identify">
+                            <li>
+                                <label for="usr_name">이름</label>
+                                <input type="text" id="usr_name" placeholder="공백없이 입력하세요.">
+                            </li>
+            
+                            <li>
+                                <label for="tel1">연락처</label>
+                                <select name="phonenum" id="tel1" onkeyup="if(this.selection()) this.form.tel.focus()">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="012">012</option>
+                                    <option value="013">013</option>
+                                    <option value="014">014</option>
+                                    <option value="015">015</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                <input type="tel2" id="tel2" size="1" maxlength="4" onkeyup = "if(this.value.length == 4) this.form.tel3.focus()">
+                                <input type="tel3" id="tel3" size="1" maxlength="4">
+                            </li>
+
+                            <li>
+                                <label for="usr_email">이메일</label>
+                                <input type="email" size="10" id="usr_email">
+                                <span>@</span>
+
+                                <select name="" id="">
+                                    <option value="">선택</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                    <option value="hanmail.net">hanmail.net</option>
+                                    <option value="yahoo.co.kr">yahoo.co.kr</option>
+                                </select>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p>지원 분야</p>
+                        <ul class="subject">
+                            <li>
+                                <input type="radio" name="sj" value="sj1" checked><spam>웹 퍼블리싱</spam>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="sj" value="sj2"><spam>웹 어플리케이션 개발</spam>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="sj" value="sj3"><spam>개발 환경 개선</spam>
+                            </li>
+                        </ul>
+
+
+                    </li>
+
+                    <li>
+                        <p>지원 동기</p>
+                            <textarea name="건의사항" id="clame" cols="50" rows="6" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+                    </li>
+            </ul>
+                
+            <p>작업스킬</p>
+            <table id="skill"> <!-- li 안에 들어가면 th 기본속성이 일부 삭제됨 -->                    
+                <tr>
+                    <th rowspan="2">구분</th>
+                    <th>html</th>
+                    <th>CSS</th>
+                    <th>jQuery</th>
+                </tr>
+
+                <tr>
+                    <td>상급</td>
+                    <td>상급</td>
+                    <td>상급</td>
+                </tr>
+
+                <tr>
+                    <td>자격증</td>
+                    <td colspan="3">GTQ1급/웹디자인기능사</td>
+                </tr>
+            </table>
+
+
+                <div class="btn_box">
+                    <input type="submit" value="접수하기">
+                    <input type="reset" value="다시 쓰기">                
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+</html>

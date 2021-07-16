@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>scroll</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        #wrap { height: 2000px; }
+        #wrap > div { width: 100px; height: 100px; margin: 10px; 
+                      position: fixed; top: 10px;}
+        .box1 {background: skyblue; left: 0; }
+        .box2 {background: orange;  left: 110px; }
+        .box3 {background: deeppink; left: 220px;}
+        .box4 {background: blueviolet; left: 330px;}
+        .box5 {background: blue; left: 440px;}
+
+        .value { position: fixed; top: 10px; right: 10px; font-size: 32px; }
+    </style>
+    <script>
+     $(function(){
+        //  let box4left = $(".box4").offset().left; 
+        //  let box4top = $(".box4").offset().top; 
+
+         let box4left = $(".box4").position().left; 
+         let box4top = $(".box4").position().top;
+
+         $(window).scroll(function(){
+             let sctop = $(this).scrollTop();
+             $(".value").text(sctop);
+
+             $(".box1").css("top", sctop/3 );
+             $(".box2").css("left", (sctop+110)*2 );
+             $(".box3").css({
+                 "top":sctop,
+                 left: (sctop+220)*2
+             });
+             $(".box4").css({
+                 top: box4top + sctop, 
+                 left: box4left + sctop*2,
+             });
+             $(".box5").css({
+                 transform: "rotate("+ sctop*2 +"deg) scale("+ sctop*0.003 +")",
+                 opacity: sctop*0.005,
+                 top: sctop*0.5
+             });
+         });
+     });
+    </script>
+</head>
+<body>
+  <p class="value">스크롤 좌표</p>
+  <div id="wrap">
+      <div class="box1"> box1 </div>
+      <div class="box2"> box2 </div>
+      <div class="box3"> box3 </div>
+      <div class="box4"> box4 </div>
+      <div class="box5"> box5 </div>
+  </div>  
+</body>
+</html>
+​

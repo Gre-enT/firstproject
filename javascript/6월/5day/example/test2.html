@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setArttribute</title>
+
+
+    <style>
+        .imgbox {
+            width : 400px;
+            padding 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .imgbox img {
+            width : 100%;
+        }
+
+        #desc{
+            width : 400px;
+            padding : 20px;
+            border : 1px solid #ccc;
+
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="gallery">
+        <div class="imgbox"><img src="images/pic_1.jpg" alt="" id="photo"></div>
+        <p>
+            <button onclick="show()" id="open">상품 설명 보기</button>
+        </p>
+        <p>
+            <button onclick="gallery(0)">이전</button>
+            <button onclick="gallery(1)">다음</button>
+        </p>
+
+        <div id="desc">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem tempore maiores, architecto porro ab laborum suscipit dolorum pariatur perferendis dicta quis facere. Neque nostrum voluptatibus ipsum eius, dolor corporis libero!</p>
+            <button onclick="hide()">상품 설명 닫기</button>
+        </div>
+        
+    </div>    
+
+    <script>
+        var num=1;
+
+
+        function gallery(direct){
+            if (direct) {
+                if(num==9) return;
+                num++;
+            }
+            else {
+                if(num==1) return;
+                num--;
+            }
+            var imgTag = document.getElementById("photo");
+            imgTag.setAttribute("src", "images/pic_"+num+".jpg");
+        }
+
+        var desc = document.getElementById("desc");
+
+        function show() {
+            desc.style.display = "block";
+            open.style.display = "none";
+        }
+        function hide() {
+            desc.style.display = "none";
+            open.style.display = "block";
+        }
+
+    </script>
+</body>
+</html>

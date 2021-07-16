@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #wrap{
+            padding : 30px 100px;
+            text-align: center;
+            width : 200px;
+            margin : 50px auto;
+            border:5px solid skyblue;
+        }
+
+        #title{
+            font-size:42px;
+        }
+        
+        .fa{
+            font-size: 62px;
+            color:skyblue;
+        }
+        #like {
+            font-size:32px;
+            color:crimson;
+            margin-top:30px;
+        }
+
+        .hide {
+            display:none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 id="title">추천</h1>
+        <i class="fa fa-thumbs-up"></i> <!--fa-thumbs-down -->
+        <div id="like">♥ ♥ ♥</div>
+    </div>
+    <script>
+        let wrap = document.querySelector("#wrap");
+        let fa = document.querySelector(".fa");
+        
+        wrap.onclick = function() {
+            let title = document.querySelector("#title");
+            let like = document.querySelector("#like");
+            if(title.innerHTML == "추천"){
+                title.innerHTML = "비추천"
+                fa.classList.add("fa-thumbs-down");
+                fa.classList.remove("fa-thumbs-up");
+                like.style.display = "none";
+            }
+            else if(title.innerHTML == "비추천"){
+                title.innerHTML = "추천";
+                fa.classList.add("fa-thumbs-up");
+                fa.classList.remove("fa-thumbs-down");
+                like.style.display = "";
+            }
+        }
+    </script>
+  </body>
+  </html>

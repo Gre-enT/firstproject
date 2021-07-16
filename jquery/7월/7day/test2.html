@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin : 0;
+            padding : 0;
+        }
+
+        #wrap{
+            width: 70%;
+            height: 300px;
+            border: 1px solid red;
+            margin: 0 auto;
+
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #wrap>div{
+            height: 200px;
+            border: 2px solid blue;
+            font-size: 22px;
+            box-sizing: border-box;
+        }
+        /*
+            flex : 1 1 auto;
+            flex-grow : 설정한 대로 늘어남
+            flex-shrink : 설정한 비율대로 줄어듬
+            flex-basis : 늘어나거나 줄어드는 기준 너비 설정
+            만약
+            0 -> 컨텐츠 전체 너비를 비율대로 할다
+            auto -> 남는 여백 너비를 비율대로 할당
+            100px -> 설정한 너비와 남는 공간을 비율대로 할당
+        */
+        .box1{
+            flex:1 1 auto;
+        }
+        .box2{
+            flex:3 3 auto;
+        }
+        .box3{
+            flex:1 1 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box1">오늘은</div>
+        <div class="box2">...</div>
+        <div class="box3">아침부터 계속 비가 내림</div>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .toggle {
+            display:inline-block;
+            cursor: pointer;
+            margin:50px 0 0 500px;
+        }
+        .toggle span{
+            width:35px;
+            height:2px;
+            background-color: #333;            
+        }
+
+
+        .on{
+            left : 0px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>   
+    <nav class="sidenav">
+      <a href="#" class="close">닫기 X</a>
+      <a href="#">menu01</a>  
+      <a href="#">menu02</a>  
+      <a href="#">menu03</a>  
+      <a href="#">menu04</a>  
+    </nav>
+
+    <script>
+        let toggle = document.querySelector(".toggle");
+        let sidenav = document.querySelector(".sidenav");
+        let close = document.querySelector(".close");
+
+        toggle.onclick = function(){
+            // sidenav.classList.toggle("on");
+            // sidenav.style.left = "0px";
+            if(sidenav.style.left == "0px"){
+                sidenav.style.left == "-400px"
+            }
+            else{
+                sidenav.style.left = "0px"
+            }
+        }
+
+        close.onclick = function(){
+            sidenav.classList.toggle("on");
+        }
+    </script>
+  </body>
+  </html>

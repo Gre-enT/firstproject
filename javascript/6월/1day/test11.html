@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>투표권 확인</title>
+</head>
+<body>
+    <input type="text" id="age" placeholder="나이를 입력하세요.">
+    <button onclick="check()">확인하기</button>
+    <p id="result"></p>
+
+    <script>
+        function check(){
+        var age = document.getElementById("age").value;
+        const basic = 18;
+
+        var result = age > basic ? "투표가 가능" : "투표가 불가능"
+        document.getElementById("result").innerHTML
+        = "당신은 " + result + "합니다.";
+        }
+    </script>
+    
+</body>
+</html> 

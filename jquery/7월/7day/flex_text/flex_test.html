@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      #wrap { max-width: 1200px; margin: 0 auto; }
+      header h1 { font-size: 3em; text-align: center; }
+
+      #content>div {height: 320px; 
+                    border: 1px solid #333; 
+                    margin-bottom: 10px; 
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover; }
+
+      .box1 { background-image: url(images/01.jpg); }       
+      .box2 { background-image: url(images/02.jpg); }       
+      .box3 { background-image: url(images/03.jpg); }       
+      .box4 { background-image: url(images/04.jpg); }       
+      .box5 { background-image: url(images/05.jpg); }            
+      footer { background-color: #ddd;
+              text-align: center; padding: 10px 0; }
+        
+
+         /* 태블릿 560~ */
+         @media screen and (min-width: 560px) {
+          #content{
+            display : flex;
+            flex-flow : row wrap;
+            justify-content: space-between;
+          }
+          #content>div{
+            width : 49%;
+            
+          }
+          #content>.box5{
+            flex:2 2 auto;
+          }
+         }
+
+         /* PC 760~ */
+         @media screen and (min-width:760px) {
+           #content>div{
+             width : 32%;
+           }
+         }
+     
+    </style>
+</head>
+<body>
+  <div id="wrap">
+      <header>
+        <h1>플랙스 레이아웃</h1>
+      </header>
+      <section id="content">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>  
+      </section>
+      <footer>
+        <p>copyright</p>  
+      </footer>
+  </div>  
+</body>
+</html>

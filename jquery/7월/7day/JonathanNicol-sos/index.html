@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Jonathan Nicol</title>
+	<link rel="stylesheet" href="css/jonathan.css">
+
+	<script src="js/jquery-1.12.4.min.js"></script>
+
+	<script>
+		$(function(){
+			$("header .inner").append("<button></button>")
+			.find("button")
+			.css({
+				position:"absolute",
+				top: "20px",
+				right: "10px",
+				border: "0",
+				width: "24px",
+				height: "24px",
+				background: "url(img/ico-list.svg) no-repeat 50% 50%",
+				cursor: "pointer"
+			}).click(function(){
+				// alert("click");
+				$("header nav .gnb").slideToggle();
+			})
+
+		})
+
+	</script>
+</head>
+<body>
+  <!-- #wrap>header+#content+footer -->
+  <div id="wrap">
+	<header>
+	  <div class="inner">
+		<h1 class="logo"><a href="#">JONATHAN NICOL</a></h1>  
+		<nav>
+		  <ul class="gnb">
+			  <li><a href="#">WORK</a></li>
+			  <li><a href="#">BLOG</a></li>
+			  <li><a href="#">ABOUT</a></li>
+			  <li><a href="#">CONTACT</a></li>
+		  </ul>	
+		</nav>
+	  </div>	
+	</header>
+	<div id="content">
+	 <!-- ul.list>li*6>a>img+strong	 -->
+	 <ul class="list">
+		<li><a href="#">
+			<img src="img/engraving-men.png" alt="">
+			<strong>Work</strong></a></li>
+		<li><a href="#">
+			<img src="img/engraving-typewriter.png" alt="">
+			<strong>Blog</strong></a></li>
+		<li><a href="#">
+			<img src="img/engraving-brain.png" alt="">
+			<strong>About</strong></a></li>
+		<li><a href="#">
+			<img src="img/engraving-bird.png" alt="">
+			<strong>Twitter</strong></a></li>
+		<li><a href="#">
+			<img src="img/engraving-octopus.png" alt="">
+			<strong>Githup</strong></a></li>
+		<li><a href="#">
+			<img src="img/engraving-boy.png" alt="">
+			<strong>Contact</strong></a></li>
+	 </ul>
+	</div>
+	<footer>
+	  <div class="btm_logo">
+		<p>JONATHAN NICOL</p>
+	  </div>	
+	  <div class="address">
+		 <address>
+			Jonathan Nicol <br>
+			Room 6, Level 5<br>
+			358 Lonsdale Street<br>
+			Melbourne, VIC 3000<br>
+			Australia 
+		 </address>  
+	  </div>	
+	  <div class="email">
+		  <address>info@jonathannicol.com</address>
+	  </div>	
+	  <ul class="sns">
+        <li><a href="#"> </a></li>
+        <li><a href="#"> </a></li>
+	  </ul>	
+	</footer>
+  </div>
+</body>
+</html>

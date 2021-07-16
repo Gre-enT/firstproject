@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+/* reset */
+html{
+    font-size:10px;
+    scroll-behavior: smooth;
+}
+
+body, h1, h2, h4, p, ul, li, ol, dl, dt, dd{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;;
+    color:#ccc;
+}
+ul{
+    list-style: none;
+}
+/*
+img{
+    max-width:100%;
+}*/
+.clear::after{
+    content:""; display:block; clear: both;
+}
+
+
+/* 공통+모바일 */
+
+#wrap{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+header{
+    background-color: brown;
+    padding:1em;
+}
+.gnb{
+
+}
+.gnb li{
+    float:left;
+    margin:0 20px;
+    font-size:1.6em;
+}
+.gnb li a{
+    color:#fff;
+}
+
+
+#visual{
+    height:500px;
+    background: url(../images/header.jpg) no-repeat center / cover;
+    position:relative;
+}
+.caption{
+    width:40%;
+    min-width:260px;
+    background-color: rgba(65, 15, 15,0.7);
+    border-radius: 20px;
+    height : 120px;
+    padding:2em 1em 1em;
+    position:absolute;
+    top: 100px;
+    left : 50%;
+    transform:translateX(-50%)
+
+}
+.caption h1{
+    font-size: 3em;
+    color:#fff;
+    text-align: center;
+    margin-bottom:0.5em;
+}
+.caption p{
+    font-size:2em;
+    text-align: center;
+    color:#ddd;
+}
+.btn{
+    width : 100px;
+    height : 40px;
+    background-color: rgba(165, 42, 42, 0.8);
+
+    text-align: center;
+    line-height: 40px;
+    font-weight:bold;
+    font-size:1.5em;
+
+    position:absolute;
+    top:300px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+#content{
+
+}
+#content section{
+    border-left:1px solid #000;
+    border-top:1px solid #000;
+    border-right:1px solid #000;
+    padding:3em 10%;
+}
+#content img{
+    width:100%;
+}
+#content section h3{
+    font-size: 2em;
+    margin-bottom:1em;
+}
+#content section .txtbox{
+    font-size: 1.6em;
+    line-height: 1.8;
+    margin-top:1em;   
+}
+.intro{
+
+}
+.intro .imgbox{
+
+}
+.intro .txtbox{
+    
+}
+
+.map{
+
+}
+.map .imgbox{
+
+}
+.map .txtbox{
+    
+}
+
+.coffee{
+    border-bottom:1px solid #000;
+}
+.coffee h4{
+    font-size:1.8em;
+    color:cornflowerblue;
+    margin-top:2em;
+}
+.coffee .list{
+    padding-left:20px;
+    margin-top:2em;
+}
+.coffee .list li{
+    font-size:1.6em;
+    line-height:2;
+}
+.coffee .imgbox{
+    margin-top:2em;
+}
+.coffee .imgbox img{
+    border-radius:50%;
+}
+
+footer{
+    background-color: #333;
+    color:#fff;
+    text-align: center;
+    padding:1.2em;
+    font-size:2em;
+}
+
+/* 태블릿 520px~*/
+@media screen and (min-width:520px){
+    #content section{
+        padding : 3em 7%;
+    }
+    #content section .imgbox{
+        float:left;
+        width:50%;
+        margin-right:4%;
+    }
+    #content section .txtbox{
+        float:right;
+        width:46%;
+    }
+    #content section h3{
+        text-align: center;
+        font-size:3em;
+    }
+    #content .coffee .imgbox{
+        width:100%;
+        text-align:center;
+    }
+    #content .coffee .imgbox img{
+        width: 70%;
+        margin:1em 0;
+    }
+
+}
+
+
+/* PC 720px~*/
+
+@media screen and (min-width:720px){
+    html{
+        font-size:12px;
+    }
+
+    #content section h3{
+        text-align: left;
+    }
+
+    #content section .imgbox{
+        width:100%;
+        float:none;
+        margin-right:0;
+    }
+    /*
+    #content section .imgbox img{
+        height : 230px;
+    }*/
+
+    #content section .txtbox{
+        float:none;
+        width:100%;
+    }
+    #content .intro{
+        float:left;
+        width: 50%;
+        border-right:0;
+        
+        box-sizing: border-box;
+
+        height:520px;
+    }
+
+    #content .map{
+        float:left;
+        width: 50%;
+        
+        box-sizing: border-box;
+        height:520px;
+    }
+
+    #content .coffee{
+        clear:both;
+    }
+
+    #content .coffee .list{
+        float:left;
+        width : 50%;
+        box-sizing: border-box;
+    }
+    #content .coffee .imgbox{
+        float:left;
+        width : 50%;
+        margin-top: -30px;
+    }
+}

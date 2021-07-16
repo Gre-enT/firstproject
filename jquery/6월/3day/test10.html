@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>284p</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        *{
+            margin : 0;
+            padding : 0;
+        }
+
+        div:nth-of-type(1){
+            background-color: red;
+        }
+        div:nth-of-type(2){
+            background-color: blue;
+        }
+        div:nth-of-type(3){
+            background-color: green;
+        }
+    </style>
+
+    <script>
+            $(function(){
+                $("div").eq(0).css({
+                    padding:10,
+                    textAlign:"center"
+                });
+                $("div").css(
+                    "width", function(index){
+                        return index*100+100;
+                    
+                });
+            })
+    </script>
+
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</body>
+</html>

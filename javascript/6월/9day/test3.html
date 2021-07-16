@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>태그생성</title>
+    
+</head>
+    <body>
+
+    
+    <script>
+        let newTagA = document.createElement("a");
+        console.log(newTagA);
+
+        let newText = document.createTextNode("네이버로 이동");
+        console.log(newText);
+
+        newTagA.appendChild(newText)
+
+        let addr = document.createAttribute("href");
+        addr.value = "https://www.naver.com"
+
+        newTagA.setAttributeNode(addr);
+        document.body.appendChild(newTagA);
+    </script>
+</body>
+</html>

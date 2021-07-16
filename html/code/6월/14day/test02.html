@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        /* 공통 0~100% pc화면 */
+        * {
+            margin:0;
+            padding:0;
+        }
+
+        body {
+            background-color: cornflowerblue;
+        }
+
+        .clear::after{
+            content:""; display:block; clear: both;
+        }
+
+        #wrap{
+            width:70%;
+            margin:0 auto;
+            min-width: 1000px;
+        }
+
+        header {
+            text-align: center;
+            padding:20px 0;
+        }
+        header h1{
+            font-size:2.625em; /* 42px */
+            margin:1.25em 0; /* 20px */
+        }
+        header ul{
+            list-style: none;
+            padding:1em 0;
+        }
+        header ul li{
+            width:25%;
+            font-size:1em;
+            box-sizing: border-box;
+            border:2px solid blue;
+            height:40px;
+            line-height: 36px;
+            text-align: center;
+            float:left;
+            background-color: #fff;
+        }
+
+        #content{
+            margin: 1em auto;
+            text-align: center;
+        }
+        #content section{
+            margin-bottom:10px;
+            background-color: white;
+            padding:1em;
+            font-size:0.875em;
+        }
+        #content section h2 {
+            margin: 1em 0;
+        }
+        #content section>p{
+            margin:1em 0;
+        }
+        #content section ul{
+            list-style:none;
+            overflow: hidden;
+        }
+        #content section ul li{
+            width:30%;
+            float:left;
+            margin: 0 1.5%;
+            background-color: white;
+        }
+        #content section ul li img{
+            width:100%;
+        }
+        #content section ul li p{
+            text-align: left;
+        }
+
+            padding:1em 0;
+            text-align: center;
+        }
+
+
+
+        /* 태블릿 화면 */
+        @media screen and (max-width:860px){
+            body{
+                background-color: pink;
+            }
+
+            #wrap{
+                width:90%;
+                min-width:100%;
+            }
+
+            #wrap img{
+                width:100%;
+            }
+
+            header{
+                font-size:0.5em;
+            }
+            header ul{
+                font-size:4em;
+            }
+            header ul li{
+                font-size:1em;
+            }
+
+            #content section ul li{
+                width:100%;
+                float:none;
+                margin: 0;
+                overflow: hidden;
+                border:1px solid #333;
+                padding:5px;
+                margin-bottom:10px;
+            }
+            #content section ul li img{
+                width:30%;
+                float:left;
+            }
+            #content section ul li p{
+                width:65%;
+                float:right;
+            }
+
+        }
+
+        /*  */
+        @media screen and (max-width:460px){
+            body{
+                background-color: skyblue;
+            }
+            header ul li{
+            width:50%;
+        }
+            #content section ul li img{
+                width:100%;
+                float:none;
+                margin-bottom:10px
+            }
+            #content section ul li p{
+                width:100%;
+                float:none;
+            }
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>반응형 레이아웃 기본</h1>
+
+            <ul class="clear">
+                <li>menu01</li>
+                <li>menu02</li>
+                <li>menu03</li>
+                <li>menu04</li>
+            </ul>
+        </header>
+
+        <div id="content">
+            <section>
+                <h2>본문단</h2>
+                <img src="images/test.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam reiciendis, harum corrupti similique quos rem adipisci molestiae cumque ea odio quisquam, facilis doloribus sed provident molestias nesciunt quidem. Odio, ipsum.</p>
+            </section>
+
+            <section>
+                <ul class="clear">
+                    <li>
+                        <img src="images/test.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam reiciendis, harum corrupti similique quos rem adipisci molestiae cumque ea odio quisquam, facilis doloribus sed provident molestias nesciunt quidem. Odio, ipsum.</p>
+                    </li>
+
+                    <li>
+                        <img src="images/test.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam reiciendis, harum corrupti similique quos rem adipisci molestiae cumque ea odio quisquam, facilis doloribus sed provident molestias nesciunt quidem. Odio, ipsum.</p>
+                    </li>
+
+                    <li>
+                        <img src="images/test.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam reiciendis, harum corrupti similique quos rem adipisci molestiae cumque ea odio quisquam, facilis doloribus sed provident molestias nesciunt quidem. Odio, ipsum.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <footer>Copyright</footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        * {
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #wrap {
+            height : 1500px;
+        }
+
+        .inner {
+            width: 800px;
+            margin : 5px auto;
+            padding : 10px 10px;
+            box-sizing: border-box;
+        }
+
+        header {
+            width : 100%;
+            border: 3px solid blue;
+        }
+
+        header .inner::after {
+            content:""; display:block; clear:both;
+        }
+
+        #wrap header .inner h1{
+            float:left;
+            color:blue;
+        }
+
+        nav{
+            float:right;
+            margin: 5px 0;
+        }
+
+        .gnb {
+            list-style: none;
+        }
+
+        .gnb li{
+            width : 120px;
+            height : 40px;
+            float:left;
+            text-align: center;
+            line-height: 40px;
+            margin : 0 10px;
+            border : 1px solid blue;
+        }
+
+        .gnb li a{
+            text-decoration: none;
+            color:black;
+        }
+
+        .gnb li:hover {
+            background-color: blue;
+        }
+
+        .gnb li:hover a{
+            color:white;
+        }
+
+        #content {
+            width:800px;
+            margin : 5px auto;
+            border : 3px solid blue;
+
+            position : relative;
+        }
+        
+        #content::after{
+            content:""; display: block; clear: both;
+        }
+
+        #content section {
+            float:left;
+            height : 150px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            margin-top : 10px;
+            margin-left : 10px;
+        }
+
+        #content section:nth-of-type(1),
+        #content section:nth-of-type(2) {
+            width : 385px;
+        }
+
+        #content section:nth-of-type(3), 
+        #content section:nth-of-type(4), 
+        #content section:nth-of-type(5) {
+            width : 253.3333px;
+            margin-bottom : 10px;
+        }
+
+        #content section:nth-of-type(2),
+        #content section:nth-of-type(5) {
+            margin-right : 10px;
+        }
+
+        footer {
+            width : 100%;
+            border: 3px solid blue;
+            text-align: center;
+        }
+
+        footer p{
+            color:blue;
+        }
+
+        .sns{
+            width : 30px;
+            height: 30px;
+            background: blue;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+
+            position : absolute;
+            top : 50%;
+            margin :-15px 0;
+        }
+
+        .sns a{
+            color : white;
+            text-decoration: none;
+        }
+
+        footer .inner {
+            position: relative;
+        }
+
+        #sns1{
+            right : 100px;
+        }
+
+        #sns2{
+            right : 55px;
+        }
+
+        #sns3{
+            right : 10px
+        }
+
+
+        .banner {
+            width : 100px;
+            height : 200px;
+            background-color: deeppink;
+            border : 1px solid blue;
+
+            position : absolute;
+            right : -120px;
+        }
+
+        .top {
+            width : 50px;
+            height : 50px;
+            background-color: deeppink;
+            border-radius: 50%;
+            text-align: center;
+
+            position:fixed;
+            bottom : 20px;
+            right : 20px;
+
+            
+            color:white;
+            line-height: 50px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+    
+        <header>
+            <div class="inner">
+                <h1>LOGO</h1>
+
+                <nav>
+                    <ul class="gnb">
+                        <li><a href="#">menu1</a></li>
+                        <li><a href="#">menu2</a></li>
+                        <li><a href="#">menu3</a></li>
+                        <li><a href="#">menu4</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="content" class >
+            <section>box1</section>
+            <section>box2</section>
+            <section>box3</section>
+            <section>box4</section>
+            <section>box5</section>
+
+            <div class="banner">
+                <p>배너단</p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="inner">
+                <p>COPYRIGHT</p>
+
+                
+                <div class="sns" id = "sns1"><a href="#">S</a></div>
+                <div class="sns" id = "sns2"><a href="#">N</a></div>
+                <div class="sns" id = "sns3"><a href="#">S</a></div>
+
+            </div>
+        </footer>
+
+        <div><a href="#wrap" class="top">TOP</a></div>
+    </div>
+</body>
+</html>

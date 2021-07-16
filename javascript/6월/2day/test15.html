@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>검색 포털 이동</title>
+
+
+    <style>
+        .red {
+            color:red;
+        }
+
+        .blue {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var i = 1;
+
+        while(i<=100) {
+            console.log(i);
+            
+            if(i%2 == 0){
+                document.write("<p class='red'>" + i + "는 짝수입니다.<br></p>");
+            }
+            else {
+                document.write("<p class='blue'>" + i + "는 홀수입니다.<br></p>");
+            }
+
+            i += 1;
+        }
+
+        document.write("end");
+
+    </script>
+
+</body>
+</html>

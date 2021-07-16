@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>쿠팡 배너 회전</title>
+
+    <style>
+        #box{
+            width:300px;
+            height:400px;
+            background: url(ani_sos/bg.jpg) no-repeat center / auto 100%;
+            border:5px solid skyblue;
+            position:relative;
+            overflow: hidden;
+            transition:1s;
+        }
+
+        #box:hover{
+            background: url(ani_sos/bg.jpg) no-repeat center / auto 120%;
+        }
+
+        #box>div{
+            width: 50px;
+            height: 50px;
+            margin-bottom : 10px;
+            transition-property: all;
+            transition-timing-function: ease;
+            transition-duration: 0.5s;
+            border-radius: 50%;
+            position:absolute;
+            
+            opacity:0%;
+            bottom : -100px;
+        }
+
+        #box:hover>div{
+            opacity: 1;
+            bottom : 30px;
+        }
+
+        .icon1 {
+            background-color: blueviolet;
+            transition-delay: 0s;
+            left : 35px;
+        }
+        #box:hover .icon1{
+            transition-delay: 0s;
+        }
+        
+        .icon2 {
+            background-color: coral;
+            left : 95px;
+        }
+        #box:hover .icon2{
+            transition-delay: 0.5s;
+        }
+        
+        .icon3 {
+            background-color: crimson;
+            left : 155px;
+        }
+        #box:hover .icon3{
+            transition-delay: 1s;
+        }
+
+        .icon4 {
+            background-color: forestgreen;
+            left : 215px;
+        }
+        #box:hover .icon4{
+            transition-delay: 1.5s;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div class="icon1"></div>
+        <div class="icon2"></div>
+        <div class="icon3"></div>
+        <div class="icon4"></div>
+    </div>
+</body>
+</html>

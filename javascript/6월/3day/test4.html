@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3의 배수 갯수</title>
+
+
+    <style>
+        tr[]{
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var tv = new Object();
+
+        tv.color = "black";
+        tv.price = 30000;
+        tv.info = function(){
+            document.write( "TV의 색은 " + this.color + " 입니다.<br>");
+            document.write( "TV의 가격은 " + this.price + " 입니다<br>");
+
+        }
+        tv.info();
+
+
+        var car = {
+            color: "red",
+            price: 10000000,
+            info: function() {
+                document.write("차의 색은 " + this.color + "입니다.<br>");
+                document.write("차의 가격은 " + this.price + "입니다.");
+            }
+        }
+
+
+        car.info();
+    </script>
+
+</body>
+</html>

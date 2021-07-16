@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>용돈 계산 프로그램</title>
+</head>
+<body>
+    <span>교통비 : </span><input type="text" id="price1">원 <br>
+    <span>식비 : </span><input type="text" id="price2">원 <br>
+    <span>음료비 : </span><input type="text" id="price3">원 <br>
+    <button onclick="money()">지출 내역 계산</button>
+
+    <p id="result"></p>
+
+    <script>
+        function money(){
+            var price1 = document.getElementById("price1").value;
+            var price2 = document.getElementById("price2").value;
+            var price3 = document.getElementById("price3").value;
+
+            var remain = 10000 - price1 - price2 - price3
+
+            var result = remain >= 0 ?
+            "용돈관리를 잘했습니다. " + remain + "원 세이브 되었습니다."
+            :
+            "용돈관리를 잘못했습니다. " + -remain + "원 초과하였습니다.";
+
+            document.getElementById("result").innerHTML = result;
+        }
+
+
+    </script>
+
+
+</body>
+</html> 

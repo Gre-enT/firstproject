@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>메뉴리스트 등록</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="점심메뉴 입력" id="menutext">
+        <button onclick="addList()">확인</button>
+    </form>
+    
+    <ul id="menubox"></ul>
+
+    <script>
+        let formbox = document.querySelector("form");
+        formbox.onsubmit = function(e) {
+            e.preventDefault(); //button이 action안에 들어가면 submit으로 동작. 따라서 form에 있는 submit을 제거.
+        }
+
+
+        let menutext = document.getElementById("menutext"); // input
+        let addbtn = document.querySelector("button");
+        let menubox = document.getElementById("menubox");
+
+        let menulist = [];
+
+        menutext.onkeypress = function(){
+            if(event.keyCode == 13){
+                addList();
+            }
+        }
+
+
+        function addList( ) {
+            if(menutext.value != "" && menutext.value != null){
+                menulist.push(menutext.value);
+                console.log(menulist);
+
+                menutext.value = "";
+            }
+            menutext.focus();
+            showList();
+
+        }
+
+        function showList(){
+            let list = "";
+            for(let i=0; i<menulist.length; i++){
+                list += `<li>${menulist[i]}--------<span id="${i}">메뉴 삭제 </span></li>`
+            }
+
+            menubox.innerHTML = list;
+
+            let delbtn = document.querySelectorAll("#menubox>li>span");
+            for(let i=0; i<delbtn.length; i++){
+                delbtn[i].addEventListener("click", remove);
+            }
+        }
+
+        function remove() {
+            let indexNum = this.getAttribute("id");
+            console.log(indexNum);
+
+            menulist.splice(indexNum, 1);
+
+            showList();
+        }
+
+
+    </script>
+
+
+</body>
+</html>

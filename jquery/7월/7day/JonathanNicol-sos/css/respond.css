@@ -1,0 +1,125 @@
+@media screen and (min-width: 1600px) {
+	#content {
+		width: 1570px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+@media screen and (max-width: 1200px) {
+	#header {
+		min-width: 0;
+	}
+	#header .inn {
+		width: auto;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	#content {
+		min-width: 0;
+	}
+	#footer {
+		width: auto;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+@media screen and (max-width: 970px) {
+	#header .inn {
+		padding-top: 40px;
+		padding-bottom: 70px;
+	}
+	#header .logo {
+		float: none;
+		margin-bottom: 20px;
+	}
+	#header .nav {
+		float: none;
+	}
+	#header .nav ul:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	#header .nav li {
+		width: 25%;
+		margin-left: 0;
+	}
+	#header .nav li a {
+		width: auto;
+		margin-right: 20px;
+	}
+	#content li {
+		width: 50%;
+	}
+	#footer {
+
+	}
+	#footer .btm-logo {
+		float: none;
+		width: auto;
+	}
+	#footer .address {
+		float: none;
+		width: auto;
+	}
+	#footer .address address {
+		border: 0;
+	}
+	#footer .email {
+		float: none;
+		width: auto;
+	}
+	#footer .email address {
+		border: 0;
+	}
+	#footer .sns {
+		float: none;
+		width: auto;
+		border: 0;
+		text-align: left;
+	}
+}
+@media screen and (max-width: 480px) {
+	#header .inn {
+		padding-top: 20px;
+		padding-bottom: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	#header .logo {
+		margin-left: 15px;
+	}
+	#header .nav ul {
+		margin-bottom: 20px;
+	}
+	#header .nav ul li {
+		float: none;
+		width: auto;
+	}
+	#header .nav ul li a {
+		margin-right: 0;
+		background-color: #1b1b1b;
+		color: #eee;
+		padding-left: 15px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	#header .nav ul li a:hover {
+		border-bottom-color: #aaa;
+		background-color: #444;
+		color: #fff;
+	}
+	#content li {
+		float: none;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 481px) {
+	#header .nav button {
+		display: none !important;
+	}
+	#header .nav ul {
+		display: block !important;
+	}
+}

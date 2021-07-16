@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "굴림", sans-serif;
+            font-size: 12px;
+        }
+        #wrap {
+            width: 200px;
+            margin: 20px auto;
+        }
+        #wrap .page {
+            text-align: right;
+            margin-bottom: 5px;
+        }
+        #wrap .page .page_n {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        #wrap .page button {
+            border: none;
+            background: #666;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            line-height: 1.5;
+            overflow: hidden;
+        }
+        #wrap .imgbox {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #505900;
+            overflow: hidden;
+        }  
+        #wrap .imgbox img { width: 100%; }
+    </style>
+</head>
+<body>
+   <div id="wrap">
+       <div class="page">
+           <span> <!-- 현제이미지번호 --> </span> / <span> <!-- 총이미지 갯수 --> </span>
+           <button class="prevBtn"> &lt; </button>
+           <button class="nextBtn"> &gt; </button>
+       </div>
+       <div class="imgbox">
+
+           <div><img src="images/marke1.jpg" alt="1"></div>
+           <div><img src="images/marke2.jpg" alt="2"></div>
+           <div><img src="images/marke3.jpg" alt="3"></div>
+           <div><img src="images/marke4.jpg" alt="4"></div>
+           <div><img src="images/marke5.jpg" alt="5"></div>
+           
+       </div>        
+   </div> 
+   <script>
+      $(document).ready(function(){
+        let totalNum = $(".imgbox>div").length;
+        console.log(totalNum);
+
+        let nowNum=1;
+
+        $(".page>span:first").text(nowNum);
+        $(".page>span:last").text(totalNum);
+
+        $(".nextBtn").click(function(){
+            nowNum++;
+            console.log(nowNum);
+            if(nowNum > totalNum){nowNum = 1;}
+            $(".page>span:first").text(nowNum);
+            $(".imgBox>div:first").insertAfter(".imgbox>div:last");
+        })
+        $(".prevBtn").click(function(){
+            nowNum--;
+            console.log(nowNum);
+            if(nowNum < 1){nowNum = totalNum;}
+            $(".page>span:first").text(nowNum);
+            $(".imgBox>div:last").insertBefore(".imgbox>div:last");
+        })
+
+        
+      }); 
+   </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+body, h1, h2, h3, h4, h5, p, ul, li, ol, dl, dt, dd { margin: 0; padding: 0;} 
+nav ul { list-style: none; }
+a { text-decoration: none; color: #333; }
+.clear::after { content: ""; display: block; clear: both; }
+
+#wrap {}
+.inner { width: 1000px; margin: 0 auto; }
+header { background-color: #c84040; height: 86px; padding-top: 20px; box-sizing: border-box; }
+header .logo { }
+nav { background-color: #393939; height: 48px; }
+.gnb { width: 1000px; margin: 0 auto; }
+.gnb li { float: left; width: 25%; text-align: center; line-height: 48px; }
+.gnb li:hover { background-color: #c84040; }          
+.gnb li a { color: #fff; }
+
+#visual { height: 450px;
+          background-image: url(../images/keyvisual.jpg); background-size: cover; background-position: center; }
+#content { background-color: #eee; padding: 60px 0; }
+#content h2 { text-align: center; font-size: 42px; font-weight: normal; margin: 10px 0; }
+#content h2 span { font-size: 42px; }
+#content h2.title2 { font-size: 0; }
+
+.title1 { font-size: 42px; color: #333; }
+.orange { color: orange; }
+.skyblue { color: skyblue; }
+span:nth-child(6) { margin: 0 20px; } /* 학습은 */
+.green { color: green; }
+.pink { color: tomato; }
+.maincolor { color: #c84040; font-weight: bold; }
+
+.tit_red { color: #c84040; font-size: 18px; border-bottom: 2px dashed #c84040; padding-bottom: 10px; }
+.notice_list { margin: 20px 0 30px; list-style: none; 
+}
+.notice_list li { padding-left: 25px; line-height: 1.8; 
+ background-image: url(../images/hart.png); background-repeat: no-repeat; background-position: left center; 
+ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.course_list { margin: 20px 0 30px; list-style: none; }
+.course_list li { width: 246.25px; margin-right: 5px; 
+                  float: left; 
+                  background-color: #fff; box-sizing: border-box; box-shadow: 1px 1px 5px #ccc;  }
+.course_list li:hover { border: 1px solid #c84040;}
+.course_list li a { display: block; height: 100%; padding: 10px; }                  
+.course_list li img { width: 100%; }
+.course_list li h4 { text-align: center; margin: 15px 0 10px; }
+.course_list li:last-child { margin-right: 0; }
+
+
+
+.intro {}
+.intro .left { float: left; width: 368px; margin-right: 40px; }
+.intro .left img { width: 100%; border-radius: 10px; }
+.intro .right { float: left; width: 590px; }
+
+#content .tit_intro { font-size: 28px; font-weight: bold; 
+                      text-align: left; margin-top: 0; }
+
+.intro_list { list-style: none; }
+.intro_list li { font-size: 18px; line-height: 1.8; }
+.intro_list li:first-child { font-weight: bold; color: #c84040; }
+
+.intro .icon { margin-top: 14px; }
+.intro .icon span { background-color: #c84040; color: #fff;
+                    display: inline-block; font-size: 14px; 
+                    padding: 8px 12px; border-radius: 5px; }
+.intro .icon span:hover { background-color: tomato; cursor: pointer; }
+.point { margin-top: 40px; background-color: #fff; 
+         border-radius: 10px; padding: 30px 100px; 
+         background-image: url(../images/point.png); 
+         background-repeat: no-repeat; 
+}
+.point p { line-height: 2; }
+
+.schedule { margin-top:40px;
+
+}
+
+.schedule_list{list-style: none; margin-top:20px; width:400px;
+}
+
+.schedule_list li{line-height: 3.0; border-bottom:1px dashed #ccc}  
+
+.schedule_list li .date{width : 120px; display: inline-block; padding-left:10px;}
+.schedule_list li .time{width : 120px; display: inline-block;}
+.schedule_list li .subject{width : 120px; display: inline-block;}
+
+
+
+.instructor {margin-top : 40px;}
+.instructor h3{margin-bottom : 30px;}
+
+
+
+.instructor .left{
+    float:left; margin-right:50px;
+}
+
+.instructor .left img{
+    border-radius: 50%;
+}
+
+.instructor .right{
+    float:left;
+}
+.instructor .right h4{
+    font-size:24px; margin:bottom;
+}
+.instructor .right p{ line-height: 2; font-size:18px;
+
+}
+.instructor .right .btn{
+    display:block;
+    background-color: #c84040;
+    color:white;
+    width : 200px; margin:50px auto 0;
+    height:50px auto;
+    line-height:50px;
+    text-align: center;
+    border-radius: 5px;
+    clear:both;
+}
+
+
+
+
+
+
+footer { padding: 20px 0; background-color: #c84040; }
+
+.btm_menu{
+    list-style: none;
+}
+
+.btm_menu li{
+    float:left;
+    padding : 10px;
+}
+
+.btm_menu li a{
+    color:white;
+}
+
+

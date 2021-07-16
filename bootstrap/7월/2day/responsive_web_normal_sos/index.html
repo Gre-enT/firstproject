@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>INDIGO</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="shortcut icon" href="images/favicon/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="images/favicon/indigo-touch-icon.png">
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/indigo.min.js"></script>
+<script src="js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo">INDIGO</h1>
+        
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">WE ARE</a></li>
+                    <li><a href="#">WORK</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACK US</a></li>
+                </ul>
+            </nav>
+
+            <div class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+
+        <div id="slider">
+            <ul class="imglist">
+                <li><img src="images/p-images/slide01.jpg" alt="0"></li>
+                <li><img src="images/p-images/slide02.jpg" alt="1"></li>
+                <li><img src="images/p-images/slide03.jpg" alt="2"></li>
+            </ul>
+            <div class="swiper-pagenation"></div>
+        </div>
+    </div>
+
+    <hr class="divider">
+        <section class="work">
+            <!-- 너비 100% 사진 출력위해서 .inner 삭제 -->
+            <h2 class="sec-tit">WORK</h2>
+            <ul class="work_list">
+                <li>
+                  <a href="">
+                    <div class="info">
+                        <h3>Running</h3>
+                        <span>WEB/PRINT</span>
+                    </div>  
+                    <img src="images/p-images/work01.jpg" alt="0">
+                  </a>  
+                </li>
+                <li>
+                    <a href="">
+                      <div class="info">
+                          <h3>Rugby</h3>
+                          <span>WEB/PRINT</span>
+                      </div>  
+                      <img src="images/p-images/work02.jpg" alt="1">
+                    </a>  
+                </li>
+                <li>
+                    <a href="">
+                      <div class="info">
+                          <h3>Weight</h3>
+                          <span>WEB/PRINT</span>
+                      </div>  
+                      <img src="images/p-images/work03.jpg" alt="2">
+                    </a>  
+                </li>
+                <li>
+                    <a href="">
+                      <div class="info">
+                          <h3>Marathon</h3>
+                          <span>WEB/PRINT</span>
+                      </div>  
+                      <img src="images/p-images/work04.jpg" alt="3">
+                    </a>  
+                </li>
+                <li>
+                    <a href="">
+                      <div class="info">
+                          <h3>Boxing</h3>
+                          <span>WEB/PRINT</span>
+                      </div>  
+                      <img src="images/p-images/work05.jpg" alt="4">
+                    </a>  
+                </li>
+                <li>
+                    <a href="">
+                      <div class="info">
+                          <h3>Ice Hockey</h3>
+                          <span>WEB/PRINT</span>
+                      </div>  
+                      <img src="images/p-images/work06.jpg" alt="5">
+                    </a>  
+                </li>
+                <li>
+                    <a href="">
+                      <div class="info">
+                          <h3>Skate board</h3>
+                          <span>WEB/PRINT</span>
+                      </div>  
+                      <img src="images/p-images/work07.jpg" alt="6">
+                    </a>  
+                </li>
+                <li>
+                    <a href="">
+                      <div class="info">
+                          <h3>Basketball</h3>
+                          <span>WEB/PRINT</span>
+                      </div>  
+                      <img src="images/p-images/work08.jpg" alt="7">
+                    </a>  
+                </li>
+            </ul>
+       
+        </section>
+        <!-- <section class="blog"></section> -->
+        <section class="contact">
+          <div class="inner">
+            <h2 class="sec-tit">contact</h2>
+            <div class="form_box">
+              <form action="">
+                <fieldset>
+                  <legend class="blind">contact us</legend>  
+                  <div class="form">
+                    <label for="name" class="blind">name</label>
+                    <input type="text" id="name" placeholder="Name"> 
+                    <label for="phone" class="blind">phone</label>
+                    <input type="text" id="phone" placeholder="Phone"> 
+                    <label for="email" class="blind">email</label>
+                    <input type="text" id="email" placeholder="Email">  
+                  </div>
+                  <div class="textarea">
+                    <label for="message" class="blind">message</label>
+                    <textarea name="message" id="message" placeholder="Message"></textarea>  
+                  </div>
+                </fieldset>  
+                <div class="send-btn"><button>SEND MESSAGE</button></div>
+              </form>
+            </div>
+          </div>  
+        </section>
+
+    <script>
+        $(".toggle").click(function(){
+            $("nav").stop().slideToggle();
+        });
+
+        let swiper = new Swiper(".imglist", {
+            pagenation: {   //도트 출력
+                el: ".swiper-pagenation",
+
+            }
+        });
+
+        // $(".imglist").
+    </script>
+</body>
+</html>

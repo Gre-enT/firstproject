@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .inner{
+            max-width: 1140px;
+            margin : 0 auto;
+            padding : 0 5%;
+            text-align: center;
+        }
+        .inner h3{
+            font-size:3rem;
+            font-weight: normal;
+        }
+        .inner h2{
+            font-size:3.4rem;
+            margin-bottom:40px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .gallery{
+            font-size: 0;
+
+            display:grid;
+
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto auto;
+            grid-gap: 1vw;
+        }
+
+        .gallery li{
+            overflow: hidden;
+        }
+        .gallery li a{
+            position:relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .gallery li a img{
+            width: 100%;
+            height: 100%;
+        }
+        .gallery li a .txt{
+            position:absolute;
+            left:0;
+            right:0;
+            top : 0;
+            bottom: 0;
+
+            background: rgba(0,0,0,0.5);
+            transition: opacity 0.5s;
+            opacity: 0;
+
+            color:#fff;
+            font-size:42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery li:hover a .txt{
+            opacity:1
+        }
+
+
+        .imgbox01{
+            grid-column: 1 / 2;
+            grid-row : 1 / 3;
+        }
+        .imgbox02{
+            grid-column: 2 / 3;
+            grid-row : 1 / 2;
+        }
+        .imgbox03{
+            grid-column: 2 / 3;
+            grid-row : 2 / 3;
+        }
+        .imgbox04{
+            grid-column: 3 / 4;
+            grid-row : 1 / 2;
+        }
+        .imgbox05{
+            grid-column: 3 / 4;
+            grid-row : 2 / 3;
+        }
+        .imgbox06{
+            grid-column: 4 / 5;
+            grid-row : 1 / 3;
+        }
+
+        @media screen and (max-width:580px){
+            .gallery{
+                grid-template-columns: auto auto;
+                grid-template-rows: repeat(4, 1fr);
+                grid-gap: 1vw;
+            }
+
+            .imgbox01{
+                grid-column: 1 / 2;
+                grid-row : 1 / 3;
+            }
+            .imgbox02{
+                grid-column: 2 / 3;
+                grid-row : 1 / 2;
+            }
+            .imgbox03{
+                grid-column: 2 / 3;
+                grid-row : 2 / 3;
+            }
+            .imgbox04{
+                grid-column: 1 / 2;
+                grid-row : 3 / 4;
+            }
+            .imgbox05{
+                grid-column: 1 / 2;
+                grid-row : 4 / 5;
+            }
+            .imgbox06{
+                grid-column: 2 / 3;
+                grid-row : 3 / 5;
+            }
+        }
+
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="inner">
+            <h3>HELLO?</h3>
+            <h2>MY NAME Is JANNY!</h2>
+            <ul class="gallery">
+                <li class="imgbox01">
+                    <a href="#">
+                        <img src="images/main.jpg" alt="">
+                        <span class="txt">#COFFEE</span>
+                    </a>
+                </li>
+                <li class="imgbox02">
+                    <a href="#">
+                        <img src="images/main2.jpg" alt="">
+                        <span class="txt">#COFFEE</span>
+                    </a>
+                </li>
+                <li class="imgbox03">
+                    <a href="#">
+                        <img src="images/main3.jpg" alt="">
+                        <span class="txt">#COFFEE</span>
+                    </a>
+                </li>
+                <li class="imgbox04">
+                    <a href="#">
+                        <img src="images/main4.jpg" alt="">
+                        <span class="txt">#COFFEE</span>
+                    </a>
+                </li>
+                <li class="imgbox05">
+                    <a href="#">
+                        <img src="images/main5.jpg" alt="">
+                        <span class="txt">#COFFEE</span>
+                    </a>
+                </li>
+                <li class="imgbox06">
+                    <a href="#">
+                        <img src="images/main6.jpg" alt="">
+                        <span class="txt">#COFFEE</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>        
+</body>
+</html>

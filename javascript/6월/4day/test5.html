@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>랜덤 인사말 출력</title>
+
+
+    
+</head>
+<body>
+    <p id = "test"></p>
+
+    <input id="input" type="text" placeholder="인사말을 입력하세요.">
+    <button onclick="add()">확인</button>
+
+    <ul id="list"></ul>
+
+    <script>
+        var greeting = [];
+        function add() {
+            var text = document.getElementById("input").value;
+            console.log(text)
+            greeting.push(text);
+            console.log(greeting);
+
+            var list = "";
+
+            for(i in greeting){
+                list += "<li>" + greeting[i] + "</li>";
+            }
+
+            document.getElementById("list").innerHTML = list;
+
+            var rdn = Math.random();
+
+            var num = Math.floor(rdn*greeting.length);
+
+            document.getElementById("test").innerHTML = greeting[num];
+        }
+
+    </script>
+
+</body>
+</html>

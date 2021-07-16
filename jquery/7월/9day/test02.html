@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>scroll</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        #wrap { height: 2000px; }
+        #wrap > div { width: 800px; height: 400px; margin: 10px auto; }
+        #wrap > div > h1 { margin: 10px 0; }
+        #wrap > div > img { width: 48%; }
+        .box1 {border: 1px solid skyblue; }
+        .box2 {border: 1px solid orange;  }
+        .box3 {border: 1px solid deeppink; }
+        .box4 {border: 1px solid blueviolet; }
+        .box5 {border: 1px solid blue; }
+
+        .value { position: fixed; top: 10px; right: 10px; font-size: 32px; }
+    </style>
+    <script>
+     $(function(){
+        let box1top = $(".box1").offset().top;
+        console.log(box1top);
+
+        $(window).scroll(function(){
+            let sctop = $(this).scrollTop();
+            $(".value").text(sctop);
+        });
+     });
+    </script>
+</head>
+<body>
+  <p class="value">스크롤 좌표</p>
+  <div id="wrap">
+      <div class="box1"> 
+        <h1>스크롤 첫번째 컨텐츠</h1>
+        <img src="images/banner01.jpg" alt="">
+      </div>
+      <div class="box2"> 
+        <h1>스크롤 두번째 컨텐츠</h1>
+        <img src="images/banner02.jpg" alt="">
+      </div>
+      <div class="box3"> 
+        <h1>스크롤 세번째 컨텐츠</h1>
+        <img src="images/banner03.jpg" alt="" class="left">
+        <img src="images/banner04.jpg" alt="" class="right">
+      </div>
+      <div class="box4"> 
+        <h1>스크롤 네번째 컨텐츠</h1>
+        <img src="images/banner05.jpg" alt="">
+      </div>
+  </div>  
+</body>
+</html>

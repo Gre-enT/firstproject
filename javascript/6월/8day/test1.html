@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+
+    <style>
+        .aco{
+            background-color: #ddd;
+            color:#555;
+            cursor: pointer;
+            padding : 16px;
+            width : 100%;
+            border:1px solid #aaa;
+            outline:0;
+        }
+
+        .aco:hover, .aco.on{
+            background-color: #ccc;
+        }
+
+        #acobox1, #acobox2, #acobox3{
+            padding : 20px;
+            background-color: #fff;
+            border:2px solid #ddd;
+            box-sizing: border-box;
+            display:none;
+        }
+
+        #acobox1 p, #acobox2 p, #acobox3 p{
+            font-size: 14px;
+            line-height: 2;
+            color:#333;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>아코디언 메뉴</h1>
+
+
+    <button class="aco">메뉴 01</button>
+    <div id="acobox1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora vel quos quas in commodi explicabo! Ipsam fuga molestiae nam fugiat reiciendis quia, similique adipisci, optio ullam mollitia iusto? Repellat, praesentium.</p>
+    </div>
+
+    
+    <button class="aco">메뉴 02</button>
+    <div id="acobox2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora vel quos quas in commodi explicabo! Ipsam fuga molestiae nam fugiat reiciendis quia, similique adipisci, optio ullam mollitia iusto? Repellat, praesentium.</p>
+    </div>
+
+
+    <button class="aco">메뉴 03</button>
+    <div id="acobox3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora vel quos quas in commodi explicabo! Ipsam fuga molestiae nam fugiat reiciendis quia, similique adipisci, optio ullam mollitia iusto? Repellat, praesentium.</p>
+    </div>
+
+
+    <script>
+        let btn = document.querySelectorAll(".aco");
+        let acobox = document.querySelectorAll("div");
+
+        for(let i = 0; i<btn.length; i++) {
+            btn[i].addEventListener("click", function(){
+                this.classList.toggle("on");
+                console.log(this);
+
+                let nextBox = this.nextElementSibling;
+                console.log(nextBox);
+
+                if(nextBox.style.display == "block"){
+                    nextBox.style.display = "none";
+                }
+                else{
+                    nextBox.style.display = "block";
+                }
+                    
+            })
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>D-Day 계산</title>
+	<link href="css/d-day.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="day1">
+			<h3>수업시작일</h3>
+			<p id="accent" class="accent"><span style="font-size:0.6em; font-style:italic">며칠?</span></p>
+			</div>
+			<div class="bar">기념일 계산</div>
+			<div class="day2">
+				<ul>
+					<li class="item-title">100일</li>         
+					<li class="item-date" id="date100"></li>
+				</ul>
+				<ul>
+					<li class="item-title">200일</li>
+					<li class="item-date" id="date200"></li>
+				</ul>     
+				<ul>
+                    <li class="item-title">1년</li>
+                    <li class="item-date" id="date365"></li>
+                </ul>      
+				<ul>
+                    <li class="item-title">500일</li>
+                    <li class="item-date" id="date500"></li>
+                </ul>      									     
+			</div>
+		</div>
+
+		<script>
+			let now = new Date();
+			let firstDay = new Date("2021-05-25");// 기준일
+			let toNow = now.getTime();
+
+			let toFirst = firstDay.getTime();
+
+			console.log(now, toNow);
+			console.log(firstDay, toFirst);
+
+			let passTime = toNow - toFirst;
+
+			let passDay = passTime / (1000*60*60*24)
+			let passDay2 = Math.round(passDay);
+			
+			console.log(passDay);
+			console.log(passDay2);
+
+
+
+			document.getElementById("accent").innerHTML = passDay2 + "일"
+
+			function calcDate(days){
+				let dDay = days*(1000*60*60*24);
+				let future = toFirst + dDay;
+				let someday = new Date(future);
+
+				console.log(someday);
+				let year = someday.getFullYear();
+				let month = someday.getMonth()+1;
+				let date = someday.getDate();
+
+				document.getElementById("date" + days).innerHTML = year + "년 " + month + "월 " + date + "일";
+			}
+
+			calcDate(100);
+			calcDate(200);
+			calcDate(365);
+			calcDate(500);			
+
+		</script>
+
+
+
+
+	</body>
+	</html>

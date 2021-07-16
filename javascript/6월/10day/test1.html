@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <script>
+        window.onload = function() {
+            let linkbox = document.getElementById("link");
+            linkbox.onclick = function(e){
+                alert("바로가기 a태그");
+                console.log(e);
+                e.preventDefault();
+            }
+
+
+            let inner = document.getElementById("inner");
+            let outer = document.getElementById("outer");
+            
+            inner.onclick = function(e){
+                alert("내부 선택");
+                console.log(e);
+                e.stopPropagation(); // 이벤트 버블링 현상(자식의 이벤트가 부모에게 올라가는 현상) 막기 
+            }
+
+            outer.onclick = function(e){
+                alert("외부 선택");
+                console.log(e);
+            }
+        }
+    </script>
+
+
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+
+        #outer {
+            margin-top:100px;
+            padding : 50px;
+            background-color: red;
+        }
+        #inner{
+            padding:20px;
+            background-color: yellow;;
+        }
+
+    </style>
+</head>
+    <body>
+        <div><a href="https://www.naver.com/" id ="link">네이버 바로가기</a></div>
+
+        <div id="outer">
+            <div id="inner">클릭 </div>
+        </div>
+    </body>
+</html>

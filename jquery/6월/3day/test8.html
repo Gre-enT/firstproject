@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>284p</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        body{
+            font-size: 14px;
+        }
+        #txtbox{
+            padding : 20px;
+            border : 2px solid #333;
+            line-height: 1.8;
+            width : 400px;
+        }
+    </style>
+
+<script>
+
+    $(function(){
+        let basicfont = 14;
+
+        $(".btnbox>button").on("click", zoom);
+
+        function zoom(){
+            if($(this).hasClass("zoomOut")){
+                if(basicfont <= 10) {return false;}
+                basicfont--;
+            }
+            else if($(this).hasClass("zoomIn")){
+                if(basicfont >= 40) {return false;}
+                basicfont++;
+            }
+            else if($(this).hasClass("origin")){
+                basicfont = 14;
+            }
+
+            $(".fontSize").text(basicfont + "px");
+            $("body").css("font-size", basicfont + "px");
+        }
+    })
+
+</script>
+
+</head>
+<body>
+    <p class="btnbox">
+        <button class="zoomOut"> - </button>
+        <button class="origin"> 100% </button>
+        <button class="zoomIn"> + </button>
+    </p>
+    <p class="fontSize">14px</p>
+    <div id="txtbox">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas harum, blanditiis velit accusamus odit vitae incidunt obcaecati animi distinctio? Illo enim molestiae, excepturi sed expedita corrupti necessitatibus itaque numquam dolor.<br>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, quia? Praesentium obcaecati voluptate saepe in blanditiis itaque quae porro nihil, nemo iste, dolorem quia perferendis sequi exercitationem harum, est asperiores.
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var time = prompt("현재 시각을 입력하세요.", "");
+
+        if(time >= 6 && time < 12){
+            document.write("Good Morning");
+        } else if(time >= 12 && time < 18){
+            document.write("Good Day");
+        } else if(time >= 18 && time <= 24 || time < 6){
+            document.write("Good Evening");
+        } else{
+            alert("지구입니까?");
+            location.reload();
+        }
+
+    </script>
+
+</body>
+</html>

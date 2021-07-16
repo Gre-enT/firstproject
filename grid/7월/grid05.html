@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #grid{
+            border:2px solid red;
+            width : 80%;
+            height: 600px;
+            padding : 10px;
+            margin : 0 auto;
+            background-color: powderblue;
+
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+            justify-content: space-evenly;
+            /* align-items: center; */ /* 각각의 칸 안에서 수직방향 정렬 */
+            align-content: space-between;
+
+            grid-template-areas: 
+            "header header header"
+            "menu main right"
+            "menu footer footer";
+
+            grid-gap:10px;
+        }
+        #grid>div{
+            border:1px solid blue;
+            font-size:42px;
+            text-align: center;
+            background-color: pink;
+            padding : 20px;
+        }
+
+        .box1{
+            grid-area: header;        
+        }
+        .box2{
+            grid-area: menu;
+        }
+
+        .box3{
+            grid-area: main;
+        }
+
+        .box4{
+            grid-area: right;
+        }
+
+        .box5{
+            grid-area: footer;
+        }
+
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div id="grid">
+        <div class="box1">Header</div>
+        <div class="box2">Menu</div>
+        <div class="box3">Main</div>
+        <div class="box4">Right</div>
+        <div class="box5">Footer</div>
+    </div>
+        
+</body>
+</html>

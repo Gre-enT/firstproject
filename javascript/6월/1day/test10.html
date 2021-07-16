@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <input type="text" id="num1" size="2">
+    <input type="text" id="num2" size="2">
+
+    <hr>
+
+    <button onclick="add()"> + </button>
+    <button onclick="sub()"> - </button>
+    <button onclick="mul()"> * </button>
+    <button onclick="div()"> / </button>
+    
+    <hr>
+
+    <input type="text" id="result">
+
+    <script>
+        
+        
+
+        function add() {
+            var num1 = Number(document.getElementById("num1").value);
+            var num2 = Number(document.getElementById("num2").value);
+            var result;
+            result = num1 + num2;
+            console.log(result);
+            document.getElementById("result").value = result;
+        }
+
+        function sub() {
+            var num1 = Number(document.getElementById("num1").value);
+            var num2 = Number(document.getElementById("num2").value);
+            var result;
+            result = num1 - num2;
+            console.log(result);
+            document.getElementById("result").value = result;
+        }
+
+        function mul() {
+            var num1 = Number(document.getElementById("num1").value);
+            var num2 = Number(document.getElementById("num2").value);
+            var result;
+            result = num1 * num2;
+            console.log(result);
+            document.getElementById("result").value = result;
+        }
+
+        function div() {
+            var num1 = Number(document.getElementById("num1").value);
+            var num2 = Number(document.getElementById("num2").value);
+            var result;
+            result = num1 / num2;
+            console.log(result);
+            document.getElementById("result").value = result;
+        }
+
+
+        
+    </script>    
+</body>
+</html>

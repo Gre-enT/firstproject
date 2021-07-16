@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>D-Day 계산</title>
+</head>
+<body>
+    <h1 id="title">제목</h1>
+
+    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A ipsa rem aliquam hic rerum! Perspiciatis eius expedita eum incidunt cupiditate unde ratione repellat tempora saepe, repudiandae dolores nemo non quaerat.</p>
+    <ul>
+        <li class="item">사과</li>
+        <li class="item">딸기</li>
+        <li class="item">포도</li>
+        <li class="item">오렌지</li>
+        <li class="item">키위</li>
+        <li class="item">바나나</li>
+        <li class="item">수박</li>
+    </ul>
+    <button onclick="test1()">클릭</button>
+    <button onclick="test2()">변경</button>
+    <button onclick="test3()">갯수출력</button>
+    <button onclick="test4()">숨기기</button>
+    <button onclick="test5()">보이기</button>
+    
+
+		<script>
+			let title = document.getElementById("title");
+            title.style.backgroundColor = "red";
+            title.style.color = "#545";
+            title.innerHtml = "아이디 선택자"	
+
+			let item = document.getElementsByClassName("item");
+            item[1].style.backgroundColor = "red";
+            item[1].style.color = "#545";
+            item[1].innerHtml = "아이디 선택자"	
+            console.log(item);
+            
+            let text = document.getElementsByClassName("text");
+
+            let tagp = document.getElementsByTagName("p");
+            console.log(tagp);
+
+            tagp[0].style.backgroundColor = "orange"
+
+            function test1(){
+                console.log(text);
+                text[0].style.backgroundColor = "yellow"
+
+
+            }
+
+            function test2(){
+                item[0].innerHTML = "파인애플"
+            }
+
+            function test3(){
+                var count = item.length;
+                console.log(count);
+            }
+
+            function test4(){
+                text[0].style.display="none";
+            }
+
+            function test5(){
+                text[0].style.display="block";
+            }
+
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>투표권 확인</title>
+</head>
+<body>
+    <span>원래 가격 : </span><input type="text" id="origin">원 <br>
+    <span>할인률 : </span><input type="text" id="rate">% <br>
+    <button onclick="price()">할인 가격 계산</button>
+
+    <p id="result"></p>
+
+
+    <script>
+        function price(){
+            var origin = Number(document.getElementById("origin").value);
+            var rate = Number(document.getElementById("rate").value);
+
+            var result = origin * (100 - rate) / 100;
+
+            document.getElementById("result").innerHTML
+            = "가격은 " + result + "원 입니다.";
+        }
+
+
+    </script>
+
+
+</body>
+</html> 

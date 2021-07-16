@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>탭 메뉴</title>
+<style>
+.tab_title { overflow: hidden; background: #eee;border-left: 1px solid #ccc; border-top: 1px solid #ccc; border-right: 1px solid #ccc;}  
+.tab_title .tab_btn { background: inherit; float: left; border: 0; outline: 0; cursor: pointer; font-size: 20px; padding: 14px 30px; }  
+.tab_title .tab_btn:hover { background: #eee; }
+.tab_title .tab_btn.on { background: #fff; border-bottom-color: #fff; }
+.tab_box { padding: 10px 20px; border: 1px solid #ccc; border-top: none; display: none; } 
+.tab_box h3 { font-size: 24px; }
+.tab_box p { color: #333; }
+</style>
+    
+</head>
+    <body>
+    <div class="tab_title">
+        <button class="tab_btn"> 빨강 </button> 
+        <button class="tab_btn"> 노랑 </button> 
+        <button class="tab_btn"> 파랑 </button>   
+    </div>
+        
+    <div id="red" class="tab_box">
+        <h3>color: red</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>   
+    </div> 
+    <div id="yellow" class="tab_box">
+        <h3>color: yellow</h3>
+        <p>동해물과 백두산이 동해물과 백두산이</p>
+    </div> 
+    <div id="blue" class="tab_box">
+        <h3>color: blue</h3>
+        <p>하나둘셋넷 하나둘셋넷 하나둘셋넷 </p>
+    </div>
+    
+    <script>
+        let tab_box = document.getElementsByClassName("tab_box");
+        let tab_btn = document.getElementsByClassName("tab_btn");
+        
+        for(let i=0; i<tab_btn.length; i++){
+            tab_btn[i].addEventListener("click", function(){
+                console.log("버튼 인덱스 번호 : " + i);
+
+                for(let i=0; i<tab_btn.length; i++){
+                    tab_btn[i].classList.remove("on");
+                    tab_box[i].style.display = "none"
+                }
+
+                tab_btn[i].classList.add("on");
+                tab_box[i].style.display = "block"
+            })
+        }
+
+
+        tab_btn[0].click;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body { margin: 0; }        
+        header { padding-top: 30px; text-align: center; 
+                 position: fixed; top: 0; z-index: 1;
+                 width: 100%; background-color: #f1f1f1; }
+        header h2 { margin-bottom: 50px; }
+        .box { width: 100%; height: 8px; 
+               background-color: #ccc;     }
+        .bar { height: 8px; background-color: red; width: 0%; }
+        #content { padding: 150px 30px; }       
+    </style>
+</head>
+<body>
+    <header>
+       <h2>scroll indicator</h2> 
+       <div class="box">
+         <div class="bar"></div>    
+       </div>
+    </header>
+    <div id="content">
+       <h2>scroll indicator</h2>
+       <p>Lorem ipsum1 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p> 
+       <p>Lorem ipsum2 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum3 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum4 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum5 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum6 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum7 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum8 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum9 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum10 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum11 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum12 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum13 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum14 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum15 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum16 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum17 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum18 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+       <p>Lorem ipsum19 dolor sit amet, consectetur adipisicing elit. Nisi deserunt fuga possimus, necessitatibus veritatis dolor perferendis nemo error optio voluptatum, exercitationem dicta maiores repellat quibusdam recusandae, placeat natus. Molestias, error.</p>
+    </div>
+
+
+    <script>
+        window.onscroll = function(){
+            let winScroll = window.pageYOffset;
+            let scrollHeight = document.documentElement.scrollHeight;
+
+            let clientHeight = document.documentElement.clientHeight;
+
+            let height = scrollHeight - clientHeight;
+
+            let scrolled = (winScroll / height) * 100;
+
+            // console.log(scrollHeight, clientHeight);
+            // console.log(winScroll);
+
+            console.log(scrolled);
+
+            let bar = document.querySelector(".bar");
+            bar.style.width = scrolled + "%";
+        }
+    </script>
+</html>

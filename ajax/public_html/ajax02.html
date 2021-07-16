@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border : 1px solid #ccc;
+            margin : 0;
+            padding : 5px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $.ajax({
+                url: "data/MOCK_DATA.json",
+                dataType: "json",
+                success: function(data){
+                    console.log(data);
+                    let table = $("<table>");
+                    for(let i in data){
+                        let $id = data[i].id;
+                        let $first_name = data[i].first_name;
+                        let $last_name = data[i].last_name;
+                        let $email = data[i].email;
+                        let $gender = data[i].gender;
+
+                        let row = $("<tr>").append(
+                            $("<td>").text($id),
+                            $("<td>").text($last_name),
+                            $("<td>").text($last_name),
+                            $("<td>").text($email),
+                            $("<td>").text($gender)
+                        );
+                        table.append(row);
+                    }
+                    $("#wrap").append(table);
+                },
+                error: function(){
+                    alert("실패");
+                }
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+    <div id="wrap">
+
+    </div>
+</body>
+</html>

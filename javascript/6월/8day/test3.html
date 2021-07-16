@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>탭 메뉴</title>
+<style>
+.tab_title { overflow: hidden; border: 1px solid #ccc; 
+             background: #eee; }  
+.tab_title .tab_btn { background: inherit; 
+                      float: left; border: 0; outline: 0; 
+                      cursor: pointer; font-size: 20px; 
+                      padding: 14px 20px; }  
+.tab_title .tab_btn:hover, .tab_title .tab_btn.on { background: #ddd; }
+    
+.tab_box { padding: 10px 20px; 
+           border: 1px solid #ccc; 
+           border-top: none; display: none; }
+.tab_box:nth-of-type(2) { display: block; }    
+.tab_box h3 { font-size: 24px; }
+.tab_box p { color: #333; }
+    
+</style>
+    
+</head>
+    <body>
+    <div class="tab_title">
+    <button class="tab_btn" onclick="tabOpen(event, 'red')">빨강</button> 
+    <button class="tab_btn" onclick="tabOpen(event, 'yellow')">노랑</button> 
+    <button class="tab_btn" onclick="tabOpen(event, 'blue')">파랑</button>   
+    </div>
+    
+    <div id="red" class="tab_box">
+    <h3>color: red</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>   
+    </div> 
+    <div id="yellow" class="tab_box">
+    <h3>color: yellow</h3>
+    <p>동해물과 백두산이 동해물과 백두산이</p>
+    </div> 
+    <div id="blue" class="tab_box">
+    <h3>color: blue</h3>
+    <p>하나둘셋넷 하나둘셋넷 하나둘셋넷 </p>
+    </div>
+    
+    <script>
+        function tabOpen(event, color){
+            let i=0;
+
+            let tab_box = document.getElementsByClassName("tab_box");
+            for(let i=0; i<tab_box.length; i++){
+                tab_box[i].style.display = "none";
+            }
+
+            let tab_btn = document.getElementsByClassName("tab_btn");
+            for(let i=0; i<tab_btn.length; i++){
+                tab_btn[i].style.backgroundColor= "";
+            }
+            // 초기화
+            console.log(event)
+
+            document.getElementById(color).style.display = "block";
+            event.currentTarget.classList.add("on");
+
+            // 본문박스 출력, 버튼위치 + .on
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>쿠팡 배너 회전</title>
+
+    <style>
+        body{
+            background-color: #222;
+            margin:0;
+            padding:200px 0;
+            min-width:100%;
+            min-height:100%;
+            overflow: hidden;
+        }
+
+        #logobox{
+            width: 110px;
+            height:50px;
+            position:relative;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+        }
+
+        #logobox>div{
+            width:50px;
+            height:50px;
+            border-radius: 50%;
+            position:absolute;
+            top:0;
+        }
+
+        .circle1{
+            left:0;
+            background-color: #5e239d;
+
+            animation:logo1 1s ease infinite;
+        }
+
+        .circle2{
+            right:0;
+            background-color:#f61067;
+            animation:logo2 1s ease infinite;
+        }
+
+        @keyframes logo1{
+            0%{
+                left:0; z-index:1;
+            }
+
+            50%{
+                left:50%;
+            }
+        }
+
+        @keyframes logo2{
+            0%{
+                right:0;
+            }
+
+            50%{
+                right:50%;
+            }
+        }
+
+    </style>
+</head>
+    <div id="box">
+
+    </div>
+<body>
+    <div id="logobox">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+    </div>
+</body>
+</html>

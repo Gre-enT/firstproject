@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height:350px;
+            border:1px solid #ccc;
+            padding:20px;
+            overflow:hidden;
+            transition: .5s;
+            }
+        div img { width: 100%; }
+    </style>
+
+</head>
+<body>
+    <h2>스크롤 애니메이션</h2> 
+    <div id="box1"><img src="images/coffee-1.jpg" alt=""></div>
+    <div id="box2"><img src="images/coffee-2.jpg" alt=""></div>
+    <div id="box3"><img src="images/coffee-3.jpg" alt=""></div>
+    <div id="box4"><img src="images/down.png" alt=""></div>
+    <div id="box5"><img src="images/up.png" alt=""></div>
+
+
+    <script>
+        window.onscroll = function(){
+            let scrollTop = document.documentElement.scrollTop;
+            let box1 = document.getElementById("box1");
+            let box2 = document.getElementById("box2");
+            let box3 = document.getElementById("box3");
+            let box4 = document.getElementById("box4");
+            let box5 = document.getElementById("box5");
+
+            console.log(scrollTop);
+            // console.log(box1, box2, box3, box4, box5);
+
+            if( scrollTop > box1.offsetTop-100 ){
+                box1.style.transform = "translateX(300px)";
+            }
+            else {
+                box1.style.transform = "translateX(0)";
+            }
+
+            if( scrollTop > box2.offsetTop-100 ){
+                box2.style.transform = "translateX(-500px)";
+            }
+            else {
+                box2.style.transform = "translateX(0)";
+            }
+
+            if( scrollTop > box3.offsetTop-100 ){
+                box3.style.transform = "rotateY(" + (scrollTop/2) +"deg)";
+            }
+            else {
+                box3.style.transform = "rotateY(0)";
+            }
+
+            if( scrollTop > box4.offsetTop-100 ){
+                box4.style.transform = "scale(" + scrollTop/1000 + ")";
+            }
+            else {
+                box4.style.transform = "scaleX(1)";
+            }
+        }
+
+
+    </script>
+</html>

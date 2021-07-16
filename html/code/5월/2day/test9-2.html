@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        * { margin: 0; padding: 0;
+            }
+        #wrap { width: 700px; margin: 0 auto;
+        border: 1px solid #333;
+        }
+
+        #header { background-color: skyblue;
+                height: 100px;}
+
+        #header h1 { text-align:center;
+                    padding: 10px 0;}
+
+        .menu { list-style: none;
+                width : 520px; margin: 0 auto;}
+
+        .menu li {float:left;
+                width:120px; height:30px;
+                background: deeppink;
+                text-align: center;
+                line-height : 30px;
+                font-size:12px;
+                margin : 0 5px;
+                }
+
+        .menu li:hover {
+                background-color: pink;
+        }
+
+        .menu li:hover a{
+                color:deeppink;
+        }
+
+        .menu li a {color: #fff; text-decoration: none;}
+
+        #content { background-color:  yellow;
+                    overflow: hidden;}
+
+        #content .left { width:200px; padding: 20px;
+                        background-color: greenyellow; float:left;}
+        #content .right { width:400px; padding: 20px;
+                        background-color: violet; float:right;}
+
+        #content p { font-size:12px; line-height:1.6;
+                    color: #333;}
+
+        #content h2 {font-size: 18px; text-decoration: underline;
+                    text-align: center; letter-spacing:10px}
+
+
+        #footer { background-color: skyblue;
+                height: 100px; text-align: center;
+                line-height: 100px;
+                clear:both;
+                }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+
+            <h1>LOGO</h1>
+            <ul class="menu">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <div class="left">
+                <h2>서브 베너단</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsum aliquid sequi eum, non nostrum laudantium minima quam quia culpa repellat modi eos fuga quidem quod cum rerum, distinctio iusto.</p>
+
+
+            </div>
+            <div class="right">
+                <h2>본문단</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe eos temporibus sunt suscipit totam ratione repudiandae. Odio itaque obcaecati laboriosam doloremque accusantium repellendus quis. Inventore, quos nesciunt! Officiis, esse!</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis vel ex sit voluptates, suscipit quas quisquam sint soluta voluptatibus inventore aperiam quam harum nobis ipsa quo laborum? Odio, consequatur perspiciatis.</p>
+
+
+
+
+
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>copyright.</p>
+        </div>
+    </div>
+</body>
+</html>

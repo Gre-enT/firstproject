@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $.ajax({
+                    url: "data/text.txt",
+                    success: function(data){
+                        console.log(data);
+                        $("#txt").text(data);
+                    }
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <button>출력</button>
+    <p id="txt"></p>
+</body>
+</html>

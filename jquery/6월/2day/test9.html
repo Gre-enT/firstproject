@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        #box{
+            background-color: skyblue;
+            width : 100px;
+            height : 100px;
+            margin : 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">box</div>
+    <button>play</button>
+    <button>info</button>
+
+    <script>
+       $("button").eq(0).click(function(){
+           $("#box").css({
+               transform : "rotate(360deg)",
+               transition : "all 1s"
+            });
+       })
+
+       $("button").eq(1).click(function(){
+           let text = $("#box").text();
+           console.log(text);
+       })
+
+    //    filter : 속성 검색, find : 자기 자신 안에서 검색
+
+
+    </script>
+</body>
+</html>

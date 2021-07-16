@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+
+    <style>
+        #app{
+            width: 700px;
+            margin: 0 auto;
+        }
+        hi{
+            text-align: center;
+            color:rgb(42, 93, 189)
+        }
+
+        #inbox{
+            border: 2px solid skyblue;
+            outline: none;
+            padding: 10px 15px;
+            font-size: 20px;
+            border-radius: 10px;
+            width: 80%;
+        }
+
+        .addbtn{
+            padding: 10px 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: skyblue;
+            color: #fff;
+            border: none;
+            outline: none;
+        }
+
+        .editbtn{
+            padding: 10px 30px;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: deeppink;
+            color: #fff;
+            border: none;
+            outline: none;
+        }
+
+        .list{
+            padding:0;
+            margin-top:50px;
+        }
+        .list li{
+            line-height:2;
+            font-size:20px;
+            color:#555;
+            border-bottom:1px solid #ddd;
+            list-style-position: inside;
+            padding : 0 10px;
+        }
+        .list li button{
+            margin: 5px 2px 0;
+            padding: 5px 10px;
+            float: right;
+            font-size:16px;
+            border-radius:5px;
+            background-color: orange;
+            color: #fff;
+            border: none;
+            outline: none;
+        }
+        .list li button.del{
+            background-color: cadetblue;
+        }
+
+        .on{
+            background-color: aquamarine;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <span v-if="!editing">
+            <input type="text" :id="idName" v-model="todo"> <!-- 할일 목록 입력 -->
+            <input type="submit" value="등록" :class="className" @click="addTodo"> <!-- 등록 버튼 -->
+        </span>
+
+        <span v-else>
+            <input type="text" :id="idName" v-model="todo">
+            <input type="submit" value="수정" :class="className2" @click="editTodo">
+        </span>
+
+        <ol :class="olName">
+            <li v-for="(todo, index) in todos"> {{ todo }}
+                <button @click="delbtn(index)" v-if="!editing" class="del"> X 삭제 </button>
+                <button @click="editbtn(index, todo)" > 수정 </button>
+            </li>
+        </ol>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                title: "오늘 공부할 목록",
+                idName: "inbox",
+                className: "addbtn",
+                className2: "editbtn",
+                olName: "list",
+                todo: "",
+                todos: [
+                    "과제 제출",
+                    "포트폴리오",
+                    "반응형 사이트"
+                ],
+                editing: false,
+                selectIndex:null,
+            },
+
+            methods: {
+                addTodo: function(){
+                    if(this.todo !== ""){
+                        this.todos.push(this.todo);
+                        this.todo = "";
+                    }
+                    else{
+                        alert("공란으로 추가할 수 없습니다.");
+                    }
+                },
+                editTodo: function(selectIndex){
+                    if(this.todo !== ""){
+                        this.todos.splice(this.selectIndex, 1, this.todo)
+                        $(".list>li").removeClass("on");
+                        this.editing = false;
+                        this.todo = "";
+                    }
+                    else{
+                        alert("공란으로 수정할 수 없습니다.");
+                        $(".list>li").removeClass("on");
+                        this.editing = false;
+                    }
+                },
+                delbtn: function(index){
+                    this.todos.splice(index, 1);
+                },
+                editbtn: function(index, todo){
+                    this.todo = todo;
+                    this.selectIndex = index;
+                    $(".list>li").eq(this.selectIndex).addClass("on").siblings("li").removeClass("on");
+                    this.editing = true;
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

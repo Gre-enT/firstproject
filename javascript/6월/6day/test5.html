@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>상품페이지</title>
+
+    <style>
+        #wrap{
+            width:700px; margin:0 auto;
+        }
+        #wrap::after {
+            content:""; display:block; clear:both;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .left{
+            float: left;
+            width: 50%;
+        }
+        .left>img{
+            width: 100%;
+            border: 2px solid brown;
+            box-sizing: border-box;
+            font-size: 0;
+        }
+
+        .coffee_list{
+            list-style: none;
+            padding : 0;
+        }
+        .coffee_list li{
+            font-size: 0;
+            float: left;
+            width : 32%;
+            margin-right : 2%;
+            box-sizing: border-box;
+            border: 4px solid brown;
+        }
+        .coffee_list li:hover{
+            border-color: crimson
+        }
+
+        .coffee_list li:last-child{
+            margin-right : 0;
+        }
+        .coffee_list li img{
+            
+            filter: grayscale(1);
+            width : 100%;
+        }
+        .coffee_list li img:hover{
+            filter: grayscale(0);
+            transition:0.5s;
+        }
+
+        .right{
+            float: right;
+            width : 46%;
+            line-height: 2;
+            font-size: 18px;
+        }
+        .right button{
+            width : 100%;
+            padding : 8px 0;
+        }
+        .right #view{
+            margin-top:10px;
+        }
+
+        .right .detail{
+            display:none;
+        }
+
+        #popupbg{
+            position:fixed;
+            left:0; right:0; top:0; bottom:0;
+            background-color:rgba(0, 0, 0, 0.8);
+            z-index: 99;
+            display:none;
+        }
+        .modal{
+            margin:100px auto;
+            width : 300px;
+            background-color: #fff;
+            padding : 30px;
+            text-align:center;
+        }
+        .modal h1{
+
+        }
+
+        .modal #close{
+            background-color: brown;;
+            color : #fff;
+            border:none;
+            padding : 8px 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="popupbg">
+        <div class="modal">
+            <h1>주문완료</h1>
+            <button id="close">닫기 X</button>
+        </div>
+    </div>
+    <div id="wrap">
+        <h1 class="title">에디오피아 커피</h1>
+        <div class="left">
+            <img src="images/coffee-pink.jpg" alt="" id = "coffee">
+            <ul class="coffee_list">
+                <li><img src="images/coffee-pink.jpg" alt="pink" class="simg"></li>
+                <li><img src="images/coffee-blue.jpg" alt="blue" class="simg"></li>
+                <li><img src="images/coffee-gray.jpg" alt="gray" class="simg"></li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul class="text_list">
+                <li>상품명 : 에디오피아 게뎁</li>
+                <li>판매가 : 9,000원</li>
+                <li>배송비 : 3,000원<br>
+                    (50,000원 이상 구매시 무료)</li>
+                <li>적립금 : 180원(2%)</li>
+                <li>로스팅 : 2019.06.17</li>
+            </ul>
+            <button class = "showModal">장바구니 담기</button>
+            <a href="#" id="view">상세설명 보기</a>
+            <p class="detail">Lorem ipsum dolor sit amet, consectet ur adipisicing elit. Soluta ex explicabo deserunt unde sint, perspiciatis dignissimos laudantium nam dolore cum id a libero dicta ratione porro reiciendis delectus quia voluptas!</p>
+        </div>
+    </div>
+
+		<script>
+            let bimg = document.getElementById("coffee");
+            let simg = document.getElementsByClassName("simg");
+
+            bimg.onclick = function(){
+                let src = cimg.getAttribute("src");
+                alert(src);
+            }
+            
+            for(i in simg){
+                simg[i].onclick = function(){
+                    let src = this.getAttribute("src");
+                    console.log(src);
+                    bimg.setAttribute("src", src);
+                }
+            }
+
+            let btn = document.querySelectorAll("button");
+            console.log(btn);
+            let popupbg = document.getElementById("popupbg");
+
+            btn[1].onclick = function(){
+                popupbg.style.display = "block";
+            }
+            btn[0].onclick = function(){
+                popupbg.style.display = "none";
+            }
+
+
+            let view = document.getElementById("view");
+            console.log(view);
+
+            view.onclick = function() {
+                let detail = document.querySelector(".detail")
+                
+                if(view.innerHTML == "상세설명 보기") {
+                    detail.style.display = "block";
+                    console.log(this.innerHTML);
+                    this.innerHTML = "상세설명 닫기";
+                }
+
+                else if(view.innerHTML == "상세설명 닫기") {
+                    detail.style.display = "none";
+                    console.log(this.innerHTML);
+                    this.innerHTML = "상세설명 보기";
+                }
+            }
+		</script>
+
+</body>
+</html>

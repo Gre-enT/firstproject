@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+body, h1, h2, h3, h4, p, ul, li, ol, dl, dt, dd{
+    margin:0; padding:0;
+}
+
+body {
+    color:#333333;
+}
+
+a{
+    text-decoration: none;
+    color:#333333;
+}
+
+ul{
+    list-style: none;
+}
+
+.clear::after{
+    content:""; display:block; clear: both;
+}
+/*
+div, header, footer, section, nav{
+    border:1px solid red;
+}*/
+
+#wrap {
+    width:1200px; margin: 0 auto;
+}
+
+header{
+    height:100px;
+    position:relative;
+}
+
+.logo {
+    margin-top : 30px;
+    margin-left : 10px;
+}
+
+.gnb{
+    float:right;
+    margin-right : 10px;
+    position:absolute;
+    bottom:0; right:10px;
+}
+.gnb>li{
+    width : 150px;
+    height: 40px;
+    float:left;
+    background-color:#3cb149;
+    text-align: center;
+    line-height: 40px;
+    border:1px solid black;
+
+
+    transition-duration: 0.4s;
+}
+
+.gnb>li:hover{
+    background: #1d8844;
+}
+
+.gnb>li:hover>a{
+    color:#333333;
+}
+
+.gnb>li:hover .sub_menu{
+    opacity: 1;
+}
+
+.gnb>li>a{
+    color:white;
+    font-weight: bold;
+}
+
+.sub_menu{
+    opacity: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+}
+
+.sub_menu>li{
+    background-color:#3cb149;
+    margin: 10px 0;
+}
+
+.sub_menu>li>a{
+    color:white;
+}
+
+.sub_menu>li:hover{
+    transition-duration: 0.4s;
+    background-color: #1d8844;
+}
+.sub_menu>li:hover a{
+    color:#333333;
+    transition-duration: 0.4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#visual{
+    height:300px;
+    background: url(../images/slider1.jpg) no-repeat center / cover;
+    animation: banner 10s ease infinite;
+}
+
+@keyframes banner{
+    0%{
+        background: url(../images/slider1.jpg) no-repeat center / cover;
+    }
+    11%{
+        background: url(../images/slider1.jpg) no-repeat center / cover;
+    }
+    22%{
+        background: url(../images/slider1.jpg) no-repeat center / cover;
+    }
+    33%{
+        background: url(../images/slider2.jpg) no-repeat center / cover;
+    }
+    44%{
+        background: url(../images/slider2.jpg) no-repeat center / cover;
+    }
+    55%{
+        background: url(../images/slider2.jpg) no-repeat center / cover;
+    }
+    66%{
+        background: url(../images/slider3.jpg) no-repeat center / cover;
+    }
+    77%{
+        background: url(../images/slider3.jpg) no-repeat center / cover;
+    }
+    88%{
+        background: url(../images/slider3.jpg) no-repeat center / cover;
+    }
+    100%{
+        background: url(../images/slider1.jpg) no-repeat center / cover;
+    }
+}
+
+#content{
+    height:200px;
+}
+
+footer{
+    height:100px;
+}

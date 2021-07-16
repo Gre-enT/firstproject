@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      .origin { width: 350px; height: 200px; 
+                border: 1px solid #333; 
+                float: left; margin: 40px; }  
+      .origin img { width: 100%; } 
+
+      .origin>div { transition-property: transform; 
+                    transition-duration: 1s; 
+                    transition-timing-function: ease; }
+
+      .scaleX:hover { transform: scaleX(2); }
+      .scaleY:hover { transform: scaleY(0.5); }
+      .scale:hover { transform: scale(1.5); }
+
+    </style>
+</head>
+<body>
+  <div class="origin">
+    <div class="scaleX">
+     <img src="test.jpg" alt="">   
+    </div>  
+  </div> 
+  <div class="origin">
+    <div class="scaleY">
+     <img src="test.jpg" alt="">   
+    </div>  
+  </div> 
+  <div class="origin">
+    <div class="scale">
+     <img src="test.jpg" alt="">   
+    </div>  
+  </div>
+</body>
+</html>

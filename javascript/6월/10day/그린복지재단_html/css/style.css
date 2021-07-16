@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* * { margin: 0; padding: 0; } */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, ol, dl, dd { margin: 0; padding: 0; color: #333;  } 
+ul { list-style: none; }
+ul li a { text-decoration: none; color: #333; }
+.clear::after { content: ""; clear: both; display: block; }
+
+/* header, footer, div, ul, li, section { border: 1px solid red; } */
+
+#wrap { width: 1200px; margin: 0 auto; }
+header { height: 100px; }
+header .logo { float: left; width: 200px; height: 40px; 
+               margin-top: 30px; }
+header nav { float: right; }
+.gnb { margin-top: 60px; }
+.gnb>li { float: left; background-color: #1d8844; 
+          position: relative; 
+          width: 200px; text-align: center;
+          height: 40px; line-height: 40px; }
+.gnb>li>a { color: #fff; }
+.gnb>li:hover { background-color: #3cb149 }
+.submenu { position: absolute; left: 0; top: 40px; 
+           width: 100%; display: none; z-index: 999; }
+.submenu li { background-color: #434748; }
+.submenu li:hover { background-color: #555; }
+.submenu li a { color: #fff; }
+
+#slider { width: 1200px; height: 300px; 
+          position: relative; overflow: hidden; }
+.top_banner { width: 4810px; transition: left 2s; 
+              position: absolute; left: 0px; top: 0; }
+.top_banner li { width: 1200px; float: left; }
+.top_banner li img { width: 100%; }
+.sub_title { position: absolute; left: 50%; top: 50%; 
+             /* background-color: #1d8844; */
+             background-color: rgba(29,136,68,0.9);
+             color: #fff; text-align: center;
+             width: 500px; padding: 15px;  
+             border-radius: 30px; 
+             /* margin-left: -250px; margin-top: -20px; */
+             transform: translate(-50%, -50%); }
+#content { height: 170px; margin: 15px 0 15px; }
+#content>section { float: left; width: 370px;   }
+#content>section h3 { background-color: #1d8844; 
+                      width: 120px; text-align: center;
+                      padding: 7px 0; color: #fff; 
+                      font-size: 14px; }
+#content>section>#tab_menu { height: 32px; width: 100%; padding: 0; background-color: #fff; }
+#tab_menu a { color: #555; text-decoration: none; display: block; width: 120px; float: left; background-color: #eee; padding: 7px 0; }
+#tab_menu a.on { background-color: #1d8844; color: #fff; }
+
+#tab_box {}
+#tab_box .list {}
+#tab_box .list:nth-child(2) { text-align: center; display: none; }
+#tab_box .list:nth-child(2) li { display: inline-block; }
+
+.notice {}
+.notice .list { border-top: 2px solid #1d8844; padding-top: 10px; }
+.notice .list li { line-height: 2; font-size: 14px; }
+.notice .list li:nth-child(2n) { background-color: #eee; }
+.notice .list li span { float: right; }
+
+.gallery { margin: 0 40px; }
+.gallery .imglist { border-top: 2px solid #1d8844; padding-top: 10px; 
+                    text-align: center; }
+.gallery .imglist li { display: inline-block; }
+
+.banner {}
+.banner .box { border-top: 2px solid #1d8844; padding-top: 10px; 
+               text-align: center; }
+
+footer { height: 100px; 
+         border-top: 1px solid #1d8844; padding-top: 30px; }
+footer .btm_logo { float: left; }
+footer .copy { float: left; width: 800px; text-align: center;
+               line-height: 40px; }
+footer .copy span { color: green; font-weight: bold; }
+footer select { float: right; border: 1px solid #1d8844; 
+                padding: 5px; margin-top: 5px; font-size: 14px;  }
+/* 팝업 */
+#popup { display: none; position: fixed; 
+         left: 0; right: 0; top: 0; bottom: 0;
+         background: rgba(0,0,0,0.5); }
+.modal { width: 420px; height: 300px;
+         margin: 160px auto; padding: 20px 30px;
+         background: #fff; position: relative; }
+.modal h2 { color: #1d8844; padding: 10px 0;
+            border-bottom: 1px solid #1d8844; }
+.modal p { line-height: 2; margin-top: 20px; }
+.modal .close { position: absolute; 
+                right: 40px; bottom: 30px; 
+                background-color: #1d8844;
+                color: #fff; border: none; 
+                padding: 10px 20px; }
+
+
+
+
+

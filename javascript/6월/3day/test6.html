@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+
+    
+</head>
+<body>
+    <p id = "total"></p>
+    <script>
+        var rdn = Math.random();
+        var num = Math.ceil(rdn*3);
+        console.log(num);
+        var hand = prompt("가위바위보 입니다. 낼 것을 입력하세요.", "");
+
+        switch(hand){
+            case "가위" : result = 1;
+            break;
+            case "바위" : result = 2;
+            break;
+            case "보" : result = 3;
+            break;
+            default: alert("잘 못 입력하셨습니다.");
+            location.reload();
+        }
+
+
+        var total = num - result;
+
+        if(total == 0) { // 비겼을 때
+            document.getElementById("total").innerHTML = num + "비겼습니다."
+        }
+        else if(total == -1 || total == 2){
+            document.getElementById("total").innerHTML = num + "이겼습니다."
+        }
+        else{
+            document.getElementById("total").innerHTML = num + "졌습니다."
+        }
+        document.write(`<img src="images/${num}.jpg">`);
+        document.write(`<img src="images/${result}.jpg">`);
+        
+        
+
+    </script>
+
+</body>
+</html>

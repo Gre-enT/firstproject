@@ -1,0 +1,7 @@
+[
+   { "name": "홍길동", "age": 30, "score": 100  },
+   { "name": "아무개", "age": 19, "score": 92 },
+   { "name": "고길동a", "age": 52, "score": 48 },
+   { "name": "고길동b", "age": 12, "score": 12 },
+   { "name": "고길동c", "age": 22, "score": 75 }
+]

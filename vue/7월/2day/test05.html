@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <style>
+        h1 {
+            text-align: center;
+            padding: 50px 0;
+        }
+        ul{
+            list-style: none;
+            text-align: center;
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        ul li{
+            width:30%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        ul li img{
+            width: 100%;
+            transition: 0.5s;
+        }
+        ul li:hover img {
+            transform:scale(1.2);
+        }
+        ul li h2{
+            font-size: 28px;
+            text-align: center;
+        }
+        ul li p{
+            padding: 10px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>상품갤러리</h1>
+
+    <div id="app">
+        <ul>
+            <template v-for="item in items">
+                <li :class="liClass">
+                    <h2>{{ itemName }}</h2>
+                    <div class="imgbox">
+                        <img :src="item.imgSrc" :alt="item.imgAlt">
+                    </div>
+                    <p>{{ itemText }}</p>
+                </li>
+            </template>
+        </ul>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                items: [
+                    {
+                        liClass: 'p01',
+                        itemName: "상품제목 01",
+                        imgSrc:"vue_gallery/pmb1.jpg",
+                        itemText:"오늘의 할인상품은 p01 입니다.",
+                    },
+                    {
+                        liClass: 'p02',
+                        itemName: "상품제목 02",
+                        imgSrc:"vue_gallery/pmb2.jpg",
+                        itemText:"오늘의 할인상품은 p02 입니다.",
+                    },
+                    {
+                        liClass: 'p03',
+                        itemName: "상품제목 03",
+                        imgSrc:"vue_gallery/pmb3.jpg",
+                        itemText:"오늘의 할인상품은 p03 입니다.",
+                    },
+                    {
+                        liClass: 'p04',
+                        itemName: "상품제목 04",
+                        imgSrc:"vue_gallery/pmb4.jpg",
+                        itemText:"오늘의 할인상품은 p04 입니다.",
+                    },
+                    {
+                        liClass: 'p05',
+                        itemName: "상품제목 05",
+                        imgSrc:"vue_gallery/pmb5.jpg",
+                        itemText:"오늘의 할인상품은 p05 입니다.",
+                    },
+                    {
+                        liClass: 'p06',
+                        itemName: "상품제목 06",
+                        imgSrc:"vue_gallery/pmb6.jpg",
+                        itemText:"오늘의 할인상품은 p06 입니다.",
+                    }
+
+                ]
+            },
+
+            methods:{
+
+            }
+
+        });
+    </script>
+</body>
+</html> 

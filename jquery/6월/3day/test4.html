@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- <script>
+     $(document).ready(function(){ 
+
+     });
+    </script> -->
+
+    <style>
+        #box{
+            width:50px;
+            height:50px;
+            background-color: skyblue;
+            position:absolute;
+            left : 50%;
+            top : 50%;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+        $(document).on("keydown", function(e){
+            switch(e.keyCode){
+                case 37: // left
+                    $("#box").stop().animate({left:"-=50px"}, 200, "linear");
+                    break;
+                case 39: // right
+                    $("#box").stop().animate({left:"+=50px"}, 200, "linear");
+                    break;
+                case 38: // top
+                    $("#box").stop().animate({top:"-=50px"}, 200, "linear");
+                    break;
+                case 40: // bottom
+                    $("#box").stop().animate({top:"+=50px"}, 200, "linear");
+                    break;
+            }
+            let top = $("#box").css("top");
+            let left = $("#box").css("left");
+            console.log("top : " + top, ", left : " + left);
+        })
+    </script>
+</body>
+</html>

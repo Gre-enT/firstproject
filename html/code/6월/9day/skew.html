@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .origin{
+            width:350px; height:200px;
+            border:1px solid #333;
+            float:left; margin:40px;
+        }
+        .origin img {
+            width: 100%;
+        }
+
+        .origin>div {
+            transition-property: transform;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+        }
+
+        .skewX:hover{
+            transform:skewX(30deg);
+        }
+
+        .skewY:hover{
+            transform: skewY(-30deg);
+        }
+
+        .skew:hover{
+            transform: skew(-30deg, 30deg);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="origin">
+        <div class="skewX">
+            <img src="image/text.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="skewY">
+            <img src="image/text.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="origin">
+        <div class="skew">
+            <img src="image/text.jpg" alt="">
+        </div>
+    </div>
+
+
+
+</body>
+</html>

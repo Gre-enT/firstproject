@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>투표권 확인</title>
+</head>
+<body>
+    <input type="text" id="height" placeholder="키(cm)를 입력하세요.">
+    <button onclick="check()">확인하기</button>
+    <p id="result"></p>
+    
+    <script>
+        function check() {
+            var height = document.getElementById("height").value;
+            const min = 110;
+
+            var result = height >= min ? "탑승이 가능" : "탑승이 불가능"
+
+            document.getElementById("result").innerHTML
+            = result + "합니다.";
+        }
+    </script>
+
+
+</body>
+</html> 

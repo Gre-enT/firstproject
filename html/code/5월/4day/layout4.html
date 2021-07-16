@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        * {
+            /*border:1px solid red;*/
+        }
+
+        #wrap{
+        }
+
+        .inner {
+            width:800px;
+            margin:0 auto;
+            padding:10px 0;
+        }
+
+        header {
+            background-color:teal;
+        }
+
+        #content {
+            width:800px;
+            margin:10px auto;
+        }
+
+        #content::after{
+            content:""; display: block; clear:both;
+        }
+
+        #content section {
+            height:200px;
+            margin:5px;
+            border : 1px solid #000;
+            float:left;
+        }
+
+        
+        #content section:nth-of-type(1), #content section:nth-of-type(2){
+            width:388px;
+        }
+
+        #content section:nth-of-type(3), #content section:nth-of-type(4), #content section:nth-of-type(5){
+            width:254.6666px;
+        }
+
+        footer {
+            background-color:yellowgreen;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="inner">
+                <h1>LOGO</h1>
+            </div>
+        </header>
+
+        <div id="content">
+            <section>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea maxime et qui sed iste aperiam voluptatibus, aliquam atque perferendis vero nobis doloremque minima amet eveniet facere veritatis. Reprehenderit, voluptate unde!</section>
+            <section>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam deserunt, quos nulla illum nisi ipsum quisquam! Minima, impedit reprehenderit minus illo praesentium magnam vero dolore asperiores sequi dolorum quaerat voluptatem.</section>
+            <section>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet neque ullam saepe corporis recusandae quos laboriosam repellendus illum accusamus obcaecati cupiditate dolor sed vitae vero optio, rerum eius exercitationem architecto!</section>
+            <section>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat enim ipsum corrupti sed similique error reprehenderit quisquam, recusandae accusantium nesciunt aut molestias ea excepturi. Nisi nulla repellendus adipisci tenetur eveniet?</section>
+            <section>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur veniam in inventore quisquam quos similique eos nulla neque corporis quae quod nostrum magnam deleniti, labore alias eum quam, quo odit.</section>
+        </div>
+
+        <footer>
+            <div class="inner">
+                <p>Copyright.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

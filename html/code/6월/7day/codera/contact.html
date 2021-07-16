@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CODERA</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+ <!-- #wrap>header+nav+#visual+#content+footer -->
+ <div id="wrap">
+    <header>
+     <div class="inner">
+      <h1 class="logo"><img src="images/logo.png" alt="CODERA"></h1>   
+     </div>   
+    </header>
+    <nav>
+     <ul class="gnb">
+         <li><a href="index.html">홈</a></li>
+         <li><a href="course.html">코스소개</a></li>
+         <li><a href="qna.html">자주하는 질문</a></li>
+         <li><a href="contact.html">신청</a></li>
+     </ul>   
+    </nav>
+
+    <div id="content">
+        <div class="inner">
+            <h3 class="tit_red">수강신청</h3>
+            <p>수강을 희망하시는 분은 아래양식에 필요한 사항을 입혁해주세요.</p>
+
+            <form action="">
+              <fieldset class="content_fieldset">
+
+                <ul class="form_list">
+                  <li>
+                    <label for="usr_name">이름</label>
+                    <input type="text" id="usr_name">
+                  </li>
+
+                  <li>
+                    <label for="usr_email">이메일</label>
+                    <input type="email" id="usr_email">
+                  </li>
+
+                  <li>
+                    <label for="usr_subject">희망수강강좌</label>
+                    <select name="" id="usr_subject">
+                      <option value="CSS3">CSS3</option>
+                      <option value="HTML5">HTML5</option>
+                      <option value="javascript">javascript</option>
+                    </select>
+                  </li>
+
+                  <li>
+                    <label for="usr_ask">문의사항</label>
+                    <textarea name="ask" id="usr_ask" cols="70" rows="7" placeholder="문의사항을 입력해주세요."></textarea>
+                  </li>
+                </ul>
+
+                <button type="submit" class="btn">수강신청</button>
+              </fieldset>
+            </form>
+        </div>
+    </div><!--// #content -->
+    
+
+  
+    <footer>
+      <div class="inner">
+       <ul class="btm_menu clear">
+         <li><a href="#">코스 소개</a></li>
+         <li><a href="#">자주 하는 질문</a></li>
+         <li><a href="#">강좌 신청</a></li>
+       </ul> 
+       <p>&copy; codera</p>  
+      </div>
+    </footer>
+ </div>   
+</body>
+</html>

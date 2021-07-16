@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body { margin: 0; }        
+        header { text-align: center; padding: 30px; }
+        nav { background-color: #333; }        
+        nav ul { padding: 0; list-style: none; }        
+        nav ul li { display: inline-block; 
+                    padding: 10px 30px; }
+        nav ul li:hover { background-color: #999; }
+        nav ul li a { color: #fff; 
+                    text-decoration: none; }  
+        #content { padding: 20px; }         
+        .sticky { position: fixed; top: 0; width: 100%; 
+                background-color: darkorchid; }   
+        .sticky + #content { padding-top: 60px; }
+
+        .btnTop{
+            width : 40px;
+            height : 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            display:none;
+            position:fixed;
+            bottom : 50px;
+            right : 50px;
+            text-decoration: none;
+            color : white;
+            background-color: skyblue;
+        }
+        .on{
+            display:block;
+        }
+    </style>
+</head>
+<body onscroll="sticky()">
+ <header>
+    <h1>메뉴단 고정</h1>
+    <p>Sticky effect~~~~</p> 
+ </header>
+ <nav>
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">NOTICE</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul> 
+ </nav>  
+ <div id="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p> 
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus recusandae itaque error praesentium, delectus quos eaque dolores reprehenderit tenetur atque laborum, velit obcaecati, eligendi excepturi ipsam enim ex modi.</p>
+
+
+    <a href="#top" class="btnTop">TOP</a>
+
+    <script>
+        let nav = document.querySelector("nav");
+        let navTop = nav.offsetTop;
+        console.log(navTop);
+        let btnTop = document.querySelector(".btnTop");
+
+        function sticky(){
+            let scroll = window.pageYOffset;
+            console.log("스크롤된 양 : " + scroll);
+
+            if (scroll >= navTop){
+                nav.classList.add("sticky");
+            }
+            else {
+                nav.classList.remove("sticky");
+            }
+
+
+            if(scroll >=300){
+                btnTop.classList.add("on");
+            }
+            else{
+                btnTop.classList.remove("on");
+            }
+        }
+    </script>
+ </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선택자3</title>
+
+</head>
+<body>
+
+    <script>
+        let w = Number(prompt("w 입력(2~40,000)"));
+        let h = Number(prompt("h 입력(2~40,000)"));
+        let p = Number(prompt("p 입력(0~w)"));
+        let q = Number(prompt("q 입력(0~h)"));
+        let t = Number(prompt("t 입력(1~200,000,000)"));
+        let flagW = 1;
+        let flagH = 1;
+
+        console.log(w,h,p,q,t)
+
+        if(p>w || q>h || 
+        w>40000 || w<2 ||
+        h>40000 || h<2 ||
+        t>200000000 || t<1 ){
+            alert("다시 입력해주세요.");
+            location.reload();
+        }
+
+        for(let i = 1; i<=t; i++){
+            antMove();
+        }
+
+        function antMove(){
+            if(p==w || p==0){
+                flagW *= -1;
+            }
+            if(q==h || q==0){
+                flagH *= -1
+            }
+
+            p += flagW;
+            q += flagH;
+        }
+
+        console.log(p, q)
+
+    </script>
+</body>
+</html>

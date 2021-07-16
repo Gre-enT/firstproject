@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>투어리스트</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <div id="wrap">
+   <header>
+
+    <div class="header_top"><!-- 반투명 100% -->
+      <div class="inner">
+
+        <h1 class="logo"><a href="#">Tourist in tour</a></h1>
+      
+        <div class="toggle">
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        </div>
+
+        <div class="menubox">
+          <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+          </ul> 
+          <nav>
+            <ul class="gnb">
+              <li><a href="#">여행정보</a>
+                  <ul>
+                    <li><a href="#">국내</a></li>
+                    <li><a href="#">해외</a></li>
+                  </ul>
+              </li>
+              <li><a href="#">고객센터</a>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">문의사항</a></li>
+                </ul>
+              </li>
+              <li><a href="#">상품투어</a>
+                <ul>
+                  <li><a href="#">프로그램</a></li>
+                  <li><a href="#">여행자료</a></li>
+                </ul>
+              </li>
+              <li><a href="#">티켓/가이드</a>
+                <ul>
+                  <li><a href="#">항공</a></li>
+                  <li><a href="#">호텔</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="close"><a href="#">닫기</a></div>
+        </div>
+
+      </div><!--/ class="inner"  -->
+    </div> <!--/ header_top"  --> 
+
+    <div class="main_slider">
+      <div class="visualroll">
+        <ul class="imglist">
+          <li class="imglist01">
+            <div class="rollcontent">
+              <a href="#"><img src="img/img_slidecontents01.png" alt=""></a>
+              <p class="roll_txt">BE TOURISI FOR BETTER LIFE</p>
+            </div>
+          </li>
+          <li class="imglist02">
+            <div class="rollcontent">
+              <a href="#"><img src="img/img_slidecontents02.png" alt=""></a>
+              <p class="roll_txt">BE TOURISI FOR BETTER LIFE</p>
+            </div>
+          </li>
+          <li class="imglist03">
+            <div class="rollcontent">
+              <a href="#"><img src="img/img_slidecontents03.png" alt=""></a>
+              <p class="roll_txt">BE TOURISI FOR BETTER LIFE</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="mobile_slider">
+      <div class="slider_container">
+        <div class="slider_wrapper">
+          <div class="slider">
+            <a href="#"><img src="img/mainslide_mob01.jpg" alt=""></a>
+          </div>
+          <div class="slider">
+            <a href="#"><img src="img/mainslide_mob02.jpg" alt=""></a>
+          </div>
+          <div class="slider">
+            <a href="#"><img src="img/mainslide_mob03.jpg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   </header>
+    
+   <div id="content">
+   </div>
+   
+   <footer>
+   </footer> 
+ </div>
+
+ <div class="quick_area">
+ </div>
+ 
+ <div id="popup"> 
+ </div>
+ 
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script>
+  $(".toggle").click(function(){
+     $(".menubox").stop().slideDown(300);
+     $(".header_top").css("background-color","#31353d");
+  });
+</script>   
+</body>
+</html>
+
+
+
+
+
+

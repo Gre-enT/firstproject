@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.11.0/umd/react-dom.development.js"></script>
+
+    <script type="text/babel">
+    
+        const list = [
+            {menu : "라면", price: 1000},
+            {menu : "피자", price: 500},
+            {menu : "햄버거", price: 900},
+        ];
+
+        let text = "안녕하세요";
+        
+        class ListA extends React.Component{
+            render() {
+                return(
+                    <ul>{
+                    // JSX로 화면 만들기
+                        // for(let i=0; i<list.length; i++){
+                        //     list += <li>list</li>;
+                        // }
+                        list.map((value, index, array) => {
+                            return <li key={index}>{index} {value.menu}  -  {value.price}</li>
+                        })
+                    }</ul>
+                )
+            }
+        }
+
+        class Hi extends React.Component{
+            render() {
+                return(<h1>안녕하세요.</h1>)
+            }
+        }
+
+        class Hello extends React.Component{
+            render() {
+                return(<h1>반갑습니다.</h1>)
+            }
+        }
+
+        class Text extends React.Component{
+            render() {
+                const {show} = this.props;
+                if( show ){
+                    return <Hi />;
+                }
+                else{
+                    return <Hello />;
+                }
+                
+            }
+        }
+
+        class Number extends React.Component{
+            render() {
+                return(
+                    <p>{ this.props.count } </p>
+                )
+            }
+        }
+
+        class Counter extends React.Component{
+            state = {
+                count:0,
+            }
+            plus = (event) =>{
+                let newCount = this.state.count+1;
+
+                this.setState({
+                    ...this.count,
+                    count:newCount
+                })
+
+                console.log(this.state.count)
+
+            }
+
+            render(){
+                return(
+                    <div style={{
+                        background: 'skyblue',
+                        textAlign: 'center',
+                        padding: '30px',
+                        fontSize: '32px'
+                    }}>
+                        <Number count={ this.state.count }></Number>
+                        <button onClick={ this.plus }>+</button>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(
+            <Counter></Counter>,
+            document.getElementById('app')
+        );
+    </script>
+
+</body>
+</html>

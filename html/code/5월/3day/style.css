@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+img {float:left; opacity: 0.5;}
+
+/* tag < class < id 순으로 우선순위를 가지며,
+ important는 style의 순위까지 무시한다.*/
+p {background-color: orange;}
+
+#blue {background-color: blue;}
+
+.red { background-color: red;}
+
+#wrap p {background-color: chartreuse;
+
+}
+

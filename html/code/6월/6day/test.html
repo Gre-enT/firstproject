@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+       ul li { margin: 10px; } 
+
+       [href*="w3"] {
+           background-color: orange;
+       }
+
+       [href^="http"] {
+           text-decoration:line-through
+       }
+
+       [href$="org"] {
+           border-top: 2px solid red;
+       }
+
+       [class|="line"] {
+           border-bottom: 2px solid green;
+       }
+    </style>
+    
+</head>
+<body>
+ <h1>HTML5 참고 사이트</h1> 
+ <ul>
+  <li class="line-1 text1"><a href="http://www.w3c.org">웹표준안 사이트</a></li>
+  <li class="line-1 text2"><a href="https://www.w3schools.com">튜토리얼</a></li>
+  <li class="line-1 text3"><a href="http://caniuse.com">HTML 지원 여부 체크</a></li>
+  <li class="line-1 text4"><a href="www.w3c.org">미디어 쿼리</a></li>
+ </ul>  
+</body>
+</html>
